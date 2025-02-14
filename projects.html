@@ -28,7 +28,10 @@
       --primary-dark: #1E3A8A;
       --text-dark: #333333;
       --text-light: #666666;
+      --gradient-start: #2563eb;
+      --gradient-end: #1E3A8A;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -36,23 +39,28 @@
       overflow-x: hidden;
       background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
+
+    /* Navbar Styles */
     .navbar {
       padding: 1rem 0;
       transition: all 0.3s ease;
       background: var(--primary-color) !important;
     }
+
     .navbar.scrolled {
       padding: 0.5rem 0;
       background: rgba(37, 99, 235, 0.98) !important;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .nav-link {
       font-weight: 500;
       padding: 0.5rem 1rem !important;
       color: #ffffff !important;
       transition: all 0.3s ease;
     }
+
     .nav-link:hover {
       transform: translateY(-2px);
       opacity: 0.9;
@@ -60,75 +68,259 @@
 
     /* Header Section */
     .header-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
       padding: 8rem 0 6rem;
       position: relative;
       overflow: hidden;
     }
+
     .header-section::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' ...%3E");
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
     }
+
     .header-content {
       position: relative;
       z-index: 1;
       text-align: center;
     }
+
     .header-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .header-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       opacity: 0.9;
       max-width: 700px;
       margin: 0 auto;
     }
 
+    /* Project Filters */
+    .project-filters {
+      margin-top: -2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .filter-container {
+      background: white;
+      border-radius: 50px;
+      padding: 1rem;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+      display: inline-flex;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.5rem;
+      border: none;
+      background: none;
+      color: var(--text-light);
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .filter-btn:hover {
+      color: var(--primary-color);
+    }
+
+    .filter-btn.active {
+      background: var(--primary-color);
+      color: white;
+    }
+
     /* Projects Section */
     .projects-section {
       padding: 5rem 0;
-      margin-top: -4rem;
+      margin-top: -2rem;
     }
-    .projects-container {
-      background: white;
-      border-radius: 2rem;
-      padding: 3rem;
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
-    }
+
     .project-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 1rem;
+      background: white;
+      border-radius: 1.5rem;
       overflow: hidden;
       transition: all 0.3s ease;
+      height: 100%;
+      position: relative;
+      border: 1px solid #e5e7eb;
     }
+
     .project-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
       border-color: var(--primary-color);
     }
+
+    .project-img-container {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+    }
+
     .project-img {
       width: 100%;
-      height: 200px;
+      height: 100%;
       object-fit: cover;
-      background-color: #f8fafc;
+      transition: all 0.3s ease;
     }
+
+    .project-card:hover .project-img {
+      transform: scale(1.1);
+    }
+
+    .project-category {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(37, 99, 235, 0.9);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
     .project-body {
-      padding: 1.5rem;
+      padding: 2rem;
     }
+
     .project-title {
+      font-size: 1.25rem;
       font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .project-text {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .project-stack {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .stack-tag {
+      background: #f1f5f9;
+      color: var(--primary-color);
+      padding: 0.25rem 0.75rem;
+      border-radius: 25px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .project-link.primary {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .project-link.secondary {
+      background: #f1f5f9;
+      color: var(--text-dark);
+    }
+
+    .project-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Project Stats */
+    .project-stats {
+      padding: 4rem 0;
+      background: white;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .stat-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
       color: var(--primary-color);
       margin-bottom: 0.5rem;
     }
-    .project-text {
+
+    .stat-label {
       color: var(--text-light);
-      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Github Activity */
+    .github-activity {
+      padding: 4rem 0;
+    }
+
+    .activity-container {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .contribution-graph {
+      width: 100%;
+      height: 200px;
+      background: #f1f5f9;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contribution-bar {
+      position: absolute;
+      bottom: 0;
+      width: 8px;
+      margin: 0 3px;
+      background: var(--primary-color);
+      opacity: 0.2;
+      transition: all 0.3s ease;
+    }
+
+    .contribution-bar:hover {
+      opacity: 1;
     }
 
     /* Back to Top Button */
@@ -151,10 +343,12 @@
       visibility: hidden;
       z-index: 1000;
     }
+
     #back-to-top.visible {
       opacity: 1;
       visibility: visible;
     }
+
     #back-to-top:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
@@ -167,194 +361,362 @@
       text-align: center;
       margin-top: 4rem;
     }
+
     .social-links {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin-top: 1rem;
     }
+
     .social-links a {
       color: var(--primary-color);
       font-size: 1.2rem;
       transition: all 0.3s ease;
     }
+
     .social-links a:hover {
       color: var(--primary-dark);
       transform: translateY(-2px);
     }
-  </style>
+
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 2.5rem;
+      }
+
+.filter-container {
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.project-img-container {
+  height: 200px;
+}
+}
+</style>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">
+  <i class="fas fa-code me-2"></i>Mohit Bhimrajka
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="resume.html">Resume</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="certifications.html">Certifications</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="projects.html">
+        <i class="fab fa-github me-1"></i>Projects
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <!-- Active link for Projects -->
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="certifications.html">Certifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="projects.html">
-              <i class="fab fa-github me-1"></i>Projects
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="achievements.html">Achievements</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="achievements.html">Achievements</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+</div>
+</nav>
 
-  <!-- Header Section -->
-  <section class="header-section">
-    <div class="container">
-      <div class="header-content">
-        <h1 class="header-title" data-aos="fade-up">My Projects</h1>
-        <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
-          A showcase of my AI, ML, and data science projects that blend technical expertise and innovative solutions.
+<!-- Header Section -->
+<section class="header-section">
+<div class="container">
+<div class="header-content">
+  <h1 class="header-title" data-aos="fade-up">Featured Projects</h1>
+  <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
+    Exploring the intersection of AI, ML, and innovative solutions through hands-on projects and research implementations.
+  </p>
+</div>
+</div>
+</section>
+
+<!-- Project Filters -->
+<section class="project-filters text-center">
+<div class="container">
+<div class="filter-container" data-aos="fade-up">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+  <button class="filter-btn" data-filter="data-science">Data Science</button>
+  <button class="filter-btn" data-filter="web-dev">Web Development</button>
+  <button class="filter-btn" data-filter="research">Research</button>
+</div>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section">
+<div class="container">
+<div class="row g-4">
+  <!-- Project 1: Recommendation Engine -->
+  <div class="col-md-6 col-lg-4" data-category="ai-ml">
+    <div class="project-card" data-aos="fade-up">
+      <div class="project-img-container">
+        <img src="/api/placeholder/400/300" alt="Recommendation Engine" class="project-img">
+        <span class="project-category">AI/ML</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Recommendation Engine</h3>
+        <p class="project-text">
+          Built a sophisticated recommendation system using collaborative filtering and deep learning techniques, achieving 92% accuracy in user preference predictions.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="projects-section">
-    <div class="container">
-      <div class="projects-container" data-aos="fade-up">
-        <div class="row g-4">
-          <!-- Project 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <img src="assets/images/project-recommendation.jpg" alt="Recommendation Engine" class="project-img">
-              <div class="project-body">
-                <h3 class="project-title">Recommendation Engine</h3>
-                <p class="project-text">
-                  Building a sophisticated system using Python, Pandas, scikit-learn, and PostgreSQL for personalized user recommendations.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <img src="assets/images/project-counseling.jpg" alt="College Counseling App" class="project-img">
-              <div class="project-body">
-                <h3 class="project-title">College Counseling App</h3>
-                <p class="project-text">
-                  Integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications and provide personalized guidance.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <img src="assets/images/project-cnn.jpg" alt="Interactive CNN Demo" class="project-img">
-              <div class="project-body">
-                <h3 class="project-title">Interactive CNN Demo</h3>
-                <p class="project-text">
-                  An interactive demo using Keras and the MNIST dataset, showcasing real-time convolutional neural network operations.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Project 4 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="project-card">
-              <img src="assets/images/project-housing.jpg" alt="Housing Price Prediction" class="project-img">
-              <div class="project-body">
-                <h3 class="project-title">Housing Price Prediction</h3>
-                <p class="project-text">
-                  A predictive model with advanced preprocessing, PCA, and outlier handling, achieving an RMSE of 0.106.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Add or remove more project cards as needed -->
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">TensorFlow</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">scikit-learn</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YourUsername/recommendation-engine" target="_blank" class="project-link primary">
+            <i class="fab fa-github"></i> View Code
+          </a>
+          <a href="#" class="project-link secondary">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" aria-label="Back to Top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="mb-2">© 2025 Mohit Bhimrajka. All Rights Reserved.</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" aria-label="LinkedIn Profile">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/MohitBhimrajka" target="_blank" aria-label="GitHub Profile">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:mohitbhimrajka5@gmail.com" aria-label="Email Contact">
-          <i class="fas fa-envelope"></i>
-        </a>
+  <!-- Project 2: College Counseling App -->
+  <div class="col-md-6 col-lg-4" data-category="ai-ml">
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-img-container">
+        <img src="/api/placeholder/400/300" alt="College Counseling App" class="project-img">
+        <span class="project-category">AI/ML</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">College Counseling App</h3>
+        <p class="project-text">
+          Developed an AI-powered counseling system integrating LLMs to provide personalized academic and career guidance to students.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Gemma2</span>
+          <span class="stack-tag">LLaMA</span>
+          <span class="stack-tag">FastAPI</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/YourUsername/counseling-app" target="_blank" class="project-link primary">
+            <i class="fab fa-github"></i> View Code
+          </a>
+          <a href="#" class="project-link secondary">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Add more project cards here -->
 
-  <!-- AOS Library -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100
-    });
+</div>
+</div>
+</section>
 
-    // Navbar Scroll Effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+<!-- Project Stats -->
+<section class="project-stats">
+<div class="container">
+<div class="row g-4">
+  <div class="col-md-3" data-aos="fade-up">
+    <div class="stat-card">
+      <i class="fas fa-code-branch stat-icon"></i>
+      <div class="stat-number" data-target="50">0</div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+  </div>
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+    <div class="stat-card">
+      <i class="fas fa-star stat-icon"></i>
+      <div class="stat-number" data-target="120">0</div>
+      <div class="stat-label">GitHub Stars</div>
+    </div>
+  </div>
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+    <div class="stat-card">
+      <i class="fas fa-code stat-icon"></i>
+      <div class="stat-number" data-target="15000">0</div>
+      <div class="stat-label">Lines of Code</div>
+    </div>
+  </div>
+  <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+    <div class="stat-card">
+      <i class="fas fa-users stat-icon"></i>
+      <div class="stat-number" data-target="25">0</div>
+      <div class="stat-label">Contributors</div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
-    // Back to Top
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
+<!-- GitHub Activity -->
+<section class="github-activity">
+<div class="container">
+<div class="activity-container" data-aos="fade-up">
+  <h2 class="text-center mb-4">GitHub Contributions</h2>
+  <div class="contribution-graph" id="contributionGraph">
+    <!-- Contribution bars will be added via JavaScript -->
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to Top">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<p class="mb-2">© 2025 Mohit Bhimrajka. All Rights Reserved.</p>
+<div class="social-links">
+  <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" aria-label="LinkedIn Profile">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/MohitBhimrajka" target="_blank" aria-label="GitHub Profile">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:mohitbhimrajka5@gmail.com" aria-label="Email Contact">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+duration: 800,
+easing: 'ease-in-out',
+once: true,
+offset: 100
+});
+
+// Navbar Scroll Effect
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 50) {
+  navbar.classList.add('scrolled');
+} else {
+  navbar.classList.remove('scrolled');
+}
+});
+
+// Back to Top Button
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 300) {
+  backToTop.classList.add('visible');
+} else {
+  backToTop.classList.remove('visible');
+}
+});
+backToTop.addEventListener('click', () => {
+window.scrollTo({
+  top: 0,
+  behavior: 'smooth'
+});
+});
+
+// Project Filters
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+button.addEventListener('click', () => {
+  // Remove active class from all buttons
+  filterButtons.forEach(btn => btn.classList.remove('active'));
+  // Add active class to clicked button
+  button.classList.add('active');
+
+  const filter = button.getAttribute('data-filter');
+  
+  projectCards.forEach(card => {
+    const category = card.parentElement.getAttribute('data-category');
+    if (filter === 'all' || filter === category) {
+      card.parentElement.style.display = 'block';
+    } else {
+      card.parentElement.style.display = 'none';
+    }
+  });
+});
+});
+
+// Animate Stats Numbers
+const animateStats = () => {
+const stats = document.querySelectorAll('.stat-number');
+stats.forEach(stat => {
+  const target = parseInt(stat.getAttribute('data-target'));
+  const duration = 2000;
+  const step = target / (duration / 16);
+  let current = 0;
+
+  const updateCounter = () => {
+    current += step;
+    if (current < target) {
+      stat.textContent = Math.floor(current);
+      requestAnimationFrame(updateCounter);
+    } else {
+      stat.textContent = target;
+    }
+  };
+  updateCounter();
+});
+};
+
+// Create GitHub contribution graph
+const createContributionGraph = () => {
+const graph = document.getElementById('contributionGraph');
+const days = 52; // One year of contributions
+
+for (let i = 0; i < days; i++) {
+  const bar = document.createElement('div');
+  bar.className = 'contribution-bar';
+  bar.style.left = `${i * 14}px`; // Space between bars
+  bar.style.height = `${Math.random() * 150 + 50}px`; // Random height
+  graph.appendChild(bar);
+}
+};
+
+// Trigger stats animation when section is in view
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    animateStats();
+    observer.unobserve(entry.target);
+  }
+});
+});
+
+document.querySelector('.project-stats').querySelectorAll('.stat-card').forEach((stat) => {
+observer.observe(stat);
+});
+
+// Initialize contribution graph
+createContributionGraph();
+</script>
 </body>
 </html>

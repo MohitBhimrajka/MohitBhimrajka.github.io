@@ -1,127 +1,155 @@
-# ✨ Mohit Bhimrajka Portfolio ✨
+# Personal Portfolio Website
 
-![Portfolio Banner](assets/images/banner.png)
+A modern, responsive portfolio website showcasing my professional journey, skills, and achievements in AI/ML engineering.
 
-[![Website](https://img.shields.io/website?label=Portfolio&style=for-the-badge&url=https%3A%2F%2Fmohitbhimrajka.github.io)](https://mohitbhimrajka.github.io)
-[![Twitter Follow](https://img.shields.io/twitter/follow/MohitBhimrajka?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2FMohitBhimrajka&screen_name=MohitBhimrajka)
+## 🌐 Live Demo
+Visit the live website: [MohitBhimrajka.github.io](https://MohitBhimrajka.github.io)
 
-> Modern portfolio website showcasing AI/ML and Data Science expertise
+## ✨ Features
 
-[View Demo](https://mohitbhimrajka.github.io) • [Report Bug](https://github.com/MohitBhimrajka/portfolio/issues) • [Request Feature](https://github.com/MohitBhimrajka/portfolio/issues)
+- Responsive design that works on all devices
+- Modern UI with smooth animations and transitions
+- Interactive project showcase with filtering capabilities
+- Detailed certifications display with skills breakdown
+- Achievement timeline with visual elements
+- Contact section with direct communication channels
+- Printable and downloadable resume
 
-## 🚀 Features
+## 🛠️ Tech Stack
 
-* 📱 Fully responsive design optimized for all devices
-* 🎨 Modern UI with Tailwind CSS
-* 🌟 Smooth animations powered by GSAP and AOS
-* 📊 Interactive project showcases
-* 📄 Integrated resume viewer
-* 🎯 Dynamic certifications display
-* 📬 Enhanced contact form
-
-## 🛠️ Built With
-
-* HTML5 & Semantic Markup
-* Tailwind CSS
-* AOS (Animate On Scroll)
-* GSAP (GreenSock Animation Platform)
-* JavaScript (ES6+)
-* Git
+- HTML5
+- CSS3 (with custom variables and animations)
+- JavaScript (ES6+)
+- Bootstrap 5.3
+- Font Awesome Icons
+- Google Fonts
+- AOS (Animate On Scroll) Library
+- Bootswatch Materia Theme
 
 ## 📁 Project Structure
 
-```bash
-my-portfolio/
+```
+portfolio/
+├── index.html               # Home page
+├── resume.html             # Resume/CV page
+├── projects.html           # Projects showcase
+├── certifications.html     # Professional certifications
+├── achievements.html       # Achievements and recognition
+├── contact.html           # Contact information
 ├── assets/
 │   ├── css/
-│   │   └── style.css          # Custom CSS overrides and global styles
+│   │   └── style.css      # Global styles
 │   ├── js/
-│   │   ├── main.js           # Primary JavaScript functionality
-│   │   └── timeline.js       # Timeline functionality
-│   ├── images/               # Image assets
-│   └── pdf/
-│       └── MohitBhimrajka_Resume.pdf
-├── index.html                # Homepage
-├── resume.html              # Resume page
-├── projects.html            # Projects page
-├── certifications.html      # Certifications page
-├── contact.html             # Contact page
-└── README.md                # Documentation
+│   │   └── main.js        # Global JavaScript
+│   ├── images/            # Image assets
+│   └── pdf/               # PDF documents
+└── README.md
 ```
 
-## 💻 Getting Started
+## 🚀 Setup and Deployment
 
-To get a local copy up and running, follow these steps:
-
-### Prerequisites
-
-* A modern web browser
-* Basic understanding of HTML/CSS/JS
-* Code editor (VS Code recommended)
-
-### Installation
-
-1. Clone the repository
-   ```sh
-   git clone https://github.com/MohitBhimrajka/portfolio.git
-   ```
-2. Navigate to project directory
-   ```sh
-   cd portfolio
-   ```
-3. Start local server
-   ```sh
-   python3 -m http.server
-   ```
-4. Open browser and visit
-   ```
-   http://localhost:8000
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MohitBhimrajka/MohitBhimrajka.github.io.git
    ```
 
-## 🚀 Deployment
-
-1. Push your changes
-   ```sh
-   git add .
-   git commit -m "Deploy portfolio updates"
-   git push origin main
+2. Navigate to the project directory:
+   ```bash
+   cd MohitBhimrajka.github.io
    ```
 
-2. Setup GitHub Pages
-   * Go to repository Settings > Pages
-   * Set source to main branch
-   * Your site will be live at `https://<username>.github.io`
+3. Open `index.html` in your browser or use a local server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   
+   # Using Node.js
+   npx serve
+   ```
 
-## 🎨 Customization
+4. Deploy to GitHub Pages:
+   - Push changes to the `main` branch
+   - GitHub Pages will automatically build and deploy your site
 
-* **Content**: Update `index.html` and other pages with your information
-* **Styling**: Modify `assets/css/style.css` for custom styles
-* **Functionality**: Enhance `assets/js/main.js` as needed
+## 📄 Pages Description
 
-## 🔧 Development
+### Home (index.html)
+- Introduction and professional summary
+- Featured projects
+- Key skills and expertise
+- Quick links to other sections
 
-* Built with VS Code
-* Uses Tailwind CSS via CDN
-* GSAP and AOS loaded via CDN
-* Optimized for rapid development
+### Resume (resume.html)
+- Detailed professional experience
+- Educational background
+- Technical skills
+- Downloadable PDF version
 
-## 📝 License
+### Projects (projects.html)
+- Filterable project gallery
+- Detailed project descriptions
+- Live demos and GitHub links
+- Technologies used
 
-Distributed under the MIT License. See `LICENSE` for more information.
+### Certifications (certifications.html)
+- Professional certifications
+- Skills acquired
+- Verification links
+- Timeline of achievements
 
-## 🤝 Credits
+### Achievements (achievements.html)
+- Professional milestones
+- Awards and recognition
+- Leadership roles
+- Community contributions
 
-* [Tailwind CSS](https://tailwindcss.com)
-* [AOS Library](https://michalsnik.github.io/aos/)
-* [GSAP](https://greensock.com/gsap/)
-* [Google Fonts](https://fonts.google.com)
+### Contact (contact.html)
+- Professional contact information
+- Social media links
+- Direct communication channels
 
-## 📧 Contact
+## 🔧 Customization
 
-Mohit Bhimrajka - [@MohitBhimrajka](https://twitter.com/MohitBhimrajka)
+1. **Colors**: Modify color variables in `assets/css/style.css`:
+   ```css
+   :root {
+     --primary-color: #2563eb;
+     --primary-dark: #1E3A8A;
+     /* ... other variables */
+   }
+   ```
 
-Project Link: [https://github.com/MohitBhimrajka/portfolio](https://github.com/MohitBhimrajka/portfolio)
+2. **Content**: Update personal information in respective HTML files
 
----
+3. **Images**: Replace images in `assets/images/` with your own
 
-<p align="center">Made with ❤️ by Mohit Bhimrajka</p>
+4. **Resume**: Update `assets/pdf/Mohit_Bhimrajka_Resume.pdf` with your latest resume
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints at:
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+
+## 🤝 Contributing
+
+Feel free to fork this repository and customize it for your own use. If you find any issues or have suggestions for improvements, please create an issue or submit a pull request.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- Email: mohitbhimrajka5@gmail.com
+- LinkedIn: [linkedin.com/in/mohit-bhimrajka](https://linkedin.com/in/mohit-bhimrajka)
+- GitHub: [github.com/MohitBhimrajka](https://github.com/MohitBhimrajka)
+
+## 🙏 Acknowledgments
+
+- [Bootstrap](https://getbootstrap.com)
+- [Font Awesome](https://fontawesome.com)
+- [AOS Library](https://michalsnik.github.io/aos/)
+- [Bootswatch](https://bootswatch.com)
+- [Google Fonts](https://fonts.google.com)

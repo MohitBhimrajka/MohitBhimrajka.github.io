@@ -6,8 +6,8 @@
   <title>Resume | Mohit Bhimrajka - AI/ML Engineer</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore the professional resume of Mohit Bhimrajka - AI/ML Engineer and technology enthusiast.">
-  <meta name="keywords" content="Resume, AI Engineer, ML Engineer, Mohit Bhimrajka">
+  <meta name="description" content="Professional resume of Mohit Bhimrajka - AI/ML Engineer specializing in artificial intelligence and machine learning.">
+  <meta name="keywords" content="Resume, AI Engineer, ML Engineer, Mohit Bhimrajka, Machine Learning">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,7 +28,10 @@
       --primary-dark: #1E3A8A;
       --text-dark: #333333;
       --text-light: #666666;
+      --bg-light: #f8fafc;
+      --section-bg: #ffffff;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -36,23 +39,28 @@
       overflow-x: hidden;
       background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
+
+    /* Navbar Styles */
     .navbar {
       padding: 1rem 0;
       transition: all 0.3s ease;
       background: var(--primary-color) !important;
     }
+
     .navbar.scrolled {
       padding: 0.5rem 0;
       background: rgba(37, 99, 235, 0.98) !important;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .nav-link {
       font-weight: 500;
       padding: 0.5rem 1rem !important;
       color: #ffffff !important;
       transition: all 0.3s ease;
     }
+
     .nav-link:hover {
       transform: translateY(-2px);
       opacity: 0.9;
@@ -66,143 +74,368 @@
       position: relative;
       overflow: hidden;
     }
+
     .header-section::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' ...%3E");
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
     }
+
     .header-content {
       position: relative;
       z-index: 1;
       text-align: center;
     }
+
     .header-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .header-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       opacity: 0.9;
       max-width: 700px;
       margin: 0 auto;
     }
 
-    /* Main Resume Section */
+    /* Resume Content */
     .resume-section {
       padding: 5rem 0;
       margin-top: -4rem;
     }
+
     .resume-container {
-      background: white;
+      background: var(--section-bg);
       border-radius: 2rem;
       padding: 3rem;
       box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
     }
+
     .resume-header {
-      margin-bottom: 2rem;
       text-align: center;
+      margin-bottom: 3rem;
     }
-    .resume-title {
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-light);
+    }
+
+    .contact-item i {
+      color: var(--primary-color);
+    }
+
+    .section-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.75rem;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-title i {
+      font-size: 1.25rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .skill-category {
+      background: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .skill-category h4 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-list li::before {
+      content: '•';
+      color: var(--primary-color);
+    }
+
+    /* Experience Section */
+    .experience-item {
+      padding: 1.5rem;
+      border-left: 3px solid var(--primary-color);
+      background: var(--bg-light);
+      border-radius: 0 1rem 1rem 0;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .company-name {
       font-weight: 600;
       color: var(--primary-color);
     }
 
-    /* Download and Print Buttons */
-    .resume-buttons {
-      margin-top: 2rem;
-      text-align: center;
+    .experience-date {
+      color: var(--text-light);
+      font-size: 0.9rem;
     }
-    .resume-buttons a,
-    .resume-buttons button {
+
+    .experience-title {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Education Section */
+    .education-item {
+      background: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .university-name {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .degree-info {
+      margin-bottom: 0.5rem;
+    }
+
+    .education-date {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Projects Section */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-card {
+      background: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .project-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .project-tag {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary-color);
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+    }
+
+    /* Leadership Section */
+    .leadership-item {
+      background: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .leadership-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .role-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Awards Section */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .award-card {
+      background: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .award-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    .award-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Resume Actions */
+    .resume-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .resume-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.75rem;
-      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
       font-weight: 500;
       transition: all 0.3s ease;
-      margin: 0.5rem;
+      text-decoration: none;
     }
-    .btn-download {
+
+    .resume-btn.primary {
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
       color: white;
       border: none;
     }
-    .btn-download:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-      color: white;
-    }
-    .btn-print {
+
+    .resume-btn.secondary {
       background: white;
       color: var(--primary-color);
       border: 2px solid var(--primary-color);
     }
-    .btn-print:hover {
-      transform: translateY(-2px);
-      background: var(--primary-color);
-      color: white;
-    }
 
-    /* Back to Top Button */
-    #back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--primary-color);
-      color: white;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-    }
-    #back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-    #back-to-top:hover {
-      transform: translateY(-5px);
+    .resume-btn:hover {
+      transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
     }
 
-    /* Footer */
-    .footer {
-      background: white;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .social-links a {
-      color: var(--primary-color);
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-    }
-    .social-links a:hover {
-      color: var(--primary-dark);
-      transform: translateY(-2px);
+    /* Print Styles */
+    @media print {
+      .navbar,
+      .header-section,
+      .resume-actions,
+      #back-to-top,
+      .footer {
+        display: none !important;
+      }
+
+      .resume-section {
+        margin-top: 0;
+        padding: 0;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      body {
+        background: white;
+      }
+
+      .section-title {
+        break-after: avoid;
+      }
+
+      .page-break {
+        break-after: page;
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -215,7 +448,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <!-- Adjust active link for Resume -->
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -245,9 +477,9 @@
   <section class="header-section">
     <div class="container">
       <div class="header-content">
-        <h1 class="header-title" data-aos="fade-up">My Resume</h1>
+        <h1 class="header-title" data-aos="fade-up">Professional Resume</h1>
         <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
-          A comprehensive overview of my academic achievements, professional experiences, and skill sets.
+          A comprehensive overview of my journey in AI, machine learning, and technology leadership.
         </p>
       </div>
     </div>
@@ -257,57 +489,238 @@
   <section class="resume-section">
     <div class="container">
       <div class="resume-container" data-aos="fade-up">
+        <!-- Resume Header -->
         <div class="resume-header">
-          <h2 class="resume-title">Professional Summary</h2>
-          <p class="text-muted">
-            AI-focused technology student and emerging leader with a strong foundation in AI/ML, Data Science, and Big Data analytics.
-            Developed a top-3 ranked recommendation engine and reduced ideation-to-production time by 20% during a GenAI internship at Siemens.
+          <h1>Mohit Bhimrajka</h1>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 90043 82252</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>mohitbhimrajka5@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Mumbai, Maharashtra</span>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-globe"></i>
+              <a href="https://MohitBhimrajka.github.io/" target="_blank">Portfolio</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/MohitBhimrajka" target="_blank">GitHub</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-user-tie"></i>
+            Professional Summary
+          </h2>
+          <p>
+            AI-focused technology student and emerging leader with a strong foundation in AI/ML, Data Science, and Big Data analytics. 
+            Currently developing a recommendation engine that ranked in the top 3 among my batch, showcasing innovation and technical excellence. 
+            Demonstrated ability to drive efficiency—reducing ideation-to-production time by 20% during my GenAI internship at Siemens—while 
+            bridging technical insights with strategic business needs.
           </p>
         </div>
 
-        <hr>
+        <!-- Core Competencies & Skills -->
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-laptop-code"></i>
+            Core Competencies & Skills
+          </h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4><i class="fas fa-code"></i>Programming & Data Analysis</h4>
+              <ul class="skill-list">
+                <li>Python (Pandas, NumPy, SciPy, scikit-learn)</li>
+                <li>Jupyter Notebook</li>
+                <li>Matplotlib, Seaborn</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4><i class="fas fa-brain"></i>Machine Learning & AI</h4>
+              <ul class="skill-list">
+                <li>TensorFlow, PyTorch</li>
+                <li>LLM integration (Llama, OpenAI, Deepseek)</li>
+                <li>Generative AI & Prompt Design</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4><i class="fas fa-database"></i>Big Data & Databases</h4>
+              <ul class="skill-list">
+                <li>Apache Spark, Hadoop</li>
+                <li>SQL, NoSQL (MongoDB, Redis)</li>
+                <li>Data Engineering</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4><i class="fas fa-tools"></i>Tools & Platforms</h4>
+              <ul class="skill-list">
+                <li>Docker, JIRA</li>
+                <li>Google Cloud</li>
+                <li>Snowflake</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <!-- Education -->
-        <div class="mt-4">
-          <h3 class="text-primary mb-2">Education</h3>
-          <p><strong>B.Tech in Computer Science (AI &amp; ML)</strong> - ATLAS SkillTech University (CGPA: 9.03/10.00)</p>
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-graduation-cap"></i>
+            Education
+          </h2>
+          <div class="education-item">
+            <h3 class="university-name">ATLAS SkillTech University</h3>
+            <div class="degree-info">
+              <strong>Bachelor of Technology in Computer Science, AI & ML</strong>
+              <span class="education-date">Jul 2023 – Jun 2027</span>
+            </div>
+            <p><strong>CGPA:</strong> 9.03/10.00</p>
+            <p><strong>Relevant Coursework:</strong> Machine Learning, Data Engineering & Large-Scale Storage, 
+              Data Structures & Algorithms, DevOps & MLOps</p>
+          </div>
         </div>
 
-        <!-- Experience -->
-        <div class="mt-4">
-          <h3 class="text-primary mb-2">Professional Experience</h3>
-          <ul class="list-unstyled">
-            <li class="mb-3">
-              <strong>GenAI Intern</strong>, Siemens AG (Jun 2024 - Dec 2024)<br>
-              Developed an AI-driven assistant integrating LLaMA 3.1, reducing production time by 20%.
-            </li>
-            <li>
-              <strong>Data Science Intern</strong>, University of Technology Sydney (Jan 2024 - May 2024)<br>
-              Enhanced COVID-19 simulation tools and UI/UX design for improved usability.
-            </li>
-          </ul>
+        <!-- Professional Experience -->
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-briefcase"></i>
+            Professional Experience
+          </h2>
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3 class="company-name">Siemens AG</h3>
+                <h4 class="experience-title">GenAI Intern</h4>
+              </div>
+              <span class="experience-date">May 2024 – Jul 2024</span>
+            </div>
+            <ul>
+              <li>Developed an AI-driven assistant using Python and NLP tools, particularly FAISS embeddings</li>
+              <li>Integrated LLaMA 3.1 to reduce ideation-to-production cycle by 20%</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3 class="company-name">University of Technology Sydney</h3>
+                <h4 class="experience-title">Data Science Intern</h4>
+              </div>
+              <span class="experience-date">May 2024 – Jul 2024</span>
+            </div>
+            <ul>
+              <li>Developed custom PDF generation functionality for a COVID-19 simulation tool</li>
+              <li>Streamlined pandemic data dissemination and designed a user-centric UI/UX for SEIRDS model</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Key Projects -->
-        <div class="mt-4">
-          <h3 class="text-primary mb-2">Key Projects</h3>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-check-circle text-success me-2"></i>Recommendation Engine (Ongoing)</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>College Counseling App</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Interactive CNN Demo</li>
-            <li><i class="fas fa-check-circle text-success me-2"></i>Housing Price Prediction</li>
-          </ul>
+        <!-- Projects -->
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-project-diagram"></i>
+            Projects
+          </h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <h3 class="project-title">
+                <i class="fas fa-star"></i>
+                Recommendation Engine
+              </h3>
+              <p>Building a sophisticated recommendation engine with Python (Pandas, scikit-learn) and PostgreSQL.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">ML</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3 class="project-title">
+                <i class="fas fa-graduation-cap"></i>
+                College Counseling App
+              </h3>
+              <p>Developed an app integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications.</p>
+              <div class="project-tags">
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">AI</span>
+                <span class="project-tag">Python</span>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3 class="project-title">
+                <i class="fas fa-brain"></i>
+                Interactive CNN Demo
+              </h3>
+              <p>Created an interactive CNN demo using Keras and the MNIST dataset for real-time visualization.</p>
+              <div class="project-tags">
+                <span class="project-tag">Deep Learning</span>
+                <span class="project-tag">Keras</span>
+                <span class="project-tag">CNN</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <hr>
+        <!-- Leadership -->
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-users"></i>
+            Leadership & Activities
+          </h2>
+          <div class="leadership-item">
+            <h3 class="role-title">Vice President, STAGE (Cultural Club)</h3>
+            <p class="experience-date">Aug 2024 – Present</p>
+            <p>Oversee cultural initiatives and coordinate multidisciplinary teams to execute high-impact events.</p>
+          </div>
+          <div class="leadership-item">
+            <h3 class="role-title">Community Lead, Code Vipassana</h3>
+            <p class="experience-date">Mar 2024 – Present</p>
+            <p>Organized technical workshops and community events, fostering collaboration and knowledge exchange.</p>
+          </div>
+        </div>
 
-        <!-- Buttons: Download & Print -->
-        <div class="resume-buttons">
-          <a href="assets/pdf/MohitBhimrajka_Resume.pdf" download class="btn-download">
-            <i class="fas fa-download"></i> Download PDF
+        <!-- Awards -->
+        <div class="section" data-aos="fade-up">
+          <h2 class="section-title">
+            <i class="fas fa-trophy"></i>
+            Awards & Achievements
+          </h2>
+          <div class="awards-grid">
+            <div class="award-card">
+              <h3 class="award-title">SAT Math Excellence</h3>
+              <p>Scored 740/800, demonstrating outstanding quantitative aptitude.</p>
+            </div>
+            <div class="award-card">
+              <h3 class="award-title">ATLAS Achievers Award</h3>
+              <p>Recognized for exceptional leadership and technical contributions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resume Actions -->
+        <div class="resume-actions">
+          <a href="assets/Mohit_Bhimrajka_Resume.pdf" download class="resume-btn primary">
+            <i class="fas fa-download"></i>
+            Download PDF
           </a>
-          <button class="btn-print" onclick="window.print()">
-            <i class="fas fa-print"></i> Print Resume
+          <button onclick="window.print()" class="resume-btn secondary">
+            <i class="fas fa-print"></i>
+            Print Resume
           </button>
         </div>
       </div>
@@ -328,7 +741,7 @@
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://github.com/MohitBhimrajka" target="_blank" aria-label="GitHub Profile">
-          <i class="fab fa-github"></i>
+          <i class="fab-github"></i>
         </a>
         <a href="mailto:mohitbhimrajka5@gmail.com" aria-label="Email Contact">
           <i class="fas fa-envelope"></i>
@@ -342,6 +755,7 @@
 
   <!-- AOS Library -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   <script>
     // Initialize AOS
     AOS.init({
@@ -361,7 +775,7 @@
       }
     });
 
-    // Back to Top
+    // Back to Top Button
     const backToTop = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
@@ -376,6 +790,82 @@
         behavior: 'smooth'
       });
     });
+
+    // Skill Progress Animation
+    const animateSkills = () => {
+      const skillBars = document.querySelectorAll('.skill-progress');
+      skillBars.forEach(bar => {
+        const target = parseInt(bar.getAttribute('data-progress'));
+        let width = 0;
+        const interval = setInterval(() => {
+          if (width >= target) {
+            clearInterval(interval);
+          } else {
+            width++;
+            bar.style.width = width + '%';
+          }
+        }, 10);
+      });
+    };
+
+    // Observer for skill animation
+    const skillsSection = document.querySelector('.skills-section');
+    if (skillsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateSkills();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      observer.observe(skillsSection);
+    }
+
+    // Print Handler
+    const handlePrint = () => {
+      window.print();
+    };
+
+    // Download Handler
+    const handleDownload = (event) => {
+      // Optional: Add analytics tracking for resume downloads
+      console.log('Resume downloaded');
+    };
+
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Optional: Add custom print styles dynamically
+    if (window.matchMedia) {
+      const mediaQueryList = window.matchMedia('print');
+      mediaQueryList.addListener(function(mql) {
+        if (mql.matches) {
+          console.log('Printing...');
+          // Add any pre-print preparations here
+        }
+      });
+    }
+
+    // Optional: Detect if PDF is actually downloaded
+    const downloadButton = document.querySelector('.resume-btn.primary');
+    if (downloadButton) {
+      downloadButton.addEventListener('click', (e) => {
+        // You could add analytics tracking here
+        console.log('Resume download initiated');
+      });
+    }
   </script>
 </body>
 </html>
