@@ -102,81 +102,77 @@
       align-items: center;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .hero-pattern {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.1;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff'/%3E%3C/svg%3E");
+      display: none;
     }
 
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       text-align: center;
       padding: 2rem 0;
     }
 
     .hero-title {
-      font-family: 'Poppins', sans-serif;
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .hero-subtitle {
       font-size: 1.25rem;
       opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto 3rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       justify-content: center;
       margin-top: 2rem;
     }
 
     .hero-btn {
-      padding: 1rem 2.5rem;
+      padding: 1rem 2rem;
       border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
+      font-weight: 500;
       transition: all 0.3s ease;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
 
-    .about-btn {
+    .hero-btn-primary {
       background: white;
       color: var(--primary-color);
+      border: none;
     }
 
-    .about-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      color: var(--primary-color);
+    .hero-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: var(--gradient-start);
     }
 
-    .resume-btn {
-      background: rgba(255, 255, 255, 0.1);
+    .hero-btn-secondary {
+      background: transparent;
       color: white;
-      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.9);
     }
 
-    .resume-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    .hero-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
       color: white;
     }
 
@@ -225,7 +221,11 @@
 
     /* Skills Section */
     .skills-section {
-      margin-top: 3rem;
+      margin-top: 2rem;
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     .skills-heading {
@@ -237,55 +237,59 @@
     }
 
     .skill-category {
-      margin-bottom: 2rem;
+      background: #f8fafc;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .category-title {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--primary-color);
       margin-bottom: 1rem;
-      color: var(--text-dark);
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-    }
-
-    .category-title i {
-      color: var(--primary-color);
+      gap: 0.5rem;
     }
 
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
 
     .skill-tag {
-      background: #f1f5f9;
-      color: var(--primary-color);
-      padding: 0.5rem 1rem;
+      background: white;
+      color: var(--text-dark);
+      padding: 0.4rem 0.8rem;
       border-radius: 25px;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.85rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
     }
 
     .skill-tag:hover {
-      background: var(--primary-color);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
       transform: translateY(-2px);
     }
 
     /* Features Section */
     .features-section {
-      padding: 6rem 0;
-      background: #f8fafc;
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
 
     .feature-box {
       background: white;
-      border-radius: 2rem;
-      padding: 3rem;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
       text-align: center;
       transition: all 0.3s ease;
       text-decoration: none;
@@ -294,19 +298,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     .feature-box:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       color: var(--text-dark);
     }
 
     .feature-icon {
-      font-size: 3rem;
-      color: var(--primary-color);
+      font-size: 2.5rem;
+      color: var(--gradient-start);
       margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover .feature-icon {
+      transform: scale(1.1);
+      color: var(--gradient-end);
     }
 
     .feature-title {
@@ -504,7 +514,7 @@
       <div class="about-container">
         <div class="row align-items-center">
           <div class="col-lg-5 text-center" data-aos="fade-right">
-            <img src="assets/images/Mohit_image.png" alt="Mohit Bhimrajka" class="profile-image">
+            <img src="./assets/images/Mohit_image.png" alt="Mohit Bhimrajka" class="profile-image">
           </div>
           <div class="col-lg-7" data-aos="fade-left">
             <div class="about-content">
@@ -515,88 +525,69 @@
               <p>
                 My journey spans from developing sophisticated recommendation engines to creating AI-powered educational tools. I'm particularly interested in the intersection of AI with real-world applications, focusing on making technology more accessible and impactful.
               </p>
+              
+              <!-- Skills Grid Layout -->
               <div class="skills-section">
-                <h3 class="skills-heading">Technical Expertise</h3>
-                
-                <!-- Programming & Data Analysis -->
-                <div class="skill-category">
-                  <h4 class="category-title">
-                    <i class="fas fa-code"></i>
-                    Programming & Data Analysis
-                  </h4>
-                  <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">SciPy</span>
-                    <span class="skill-tag">scikit-learn</span>
-                    <span class="skill-tag">Jupyter Notebook</span>
-                    <span class="skill-tag">Matplotlib</span>
-                    <span class="skill-tag">Seaborn</span>
+                <h3 class="skills-heading mb-4">Technical Expertise</h3>
+                <div class="row g-4">
+                  <!-- Programming & Data Analysis -->
+                  <div class="col-md-6">
+                    <div class="skill-category">
+                      <h4 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Core Skills
+                      </h4>
+                      <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">scikit-learn</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Machine Learning & AI -->
-                <div class="skill-category">
-                  <h4 class="category-title">
-                    <i class="fas fa-brain"></i>
-                    Machine Learning & AI
-                  </h4>
-                  <div class="skill-tags">
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">LLM Integration</span>
-                    <span class="skill-tag">Langchain</span>
-                    <span class="skill-tag">Ollama</span>
-                    <span class="skill-tag">OpenAI</span>
-                    <span class="skill-tag">Deepseek</span>
-                    <span class="skill-tag">Generative AI</span>
-                    <span class="skill-tag">Prompt Design</span>
-                    <span class="skill-tag">Multimodal Prompting</span>
+                  <!-- AI/ML -->
+                  <div class="col-md-6">
+                    <div class="skill-category">
+                      <h4 class="category-title">
+                        <i class="fas fa-brain"></i>
+                        AI/ML
+                      </h4>
+                      <div class="skill-tags">
+                        <span class="skill-tag">LLM Integration</span>
+                        <span class="skill-tag">Langchain</span>
+                        <span class="skill-tag">Prompt Design</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Big Data & Databases -->
-                <div class="skill-category">
-                  <h4 class="category-title">
-                    <i class="fas fa-database"></i>
-                    Big Data & Databases
-                  </h4>
-                  <div class="skill-tags">
-                    <span class="skill-tag">Apache Spark</span>
-                    <span class="skill-tag">Hadoop</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Redis</span>
+                  <!-- Data & Tools -->
+                  <div class="col-md-6">
+                    <div class="skill-category">
+                      <h4 class="category-title">
+                        <i class="fas fa-database"></i>
+                        Data & Tools
+                      </h4>
+                      <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Docker</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Tools & Platforms -->
-                <div class="skill-category">
-                  <h4 class="category-title">
-                    <i class="fas fa-tools"></i>
-                    Tools & Platforms
-                  </h4>
-                  <div class="skill-tags">
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">JIRA</span>
-                    <span class="skill-tag">Google Cloud</span>
-                    <span class="skill-tag">Snowflake</span>
-                  </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="skill-category">
-                  <h4 class="category-title">
-                    <i class="fas fa-user-tie"></i>
-                    Professional Skills
-                  </h4>
-                  <div class="skill-tags">
-                    <span class="skill-tag">Project Management</span>
-                    <span class="skill-tag">Strategic Planning</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Critical Thinking</span>
+                  <!-- Professional -->
+                  <div class="col-md-6">
+                    <div class="skill-category">
+                      <h4 class="category-title">
+                        <i class="fas fa-user-tie"></i>
+                        Professional
+                      </h4>
+                      <div class="skill-tags">
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Project Management</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -610,13 +601,14 @@
   <!-- Features Section -->
   <section class="features-section">
     <div class="container">
+      <h2 class="text-center mb-5" style="color: var(--primary-color); font-family: 'Poppins', sans-serif; font-weight: 600;">Explore My Work</h2>
       <div class="row g-4">
         <div class="col-lg-4" data-aos="fade-up">
           <a href="projects.html" class="feature-box">
             <i class="fas fa-robot feature-icon"></i>
             <h3 class="feature-title">AI Projects</h3>
             <p class="feature-text">
-              Delve into my portfolio of cutting-edge machine learning and AI projects pushing the boundaries of technology.
+              Explore cutting-edge machine learning and AI projects pushing technology boundaries.
             </p>
           </a>
         </div>
@@ -625,7 +617,7 @@
             <i class="fas fa-chalkboard-teacher feature-icon"></i>
             <h3 class="feature-title">Leadership</h3>
             <p class="feature-text">
-              Discover how I spearhead large-scale initiatives, mentor teams, and drive impactful innovations.
+              Discover how I lead initiatives and drive impactful innovations.
             </p>
           </a>
         </div>
@@ -634,7 +626,7 @@
             <i class="fas fa-certificate feature-icon"></i>
             <h3 class="feature-title">Certifications</h3>
             <p class="feature-text">
-              Explore a collection of industry-recognized credentials that validate my expertise in AI, data science, and beyond.
+              View my industry-recognized credentials in AI and data science.
             </p>
           </a>
         </div>

@@ -68,7 +68,7 @@
 
     /* Header Section */
     .header-section {
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      background: linear-gradient(135deg, #1a365d 0%, #0f172a 100%);
       color: white;
       padding: 8rem 0 6rem;
       position: relative;
@@ -76,14 +76,7 @@
     }
 
     .header-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
-      opacity: 0.1;
+      display: none;  /* Remove texture */
     }
 
     .header-content {
@@ -96,15 +89,56 @@
       font-family: 'Poppins', sans-serif;
       font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .header-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       opacity: 0.9;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Stats in Hero Section */
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-width: 200px;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-label {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Remove old Stats Section */
+    .stats-section {
+      display: none;
     }
 
     /* Achievement Categories */
@@ -284,50 +318,6 @@
       transform: translateY(-2px);
     }
 
-    /* Stats Section */
-    .stats-section {
-      padding: 4rem 0;
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-      margin-top: 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 2rem;
-      border-radius: 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 1;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .stat-icon {
-      font-size: 2rem;
-      color: white;
-      margin-bottom: 1rem;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
-    }
-
     /* Back to Top Button */
     #back-to-top {
       position: fixed;
@@ -479,28 +469,18 @@
         <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
           Showcasing leadership achievements, community impact, and technical excellence throughout my journey.
         </p>
-        <!-- Stats Section -->
-        <div class="row mt-5 g-4 justify-content-center">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-card">
-              <i class="fas fa-users stat-icon"></i>
-              <div class="stat-number" data-target="300">0</div>
-              <div class="stat-label">Students Impacted</div>
-            </div>
+        <div class="hero-stats">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number" data-target="150">0</div>
+            <div class="stat-label">Students Mentored</div>
           </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-card">
-              <i class="fas fa-calendar-check stat-icon"></i>
-              <div class="stat-number" data-target="15">0</div>
-              <div class="stat-label">Events Organized</div>
-            </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">Events Organized</div>
           </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="stat-card">
-              <i class="fas fa-user-tie stat-icon"></i>
-              <div class="stat-number" data-target="6">0</div>
-              <div class="stat-label">Leadership Roles</div>
-            </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Leadership Roles</div>
           </div>
         </div>
       </div>
