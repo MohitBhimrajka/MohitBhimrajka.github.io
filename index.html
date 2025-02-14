@@ -225,88 +225,64 @@
 
     /* Skills Section */
     .skills-section {
-      margin-top: 3rem;
-      background: white;
-      border-radius: 1.5rem;
-      padding: 2.5rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-top: 2rem;
+      background: #f8fafc;
+      border-radius: 1rem;
+      padding: 2rem;
     }
 
     .skills-heading {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
+      font-size: 1.5rem;
       color: var(--primary-color);
+      margin-bottom: 1.5rem;
       text-align: center;
-      position: relative;
-      padding-bottom: 1rem;
     }
 
-    .skills-heading::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      border-radius: 3px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
 
     .skill-category {
-      background: #f8fafc;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      height: 100%;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .skill-category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border-color: var(--gradient-start);
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .category-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--primary-color);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-weight: 600;
+      gap: 0.5rem;
     }
 
     .category-title i {
-      font-size: 1.4rem;
       color: var(--gradient-start);
     }
 
-    .skill-tags {
+    .skill-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.5rem;
     }
 
-    .skill-tag {
-      background: white;
-      color: var(--text-dark);
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
+    .skill-item {
+      background: #f1f5f9;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.5rem;
       font-size: 0.9rem;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: var(--text-dark);
       transition: all 0.3s ease;
-      font-weight: 500;
     }
 
-    .skill-tag:hover {
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    .skill-item:hover {
+      background: var(--gradient-start);
       color: white;
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     /* Features Section */
@@ -555,67 +531,40 @@
                 My journey spans from developing sophisticated recommendation engines to creating AI-powered educational tools. I'm particularly interested in the intersection of AI with real-world applications, focusing on making technology more accessible and impactful.
               </p>
               
-              <!-- Skills Grid Layout -->
+              <!-- Skills Section -->
               <div class="skills-section">
-                <h3 class="skills-heading mb-4">Technical Expertise</h3>
-                <div class="row g-4">
-                  <!-- Programming & Data Analysis -->
-                  <div class="col-md-6">
-                    <div class="skill-category">
-                      <h4 class="category-title">
-                        <i class="fas fa-code"></i>
-                        Core Skills
-                      </h4>
-                      <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">scikit-learn</span>
-                      </div>
+                <h3 class="skills-heading">Technical Expertise</h3>
+                <div class="skills-grid">
+                  <div class="skill-category">
+                    <h4 class="category-title"><i class="fas fa-code"></i>Core Skills</h4>
+                    <div class="skill-list">
+                      <span class="skill-item">Python</span>
+                      <span class="skill-item">TensorFlow</span>
+                      <span class="skill-item">PyTorch</span>
+                      <span class="skill-item">scikit-learn</span>
                     </div>
                   </div>
-
-                  <!-- AI/ML -->
-                  <div class="col-md-6">
-                    <div class="skill-category">
-                      <h4 class="category-title">
-                        <i class="fas fa-brain"></i>
-                        AI/ML
-                      </h4>
-                      <div class="skill-tags">
-                        <span class="skill-tag">LLM Integration</span>
-                        <span class="skill-tag">Langchain</span>
-                        <span class="skill-tag">Prompt Design</span>
-                      </div>
+                  <div class="skill-category">
+                    <h4 class="category-title"><i class="fas fa-brain"></i>AI/ML</h4>
+                    <div class="skill-list">
+                      <span class="skill-item">LLM Integration</span>
+                      <span class="skill-item">Langchain</span>
+                      <span class="skill-item">Prompt Design</span>
                     </div>
                   </div>
-
-                  <!-- Data & Tools -->
-                  <div class="col-md-6">
-                    <div class="skill-category">
-                      <h4 class="category-title">
-                        <i class="fas fa-database"></i>
-                        Data & Tools
-                      </h4>
-                      <div class="skill-tags">
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Docker</span>
-                      </div>
+                  <div class="skill-category">
+                    <h4 class="category-title"><i class="fas fa-database"></i>Data & Tools</h4>
+                    <div class="skill-list">
+                      <span class="skill-item">SQL</span>
+                      <span class="skill-item">MongoDB</span>
+                      <span class="skill-item">Docker</span>
                     </div>
                   </div>
-
-                  <!-- Professional -->
-                  <div class="col-md-6">
-                    <div class="skill-category">
-                      <h4 class="category-title">
-                        <i class="fas fa-user-tie"></i>
-                        Professional
-                      </h4>
-                      <div class="skill-tags">
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">Project Management</span>
-                      </div>
+                  <div class="skill-category">
+                    <h4 class="category-title"><i class="fas fa-user-tie"></i>Professional</h4>
+                    <div class="skill-list">
+                      <span class="skill-item">Leadership</span>
+                      <span class="skill-item">Project Management</span>
                     </div>
                   </div>
                 </div>
