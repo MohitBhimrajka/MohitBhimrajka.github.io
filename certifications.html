@@ -187,6 +187,8 @@
       height: 100%;
       transition: all 0.3s ease;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+      display: flex;
+      flex-direction: column;
     }
 
     .cert-card:hover {
@@ -201,7 +203,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 120px;
+      min-height: 120px;
     }
 
     .cert-banner {
@@ -225,6 +227,9 @@
 
     .cert-body {
       padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .cert-title {
@@ -233,6 +238,12 @@
       font-weight: 600;
       margin-bottom: 1rem;
       color: var(--text-dark);
+      min-height: 3.6rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .cert-issuer {
@@ -241,6 +252,7 @@
       justify-content: space-between;
       margin-bottom: 1rem;
       color: var(--text-light);
+      min-height: 24px;
     }
 
     .verified-badge {
@@ -258,12 +270,20 @@
       color: var(--text-light);
       font-size: 0.9rem;
       margin-bottom: 1.5rem;
+      min-height: 20px;
     }
 
     .cert-description {
       color: var(--text-light);
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       font-size: 0.95rem;
+      flex-grow: 1;
+      min-height: 80px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .skills-title {
@@ -278,6 +298,7 @@
       flex-wrap: wrap;
       gap: 0.75rem;
       margin-bottom: 2rem;
+      min-height: 90px;
     }
 
     .skill-tag {
@@ -297,23 +318,52 @@
     }
 
     .cert-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--primary-color);
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
       text-decoration: none;
       border-radius: 50px;
       font-weight: 500;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--gradient-end) 0%, var(--gradient-start) 100%);
+      opacity: 0;
       transition: all 0.3s ease;
     }
 
     .cert-link:hover {
-      background: var(--primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
       color: white;
+    }
+
+    .cert-link:hover::before {
+      opacity: 1;
+    }
+
+    .cert-link i {
+      margin-right: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cert-link span {
+      position: relative;
+      z-index: 1;
     }
 
     /* Back to Top Button */
@@ -530,7 +580,7 @@
                 </div>
                 <a href="https://www.coursera.org/account/accomplishments/records/46U2Y6M0IDZT" target="_blank" class="cert-link">
                   <i class="fas fa-external-link-alt"></i>
-                  View Certificate
+                  <span>View Certificate</span>
                 </a>
               </div>
             </div>

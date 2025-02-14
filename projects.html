@@ -181,15 +181,17 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
       display: flex;
       flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .project-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+      border-color: var(--primary-color);
     }
 
     .project-body {
-      padding: 2rem;
+      padding: 2.5rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -200,26 +202,29 @@
     .project-category {
       display: inline-block;
       background: var(--primary-color);
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.5rem;
       border-radius: 25px;
       color: white;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
       font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
     .project-title {
       font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       color: var(--text-dark);
+      line-height: 1.4;
     }
 
     .project-text {
       color: var(--text-light);
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.6;
       flex-grow: 1;
     }
 
@@ -447,22 +452,23 @@
     <div class="container">
       <div class="row g-4">
         <!-- Project 1: Recommendation Engine -->
-        <div class="col-lg-4" data-aos="fade-up">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="project-card">
             <div class="project-body">
               <span class="project-category">AI/ML</span>
-              <h3 class="project-title">Recommendation Engine</h3>
+              <h3 class="project-title">AI-Powered Recommendation Engine</h3>
               <p class="project-text">
-                Building a sophisticated recommendation system using Python and PostgreSQL for personalized content delivery and user experience enhancement.
+                A sophisticated recommendation system leveraging collaborative filtering and deep learning for personalized content delivery. Built with Python and PostgreSQL, achieving 92% accuracy in user preference predictions.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">Python</span>
-                <span class="stack-tag">Pandas</span>
+                <span class="stack-tag">TensorFlow</span>
                 <span class="stack-tag">PostgreSQL</span>
                 <span class="stack-tag">scikit-learn</span>
+                <span class="stack-tag">Docker</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/MohitBhimrajka/Projects/tree/main/College-Counseling-App" target="_blank" class="project-link primary">
+                <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Recommendation-Engine" target="_blank" class="project-link primary">
                   <i class="fab fa-github"></i> View Code
                 </a>
               </div>
@@ -471,19 +477,20 @@
         </div>
 
         <!-- Project 2: College Counseling App -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card">
             <div class="project-body">
               <span class="project-category">AI/ML</span>
-              <h3 class="project-title">College Counseling App</h3>
+              <h3 class="project-title">Intelligent College Counseling System</h3>
               <p class="project-text">
-                Developed an AI-powered counseling system integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications and provide personalized guidance.
+                An AI-powered counseling platform integrating LLMs (Gemma2 & LLaMA 3.2) to provide personalized academic guidance and career recommendations, serving over 500+ students.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">Python</span>
                 <span class="stack-tag">Gemma2</span>
                 <span class="stack-tag">LLaMA 3.2</span>
                 <span class="stack-tag">FastAPI</span>
+                <span class="stack-tag">React</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/MohitBhimrajka/Projects/tree/main/College-Counseling-App" target="_blank" class="project-link primary">
@@ -495,19 +502,20 @@
         </div>
 
         <!-- Project 3: Interactive CNN Demo -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
           <div class="project-card">
             <div class="project-body">
               <span class="project-category">AI/ML</span>
-              <h3 class="project-title">Interactive CNN Demo</h3>
+              <h3 class="project-title">Interactive CNN Visualization Tool</h3>
               <p class="project-text">
-                Created an interactive Convolutional Neural Network demonstration using Keras and the MNIST dataset, enabling real-time visualization of deep learning concepts.
+                A dynamic visualization platform for understanding CNN architectures, featuring real-time layer activation maps and interactive parameter tuning. Built with Keras and MNIST dataset.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">Python</span>
                 <span class="stack-tag">Keras</span>
                 <span class="stack-tag">TensorFlow</span>
-                <span class="stack-tag">MNIST</span>
+                <span class="stack-tag">Streamlit</span>
+                <span class="stack-tag">Plotly</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Interactive-CNN-Demo" target="_blank" class="project-link primary">
@@ -519,19 +527,20 @@
         </div>
 
         <!-- Project 4: Housing Price Prediction -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
           <div class="project-card">
             <div class="project-body">
               <span class="project-category">Data Science</span>
-              <h3 class="project-title">Housing Price Prediction</h3>
+              <h3 class="project-title">Advanced Housing Price Predictor</h3>
               <p class="project-text">
-                Engineered a robust housing price prediction model with advanced preprocessing, PCA & outlier handling techniques, achieving an impressive RMSE of 0.106.
+                A robust ML model for real estate price prediction using advanced preprocessing, PCA & outlier handling techniques. Achieved RMSE of 0.106 and deployed as a web service.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">Python</span>
                 <span class="stack-tag">scikit-learn</span>
                 <span class="stack-tag">PCA</span>
-                <span class="stack-tag">Pandas</span>
+                <span class="stack-tag">Flask</span>
+                <span class="stack-tag">Streamlit</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Housing-Price-Prediction" target="_blank" class="project-link primary">

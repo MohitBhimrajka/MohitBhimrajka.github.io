@@ -30,7 +30,6 @@
       --text-light: #64748b;
       --gradient-start: #2563eb;
       --gradient-end: #1E3A8A;
-      --section-bg: #ffffff;
     }
 
     body {
@@ -105,7 +104,7 @@
     }
 
     .header-pattern {
-      display: none;  /* Hide the pattern */
+      display: none;
     }
 
     .header-content {
@@ -132,16 +131,16 @@
 
     /* Contact Section */
     .contact-section {
-      padding: 5rem 0;
       margin-top: -4rem;
       position: relative;
       z-index: 2;
+      padding: 0 1rem;
     }
 
     .contact-container {
       background: white;
       border-radius: 2rem;
-      padding: 4rem;
+      padding: 3rem;
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
 
@@ -452,36 +451,48 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <div class="brand-logo">
           <i class="fas fa-code"></i>
         </div>
-        MB
+        <span>Mohit Bhimrajka</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <i class="fas fa-bars" style="color: white;"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home me-2"></i>Home
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="resume.html">
+              <i class="fas fa-file-alt me-2"></i>Resume
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="achievements.html">Achievements</a>
+            <a class="nav-link" href="certifications.html">
+              <i class="fas fa-certificate me-2"></i>Certifications
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="certifications.html">Certifications</a>
+            <a class="nav-link" href="projects.html">
+              <i class="fas fa-code-branch me-2"></i>Projects
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
+            <a class="nav-link" href="achievements.html">
+              <i class="fas fa-trophy me-2"></i>Achievements
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="contact.html">Contact</a>
+            <a class="nav-link active" href="contact.html">
+              <i class="fas fa-envelope me-2"></i>Contact
+            </a>
           </li>
         </ul>
       </div>
@@ -490,12 +501,11 @@
 
   <!-- Header Section -->
   <section class="header-section">
-    <div class="header-pattern"></div>
     <div class="container">
       <div class="header-content">
-        <h1 class="header-title" data-aos="fade-up">Let's Connect</h1>
+        <h1 class="header-title" data-aos="fade-up">Get in Touch</h1>
         <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
-          I'm always open to discussing new projects, opportunities, and collaborations.
+          Let's connect and explore opportunities for collaboration and innovation.
         </p>
       </div>
     </div>
