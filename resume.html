@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Mohit Bhimrajka Portfolio</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    h1, h2, h3, .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    /* Tabs */
+    .tab-btn { transition: background 0.3s, color 0.3s; }
+    .tab-btn.active { background-color: #008080; color: #fff; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation (Leadership link removed) -->
+  <nav id="navbar" class="bg-white shadow sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-montserrat text-teal-600">Mohit Bhimrajka</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600 font-bold">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+      <div id="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="index.html#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600 font-bold">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Resume Section -->
+  <section class="container mx-auto px-6 py-12" data-aos="fade-up">
+    <h1 class="text-4xl font-montserrat text-teal-600 mb-6 text-center">Resume</h1>
+    <p class="text-center text-lg mb-8">
+      View my detailed professional journey. Choose between an embedded PDF or an interactive summary.
+    </p>
+    <!-- Tab Buttons -->
+    <div class="flex justify-center space-x-4 mb-8">
+      <button id="tab-pdf" class="tab-btn bg-teal-600 text-white font-bold py-2 px-4 rounded active">PDF View</button>
+      <button id="tab-summary" class="tab-btn bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded">Interactive Summary</button>
+    </div>
+    <!-- Tab Content -->
+    <div id="pdf-view" class="tab-content">
+      <div class="resume-viewer" data-aos="zoom-in">
+        <iframe src="assets/pdf/MohitBhimrajka_Resume.pdf" class="w-full h-screen md:h-[800px] border-0" title="Mohit Bhimrajka Resume"></iframe>
+      </div>
+    </div>
+    <div id="summary-view" class="tab-content hidden" data-aos="fade-up">
+      <!-- Interactive HTML Resume Summary -->
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h2 class="text-2xl font-montserrat text-teal-600 mb-4">Professional Summary</h2>
+        <p class="mb-4">AI-focused technology student and emerging leader with a strong foundation in AI/ML, Data Science, and Big Data analytics. Developed a top-3 ranked recommendation engine and reduced ideation-to-production time by 20% during a GenAI internship at Siemens.</p>
+        <h3 class="text-xl font-montserrat text-teal-600 mb-2">Education</h3>
+        <p class="mb-4">Bachelor of Technology in Computer Science (AI & ML) from ATLAS SkillTech University. CGPA: 9.03/10.00</p>
+        <h3 class="text-xl font-montserrat text-teal-600 mb-2">Professional Experience</h3>
+        <ul class="list-disc pl-5 mb-4">
+          <li>GenAI Intern, Siemens AG: Developed an AI-driven assistant and integrated LLaMA 3.1 to reduce production time.</li>
+          <li>Data Science Intern, University of Technology Sydney: Enhanced COVID-19 simulation tools and UI/UX design.</li>
+        </ul>
+        <h3 class="text-xl font-montserrat text-teal-600 mb-2">Key Projects</h3>
+        <ul class="list-disc pl-5">
+          <li>Recommendation Engine (Ongoing)</li>
+          <li>College Counseling App</li>
+          <li>Interactive CNN Demo</li>
+          <li>Housing Price Prediction</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Download & Print Options (optional duplication from PDF view) -->
+    <div class="mt-8 flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+      <a href="assets/pdf/MohitBhimrajka_Resume.pdf" download class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded transition duration-300">
+        Download Resume
+      </a>
+      <button onclick="window.print()" class="bg-transparent border border-teal-600 hover:bg-teal-600 hover:text-white text-teal-600 font-bold py-3 px-8 rounded transition duration-300">
+        Print Resume
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://github.com/MohitBhimrajka" target="_blank" class="hover:text-teal-600">GitHub</a>
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" class="hover:text-teal-600">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP, AOS, and Custom Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+    
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    
+    // Tab functionality
+    const tabPDF = document.getElementById('tab-pdf');
+    const tabSummary = document.getElementById('tab-summary');
+    const pdfView = document.getElementById('pdf-view');
+    const summaryView = document.getElementById('summary-view');
+
+    tabPDF.addEventListener('click', () => {
+      tabPDF.classList.add('active');
+      tabSummary.classList.remove('active');
+      pdfView.classList.remove('hidden');
+      summaryView.classList.add('hidden');
+    });
+    tabSummary.addEventListener('click', () => {
+      tabSummary.classList.add('active');
+      tabPDF.classList.remove('active');
+      summaryView.classList.remove('hidden');
+      pdfView.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

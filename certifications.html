@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications - Mohit Bhimrajka Portfolio</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Global Fonts */
+    body { font-family: 'Roboto', sans-serif; }
+    h1, h2, h3, .font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+    /* Flip card base styles */
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      transform-style: preserve-3d;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .flip-card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav id="navbar" class="bg-white shadow sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-montserrat text-teal-600">Mohit Bhimrajka</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="index.html#leadership" class="hover:text-teal-600">Leadership</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600 font-bold">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+      <!-- Mobile Menu Icon -->
+      <div id="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </div>
+    </div>
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="index.html#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="index.html#leadership" class="hover:text-teal-600">Leadership</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600 font-bold">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Certifications Section -->
+  <section class="container mx-auto px-6 py-12" data-aos="fade-up">
+    <h1 class="text-4xl font-montserrat text-teal-600 mb-6 text-center">Certifications</h1>
+    <p class="text-center text-lg mb-12">
+      Discover my professional certifications that validate my technical and leadership expertise. Hover over each card to reveal the skills acquired.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Certification Card: Google Prompting Essentials -->
+      <div class="flip-card bg-white shadow-lg rounded-lg overflow-hidden" data-aos="flip-up">
+        <div class="flip-card-inner" id="card-google">
+          <!-- Front Side -->
+          <div class="flip-card-face flip-card-front flex flex-col items-center justify-center p-6">
+            <img src="assets/images/google-prompting-essentials.png" alt="Google Prompting Essentials Logo" class="w-24 mb-4">
+            <h3 class="text-2xl font-montserrat text-teal-600 mb-2">Google Prompting Essentials</h3>
+            <p class="text-sm text-center">Fundamentals of effective AI prompting techniques.</p>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-face flip-card-back flex flex-col items-center justify-center p-6 bg-teal-600 text-white">
+            <h3 class="text-2xl font-montserrat mb-2">Skills Acquired</h3>
+            <ul class="list-disc text-left pl-5 text-sm">
+              <li>Effective prompting techniques</li>
+              <li>AI model input optimization</li>
+              <li>Best practices in prompt engineering</li>
+            </ul>
+            <a href="https://example.com/google-cert-verification" target="_blank" class="mt-4 inline-block bg-white text-teal-600 font-bold py-1 px-3 rounded">Verify</a>
+          </div>
+        </div>
+      </div>
+      <!-- Certification Card: Microsoft Office Specialist -->
+      <div class="flip-card bg-white shadow-lg rounded-lg overflow-hidden" data-aos="flip-up" data-aos-delay="100">
+        <div class="flip-card-inner" id="card-mos">
+          <!-- Front Side -->
+          <div class="flip-card-face flip-card-front flex flex-col items-center justify-center p-6">
+            <img src="assets/images/mos.png" alt="Microsoft Office Specialist Logo" class="w-24 mb-4">
+            <h3 class="text-2xl font-montserrat text-teal-600 mb-2">Microsoft Office Specialist</h3>
+            <p class="text-sm text-center">Expertise in Microsoft Office suite.</p>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-face flip-card-back flex flex-col items-center justify-center p-6 bg-teal-600 text-white">
+            <h3 class="text-2xl font-montserrat mb-2">Skills Acquired</h3>
+            <ul class="list-disc text-left pl-5 text-sm">
+              <li>Advanced document management</li>
+              <li>Spreadsheet analysis & visualization</li>
+              <li>Presentation design</li>
+            </ul>
+            <a href="https://example.com/mos-verification" target="_blank" class="mt-4 inline-block bg-white text-teal-600 font-bold py-1 px-3 rounded">Verify</a>
+          </div>
+        </div>
+      </div>
+      <!-- Certification Card: DBT Fundamentals -->
+      <div class="flip-card bg-white shadow-lg rounded-lg overflow-hidden" data-aos="flip-up" data-aos-delay="200">
+        <div class="flip-card-inner" id="card-dbt">
+          <!-- Front Side -->
+          <div class="flip-card-face flip-card-front flex flex-col items-center justify-center p-6">
+            <img src="assets/images/dbt-fundamentals.png" alt="DBT Fundamentals Logo" class="w-24 mb-4">
+            <h3 class="text-2xl font-montserrat text-teal-600 mb-2">DBT Fundamentals</h3>
+            <p class="text-sm text-center">Mastery in data transformation and analytics.</p>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-face flip-card-back flex flex-col items-center justify-center p-6 bg-teal-600 text-white">
+            <h3 class="text-2xl font-montserrat mb-2">Skills Acquired</h3>
+            <ul class="list-disc text-left pl-5 text-sm">
+              <li>Data transformation with dbt</li>
+              <li>SQL proficiency</li>
+              <li>Analytics workflow optimization</li>
+            </ul>
+            <a href="https://example.com/dbt-verification" target="_blank" class="mt-4 inline-block bg-white text-teal-600 font-bold py-1 px-3 rounded">Verify</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://github.com/MohitBhimrajka" target="_blank" class="hover:text-teal-600">GitHub</a>
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" class="hover:text-teal-600">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP, AOS, and Custom Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+    
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    
+    // GSAP Flip Animation on Hover for Each Card
+    const flipCards = ['card-google', 'card-mos', 'card-dbt'];
+    flipCards.forEach(cardId => {
+      const card = document.getElementById(cardId);
+      // Use GSAP to animate rotation on mouse enter/leave
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, { rotationY: 180, duration: 0.6, ease: "power2.out" });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, { rotationY: 0, duration: 0.6, ease: "power2.in" });
+      });
+    });
+  </script>
+</body>
+</html>

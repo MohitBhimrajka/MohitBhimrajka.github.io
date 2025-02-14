@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohit Bhimrajka Portfolio</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    h1, h2, h3, .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    /* Parallax hero background */
+    .hero-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /* Additional overlay gradient */
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.8));
+    }
+    /* Smooth scroll snap for sections (optional) */
+    section {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Sticky Navigation -->
+  <nav id="navbar" class="bg-white shadow sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-montserrat text-teal-600">Mohit Bhimrajka</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+      <div id="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Parallax and Interactive Layers -->
+  <section class="hero-bg relative h-screen flex items-center justify-center" style="background-image: url('assets/images/hero-bg.jpg');">
+    <!-- Dark Gradient Overlay -->
+    <div class="absolute inset-0 hero-overlay"></div>
+    <!-- Content Container -->
+    <div class="relative text-center text-white px-4" data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="text-4xl md:text-6xl font-montserrat mb-4">Bridging AI Innovation & Exceptional Leadership</h1>
+      <p class="text-lg md:text-2xl mb-8">Transforming ideas into impact with cutting-edge AI solutions and dynamic leadership.</p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="resume.html" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded transition duration-300 shadow-lg">
+          View Resume
+        </a>
+        <a href="#about" class="bg-transparent border border-white hover:bg-white hover:text-teal-600 text-white font-bold py-3 px-6 rounded transition duration-300 shadow-lg">
+          Learn More
+        </a>
+      </div>
+      <blockquote class="mt-8 italic text-lg" data-aos="fade-up" data-aos-delay="200">
+        "Innovation thrives where vision meets relentless pursuit of excellence."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12">
+    <!-- About Section -->
+    <section id="about" class="mb-20" data-aos="fade-up">
+      <h2 class="text-3xl font-montserrat text-teal-600 mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        I'm Mohit Bhimrajka, a passionate AI-focused technology student and an emerging leader with a flair for innovation. I combine deep technical expertise with strategic vision to create solutions that not only push boundaries but also drive impactful results. Whether I'm building sophisticated machine learning models or orchestrating large-scale initiatives, I aim to set new benchmarks of excellence.
+      </p>
+    </section>
+
+    <!-- Teaser Section for Projects -->
+    <section id="teaser-projects" class="mb-20" data-aos="fade-up">
+      <h2 class="text-3xl font-montserrat text-teal-600 mb-4">Featured Projects</h2>
+      <p class="text-lg mb-8">Explore a glimpse of my projects—each a testament to my technical prowess and leadership capabilities. Click below to discover more on the Projects page.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Example Project Card -->
+        <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up">
+          <img src="assets/images/project-recommendation.jpg" alt="Recommendation Engine" class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-montserrat text-teal-600 mb-2">Recommendation Engine</h3>
+            <p class="mb-4">Leveraging Python and ML for personalized recommendations that drive engagement.</p>
+            <a href="projects.html#recommendation-engine" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">Learn More</a>
+          </div>
+        </div>
+        <!-- Second Example Project Card -->
+        <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/project-counseling.jpg" alt="College Counseling App" class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-montserrat text-teal-600 mb-2">College Counseling App</h3>
+            <p class="mb-4">Streamlining internship applications using advanced language models and intuitive design.</p>
+            <a href="projects.html#college-counseling-app" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action for Resume -->
+    <section id="cta-resume" class="mb-20" data-aos="fade-up">
+      <div class="bg-teal-600 text-white rounded-lg p-8 text-center">
+        <h2 class="text-3xl font-montserrat mb-4">Discover My Full Resume</h2>
+        <p class="text-lg mb-6">Delve into my academic achievements, professional experiences, and certifications in detail.</p>
+        <a href="resume.html" class="bg-white text-teal-600 font-bold py-3 px-6 rounded transition duration-300 hover:bg-gray-100 shadow-lg">View Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://github.com/MohitBhimrajka" target="_blank" class="hover:text-teal-600">GitHub</a>
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" class="hover:text-teal-600">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & AOS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS for smooth scroll animations
+    AOS.init({ duration: 800, once: true });
+    
+    // GSAP for sticky nav condensing on scroll
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#navbar", {
+      scrollTrigger: {
+        trigger: "#navbar",
+        start: "top top",
+        end: "+=100",
+        scrub: true
+      },
+      paddingTop: "0.5rem",
+      paddingBottom: "0.5rem",
+      ease: "none"
+    });
+    
+    // Mobile menu toggle functionality
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

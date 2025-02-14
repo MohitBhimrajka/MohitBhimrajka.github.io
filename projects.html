@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Mohit Bhimrajka Portfolio</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    h1, h2, h3, .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    /* Overlay for additional project details */
+    .project-card-overlay {
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-col;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      transform: translateY(20px);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 0.5rem;
+    }
+    .project-card:hover .project-card-overlay {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation (Leadership link removed) -->
+  <nav id="navbar" class="bg-white shadow sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-montserrat text-teal-600">Mohit Bhimrajka</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600 font-bold">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+      <div id="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="index.html#about" class="hover:text-teal-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-teal-600 font-bold">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-teal-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Filter Bar -->
+  <section class="container mx-auto px-6 py-6" data-aos="fade-up">
+    <div class="flex flex-wrap justify-center gap-4">
+      <button class="filter-btn bg-teal-600 text-white font-bold py-2 px-4 rounded" data-filter="all">All</button>
+      <button class="filter-btn bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded" data-filter="ai">AI/ML</button>
+      <button class="filter-btn bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded" data-filter="web">Web Apps</button>
+      <button class="filter-btn bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded" data-filter="data">Data Science</button>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="container mx-auto px-6 py-12" data-aos="fade-up">
+    <h1 class="text-4xl font-montserrat text-teal-600 mb-6 text-center">Technical Projects</h1>
+    <p class="text-center text-lg mb-12">
+      A showcase of my innovative projects that blend technical excellence with impactful leadership.
+    </p>
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Recommendation Engine (Category: AI) -->
+      <div class="project-card relative group bg-white shadow-lg rounded-lg overflow-hidden" data-filter="ai" data-aos="fade-up">
+        <img src="assets/images/project-recommendation.jpg" alt="Recommendation Engine" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-montserrat text-teal-600 mb-2">Recommendation Engine</h3>
+          <p class="mb-4">Building a recommendation engine using Python, Pandas, scikit-learn, and PostgreSQL. (Ongoing)</p>
+          <button class="open-modal bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" data-modal="modal-recommendation">Learn More</button>
+        </div>
+        <div class="project-card-overlay absolute inset-0 rounded-lg">
+          <h3 class="text-xl font-montserrat mb-2">Innovation & Leadership</h3>
+          <p class="text-sm">Spearheading development and coordinating teams for an industry-leading solution.</p>
+        </div>
+      </div>
+      <!-- College Counseling App (Category: AI/Web) -->
+      <div class="project-card relative group bg-white shadow-lg rounded-lg overflow-hidden" data-filter="ai" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/images/project-counseling.jpg" alt="College Counseling App" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-montserrat text-teal-600 mb-2">College Counseling App</h3>
+          <p class="mb-4">An app integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications.</p>
+          <button class="open-modal bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" data-modal="modal-counseling">Learn More</button>
+        </div>
+        <div class="project-card-overlay absolute inset-0 rounded-lg">
+          <h3 class="text-xl font-montserrat mb-2">Seamless Integration</h3>
+          <p class="text-sm">Transforming the internship process with cutting-edge language models.</p>
+        </div>
+      </div>
+      <!-- Interactive CNN Demo (Category: AI) -->
+      <div class="project-card relative group bg-white shadow-lg rounded-lg overflow-hidden" data-filter="ai" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/images/project-cnn.jpg" alt="Interactive CNN Demo" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-montserrat text-teal-600 mb-2">Interactive CNN Demo</h3>
+          <p class="mb-4">An interactive demo using Keras and the MNIST dataset for real-time visualization.</p>
+          <button class="open-modal bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" data-modal="modal-cnn">Learn More</button>
+        </div>
+        <div class="project-card-overlay absolute inset-0 rounded-lg">
+          <h3 class="text-xl font-montserrat mb-2">Real-Time Visualization</h3>
+          <p class="text-sm">Simplifying complex neural networks into engaging interactive experiences.</p>
+        </div>
+      </div>
+      <!-- Housing Price Prediction (Category: Data) -->
+      <div class="project-card relative group bg-white shadow-lg rounded-lg overflow-hidden" data-filter="data" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/images/project-housing.jpg" alt="Housing Price Prediction" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-montserrat text-teal-600 mb-2">Housing Price Prediction</h3>
+          <p class="mb-4">A predictive model with advanced preprocessing, PCA, and outlier handling achieving an RMSE of 0.106.</p>
+          <button class="open-modal bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" data-modal="modal-housing">Learn More</button>
+        </div>
+        <div class="project-card-overlay absolute inset-0 rounded-lg">
+          <h3 class="text-xl font-montserrat mb-2">Data-Driven Insights</h3>
+          <p class="text-sm">Combining robust analytics with technical innovation for high-accuracy predictions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Container -->
+  <div id="modal-container" class="modal">
+    <div class="modal-content" data-aos="zoom-in">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <div id="modal-body">
+        <!-- Modal content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://github.com/MohitBhimrajka" target="_blank" class="hover:text-teal-600">GitHub</a>
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" class="hover:text-teal-600">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP, AOS, and Custom Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    
+    // Filtering functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.replace('bg-teal-600', 'bg-gray-200'));
+        btn.classList.replace('bg-gray-200', 'bg-teal-600');
+        const filterValue = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          card.style.display = (filterValue === 'all' || card.getAttribute('data-filter') === filterValue) ? 'block' : 'none';
+        });
+      });
+    });
+    
+    // Modal functionality
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    const modal = document.getElementById('modal-container');
+    const modalBody = document.getElementById('modal-body');
+    const modalClose = document.getElementById('modal-close');
+    const modalContents = {
+      'modal-recommendation': `
+        <h2 class="text-2xl font-montserrat text-teal-600 mb-4">Recommendation Engine</h2>
+        <p class="mb-4">Building a sophisticated recommendation engine using Python, Pandas, scikit-learn, and PostgreSQL. Leveraging advanced ML algorithms for personalized recommendations.</p>
+        <ul class="list-disc pl-5">
+          <li>Spearheaded technical design and implementation</li>
+          <li>Coordinated cross-functional teams</li>
+          <li>Iteratively refined for continuous improvement</li>
+        </ul>
+      `,
+      'modal-counseling': `
+        <h2 class="text-2xl font-montserrat text-teal-600 mb-4">College Counseling App</h2>
+        <p class="mb-4">An innovative application integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications and provide personalized guidance.</p>
+        <ul class="list-disc pl-5">
+          <li>Led development and AI integration</li>
+          <li>Designed an intuitive user interface</li>
+          <li>Optimized backend performance</li>
+        </ul>
+      `,
+      'modal-cnn': `
+        <h2 class="text-2xl font-montserrat text-teal-600 mb-4">Interactive CNN Demo</h2>
+        <p class="mb-4">An interactive demo using Keras and the MNIST dataset, visualizing convolutional neural network operations in real time.</p>
+        <ul class="list-disc pl-5">
+          <li>Designed engaging visualizations</li>
+          <li>Simplified complex concepts for general audiences</li>
+          <li>Incorporated live data feeds</li>
+        </ul>
+      `,
+      'modal-housing': `
+        <h2 class="text-2xl font-montserrat text-teal-600 mb-4">Housing Price Prediction</h2>
+        <p class="mb-4">A predictive model employing advanced preprocessing, PCA, and outlier handling to achieve an RMSE of 0.106, offering robust data-driven insights.</p>
+        <ul class="list-disc pl-5">
+          <li>Implemented robust data pipelines</li>
+          <li>Applied advanced statistical techniques</li>
+          <li>Achieved high prediction accuracy</li>
+        </ul>
+      `
+    };
+    openModalButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modalKey = btn.getAttribute('data-modal');
+        modalBody.innerHTML = modalContents[modalKey] || '<p>No content available.</p>';
+        modal.classList.add('active');
+        gsap.fromTo(modalBody, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5 });
+      });
+    });
+    modalClose.addEventListener('click', () => { modal.classList.remove('active'); });
+    window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+  </script>
+</body>
+</html>
