@@ -214,6 +214,7 @@
       position: relative;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
       overflow: hidden;
+      min-height: 400px; /* Set minimum height for consistency */
     }
 
     .achievement-card::before {
@@ -253,12 +254,8 @@
       font-weight: 600;
       color: var(--text-dark);
       margin-bottom: 0.75rem;
-      min-height: 2.5rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      min-height: auto; /* Remove fixed height */
+      line-height: 1.4;
     }
 
     .achievement-date {
@@ -275,28 +272,20 @@
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
       flex-grow: 1;
-      min-height: 4.8rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      overflow: visible; /* Allow text to show fully */
+      min-height: auto; /* Remove fixed height */
     }
 
     .achievement-footer {
-      margin-top: 1rem;
+      margin-top: auto; /* Push to bottom */
       padding-top: 1rem;
       border-top: 1px solid #e2e8f0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     .achievement-skills {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: auto;
     }
 
     .skill-tag {
@@ -314,23 +303,6 @@
       color: white;
       transform: translateY(-2px);
       box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
-    }
-
-    .know-more-btn {
-      background: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .know-more-btn:hover {
-      background: var(--primary-dark);
-      color: white;
-      transform: translateY(-2px);
     }
 
     /* Back to Top Button */
@@ -401,26 +373,8 @@
         font-size: 1.1rem;
       }
 
-      .nav-tabs {
-        gap: 0.5rem;
-      }
-
-      .nav-tabs .nav-link {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-      }
-
       .achievement-card {
-        padding: 2rem;
-      }
-
-      .achievement-title {
-        font-size: 1.1rem;
-      }
-
-      .skill-tag {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        min-height: 350px; /* Adjust for mobile */
       }
     }
   </style>
@@ -486,15 +440,15 @@
         </p>
         <div class="hero-stats">
           <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-number" data-target="150">150</div>
-            <div class="stat-label">Students Mentored</div>
+            <div class="stat-number" data-target="500">500+</div>
+            <div class="stat-label">Students Collaberated with</div>
           </div>
           <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-number" data-target="12">12</div>
+            <div class="stat-number" data-target="10">10+</div>
             <div class="stat-label">Events Organized</div>
           </div>
           <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="stat-number" data-target="4">4</div>
+            <div class="stat-number" data-target="9">9</div>
             <div class="stat-label">Leadership Roles</div>
           </div>
         </div>
@@ -502,212 +456,187 @@
     </div>
   </section>
 
-  <!-- Achievement Categories -->
-  <section class="category-tabs">
-    <div class="container">
-      <ul class="nav nav-tabs" id="achievementTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#leadership">
-            <i class="fas fa-crown me-2"></i>Leadership
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#technical">
-            <i class="fas fa-laptop-code me-2"></i>Technical
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#community">
-            <i class="fas fa-users me-2"></i>Community
-          </button>
-        </li>
-      </ul>
-    </div>
-  </section>
-
   <!-- Achievements Section -->
   <section class="achievements-section">
     <div class="container">
-      <div class="tab-content" id="achievementTabContent">
-        <!-- Leadership Tab -->
-        <div class="tab-pane fade show active" id="leadership">
-          <div class="achievements-container">
-            <div class="row g-4">
-              <!-- Vice President STAGE Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="achievement-card">
-                  <i class="fas fa-theater-masks achievement-icon"></i>
-                  <h3 class="achievement-title">Vice President, STAGE</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Aug 2024 – Present
-                  </div>
-                  <p class="achievement-text">
-                    Leading the cultural club and organizing major events, fostering artistic expression and cultural diversity within the college community.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Event Management</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Cultural Affairs</span>
-                  </div>
-                </div>
+      <div class="achievements-container">
+        <div class="row g-4">
+          <!-- Vice President STAGE Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="achievement-card">
+              <i class="fas fa-theater-masks achievement-icon"></i>
+              <h3 class="achievement-title">Vice President, STAGE</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                Aug 2024 – Present
               </div>
-
-              <!-- Community Lead Code Vipassana Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="achievement-card">
-                  <i class="fas fa-cloud achievement-icon"></i>
-                  <h3 class="achievement-title">Community Lead, Code Vipassana</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Mar 2024 – Present
-                  </div>
-                  <p class="achievement-text">
-                    Leading a Google Cloud-empowered community, organizing workshops, and fostering technical learning among students.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Community Building</span>
-                    <span class="skill-tag">Google Cloud</span>
-                    <span class="skill-tag">Technical Leadership</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Contingent Leader Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="achievement-card">
-                  <i class="fas fa-flag achievement-icon"></i>
-                  <h3 class="achievement-title">Contingent Leader, College Funbaazi 3.0</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Oct 2024 – Nov 2024
-                  </div>
-                  <p class="achievement-text">
-                    Led a team of 230+ students to victory, competing against 1,500+ participants and securing multiple accolades for the college.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Team Leadership</span>
-                    <span class="skill-tag">Competition</span>
-                    <span class="skill-tag">Strategy</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- UGDX Student Council Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="achievement-card">
-                  <i class="fas fa-users-cog achievement-icon"></i>
-                  <h3 class="achievement-title">President, UGDX Student Council</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Aug 2023 – May 2024
-                  </div>
-                  <p class="achievement-text">
-                    Led student initiatives, organized technical events, and fostered collaboration between different departments.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Student Leadership</span>
-                    <span class="skill-tag">Event Planning</span>
-                    <span class="skill-tag">Administration</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- ILLENIUM Outreach Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="achievement-card">
-                  <i class="fas fa-bullhorn achievement-icon"></i>
-                  <h3 class="achievement-title">Head of Outreach & PR, ILLENIUM</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Oct 2023 – Mar 2024
-                  </div>
-                  <p class="achievement-text">
-                    Managed public relations and outreach initiatives, expanding the organization's reach and impact.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Public Relations</span>
-                    <span class="skill-tag">Marketing</span>
-                    <span class="skill-tag">Communication</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Parijat Industries Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="achievement-card">
-                  <i class="fas fa-hands-helping achievement-icon"></i>
-                  <h3 class="achievement-title">Director of Volunteers, Parijat Industries</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Aug 2019 – Jul 2022
-                  </div>
-                  <p class="achievement-text">
-                    Spearheaded the "Back to School Initiative," supporting 300+ students and managing volunteer programs.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Volunteer Management</span>
-                    <span class="skill-tag">Social Impact</span>
-                    <span class="skill-tag">Project Management</span>
-                  </div>
+              <p class="achievement-text">
+                Leading the cultural club and organizing major events, fostering artistic expression and cultural diversity within the college community.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Event Management</span>
+                  <span class="skill-tag">Leadership</span>
+                  <span class="skill-tag">Cultural Affairs</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Technical Tab -->
-        <div class="tab-pane fade" id="technical">
-          <div class="achievements-container">
-            <div class="row g-4">
-              <!-- SAT Math Excellence Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="achievement-card">
-                  <i class="fas fa-calculator achievement-icon"></i>
-                  <h3 class="achievement-title">SAT Math Excellence</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    2023
-                  </div>
-                  <p class="achievement-text">
-                    Achieved an exceptional score of 740/800 in SAT Mathematics, demonstrating strong quantitative and analytical skills.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Mathematics</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Analytics</span>
-                  </div>
+          <!-- Community Lead Code Vipassana Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="achievement-card">
+              <i class="fas fa-cloud achievement-icon"></i>
+              <h3 class="achievement-title">Community Lead, Code Vipassana</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                Mar 2024 – Present
+              </div>
+              <p class="achievement-text">
+                Leading a Google Cloud-empowered community, organizing workshops, and fostering technical learning among students.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Community Building</span>
+                  <span class="skill-tag">Google Cloud</span>
+                  <span class="skill-tag">Technical Leadership</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Community Tab -->
-        <div class="tab-pane fade" id="community">
-          <div class="achievements-container">
-            <div class="row g-4">
-              <!-- ATLAS Achievers Award Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="achievement-card">
-                  <i class="fas fa-award achievement-icon"></i>
-                  <h3 class="achievement-title">ATLAS Achievers Award</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    2024
-                  </div>
-                  <p class="achievement-text">
-                    Recognized for exceptional leadership and significant contributions to the college community through various initiatives.
-                  </p>
-                  <div class="achievement-skills">
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Community Service</span>
-                    <span class="skill-tag">Excellence</span>
-                  </div>
+          <!-- Contingent Leader Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="achievement-card">
+              <i class="fas fa-flag achievement-icon"></i>
+              <h3 class="achievement-title">Contingent Leader, College Funbaazi 3.0</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                Oct 2024 – Nov 2024
+              </div>
+              <p class="achievement-text">
+                Led a team of 230+ students to victory, competing against 1,500+ participants and securing multiple accolades for the college.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Team Leadership</span>
+                  <span class="skill-tag">Competition</span>
+                  <span class="skill-tag">Strategy</span>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- UGDX Student Council Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="achievement-card">
+              <i class="fas fa-users-cog achievement-icon"></i>
+              <h3 class="achievement-title">President, UGDX Student Council</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                Aug 2023 – May 2024
+              </div>
+              <p class="achievement-text">
+                Led student initiatives, organized technical events, and fostered collaboration between different departments.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Student Leadership</span>
+                  <span class="skill-tag">Event Planning</span>
+                  <span class="skill-tag">Administration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ILLENIUM Outreach Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="achievement-card">
+              <i class="fas fa-bullhorn achievement-icon"></i>
+              <h3 class="achievement-title">Head of Outreach & PR, ILLENIUM</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                Oct 2023 – Mar 2024
+              </div>
+              <p class="achievement-text">
+                Managed public relations and outreach initiatives, expanding the organization's reach and impact.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Public Relations</span>
+                  <span class="skill-tag">Marketing</span>
+                  <span class="skill-tag">Communication</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parijat Industries Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="achievement-card">
+              <i class="fas fa-hands-helping achievement-icon"></i>
+              <h3 class="achievement-title">Director of Volunteers, Parijat Industries</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                Aug 2019 – Jul 2022
+              </div>
+              <p class="achievement-text">
+                Spearheaded the "Back to School Initiative," supporting 300+ students and managing volunteer programs.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Volunteer Management</span>
+                  <span class="skill-tag">Social Impact</span>
+                  <span class="skill-tag">Project Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAT Math Excellence Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="achievement-card">
+              <i class="fas fa-calculator achievement-icon"></i>
+              <h3 class="achievement-title">SAT Math Excellence</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                2023
+              </div>
+              <p class="achievement-text">
+                Achieved an exceptional score of 740/800 in SAT Mathematics, demonstrating strong quantitative and analytical skills.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Mathematics</span>
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Analytics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ATLAS Achievers Award Card -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="achievement-card">
+              <i class="fas fa-award achievement-icon"></i>
+              <h3 class="achievement-title">ATLAS Achievers Award</h3>
+              <div class="achievement-date">
+                <i class="far fa-calendar-alt"></i>
+                2024
+              </div>
+              <p class="achievement-text">
+                Recognized for exceptional leadership and significant contributions to the college community through various initiatives.
+              </p>
+              <div class="achievement-footer">
+                <div class="achievement-skills">
+                  <span class="skill-tag">Leadership</span>
+                  <span class="skill-tag">Community Service</span>
+                  <span class="skill-tag">Excellence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -809,7 +738,7 @@
       });
     });
 
-    document.querySelector('.stats-section').querySelectorAll('.stat-card').forEach((stat) => {
+    document.querySelector('.hero-stats').querySelectorAll('.stat-item').forEach((stat) => {
       observer.observe(stat);
     });
   </script>
