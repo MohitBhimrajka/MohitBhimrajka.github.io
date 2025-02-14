@@ -1,301 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required Meta Tags -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO / Social Meta -->
-  <title>Certifications | Mohit Bhimrajka Portfolio</title>
-  <meta
-    name="description"
-    content="Explore professional certifications earned by Mohit Bhimrajka, validating his expertise in AI, data transformation, and productivity tools."
-  />
-  <meta
-    name="keywords"
-    content="Mohit, Bhimrajka, AI, Certifications, Microsoft Office, dbt, Prompt Engineering, Google Prompting Essentials, Portfolio"
-  />
-  <meta property="og:title" content="Certifications | Mohit Bhimrajka" />
-  <meta
-    property="og:description"
-    content="A comprehensive list of certifications that validate Mohit's technical and leadership prowess."
-  />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:url"
-    content="https://your-github-pages-url/certifications.html"
-  />
-  <meta property="og:image" content="assets/images/hero-bg.jpg" />
-  <link
-    rel="canonical"
-    href="https://your-github-pages-url/certifications.html"
-  />
-
-  <!-- Tailwind CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-  <!-- AOS (Animate On Scroll) -->
-  <link
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    rel="stylesheet"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifications | Mohit Bhimrajka - AI/ML Engineer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional certifications and credentials of Mohit Bhimrajka - AI/ML Engineer">
+  <meta name="keywords" content="Certifications, AI Engineer, ML Engineer, Mohit Bhimrajka">
+  
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Custom Styles -->
-  <link
-    rel="stylesheet"
-    href="assets/css/style.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Bootswatch Materia Theme (Bootstrap) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/materia/bootstrap.min.css">
 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  
+  <!-- Custom CSS -->
   <style>
+    /* Root color overrides to match your blue theme */
+    :root {
+      --primary-color: #2563eb;   /* Base Blue */
+      --primary-dark: #1E3A8A;    /* Darker Blue */
+      --text-dark: #333333;       /* Standard dark text */
+      --text-light: #666666;      /* Slightly lighter text */
+    }
+
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f9fafb;
-      color: #333333;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
-    h1, h2, h3, .font-montserrat {
-      font-family: 'Montserrat', sans-serif;
+
+    /* Enhanced Navbar */
+    .navbar {
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      background: var(--primary-color) !important;
     }
-    #navbar {
-      transition: padding 0.3s ease-in-out;
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: rgba(37, 99, 235, 0.98) !important; /* Slightly transparent blue */
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .flip-card-back {
-      background-color: #2563eb; /* Blue background on flip */
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      transition: all 0.3s ease;
+      color: #ffffff !important;
     }
+    .nav-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* Header Section */
+    .header-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 8rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .header-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .header-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Certifications Section */
+    .cert-section {
+      padding: 5rem 0;
+      position: relative;
+      margin-top: -4rem;
+    }
+    .cert-container {
+      background: white;
+      border-radius: 2rem;
+      padding: 3rem;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+    }
+    .cert-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+      position: relative;
+    }
+    .cert-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      border-color: var(--primary-color);
+    }
+    .cert-header {
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+      background: #f8fafc;
+    }
+    .cert-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .cert-card:hover .cert-icon {
+      transform: scale(1.1);
+    }
+    .cert-body {
+      padding: 2rem;
+    }
+    .cert-title {
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .cert-issuer {
+      color: var(--primary-color);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .cert-date {
+      color: var(--text-light);
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .cert-description {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .cert-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      color: white;
+    }
+
+    /* Achievement Counter */
+    .achievement-section {
+      padding: 4rem 0;
+      background: white;
+      margin-top: 4rem;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+    }
+    .achievement-item {
+      text-align: center;
+      padding: 2rem;
+    }
+    .achievement-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    .achievement-label {
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    #back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* [Optional] A mild fade-up override if you want something simpler */
   </style>
 </head>
+
 <body>
-  <!-- HEADER / NAVIGATION -->
-  <header id="navbar" class="bg-white shadow sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Brand / Logo -->
-      <a
-        href="index.html"
-        class="text-2xl font-montserrat text-blue-600"
-        aria-label="Go to Home"
-      >
-        Mohit Bhimrajka
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
       </a>
-
-      <!-- Desktop Menu -->
-      <nav aria-label="Primary" class="hidden md:flex space-x-6">
-        <a href="index.html#about" class="hover:text-blue-600">About</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="resume.html" class="hover:text-blue-600">Resume</a>
-        <a href="certifications.html" class="text-blue-600 font-bold">Certifications</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
-
-      <!-- Mobile Nav Toggle -->
-      <button
-        id="menu-toggle"
-        class="md:hidden cursor-pointer"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <svg
-          class="w-8 h-8 text-blue-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 8h16M4 16h16"
-          />
-        </svg>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Adjust the menu items to match your site -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="certifications.html">Certifications</a>
+          </li>
+          <!-- Here: linking "Projects" to your GitHub or to projects.html -->
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">
+              <i class="fab fa-github me-1"></i>Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Mobile Navigation -->
-    <nav
-      id="mobile-menu"
-      class="hidden md:hidden bg-white"
-      aria-label="Mobile Primary Navigation"
-    >
-      <ul class="flex flex-col space-y-2 p-4">
-        <li><a href="index.html#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
-        <li><a href="resume.html" class="hover:text-blue-600">Resume</a></li>
-        <li><a href="certifications.html" class="text-blue-600 font-bold">Certifications</a></li>
-        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="container mx-auto px-6 py-12 bg-white">
-    <!-- CERTIFICATIONS SECTION -->
-    <section data-aos="fade-up">
-      <h1 class="text-4xl font-montserrat text-blue-600 mb-6 text-center">
-        Certifications
-      </h1>
-      <p class="text-center text-lg mb-12 max-w-3xl mx-auto">
-        Discover my professional certifications that validate my technical and
-        leadership expertise. Hover over each card to reveal the skills
-        acquired.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Certification Card: Google Prompting Essentials -->
-        <div class="flip-card bg-gray-50 shadow-lg rounded-lg overflow-hidden" data-aos="zoom-in">
-          <div class="flip-card-inner">
-            <!-- Front Side -->
-            <div class="flip-card-face flip-card-front flex flex-col items-center justify-center p-6">
-              <img
-                src="assets/images/google-prompting-essentials.png"
-                alt="Google Prompting Essentials Logo"
-                class="w-24 mb-4"
-              />
-              <h3 class="text-2xl font-montserrat text-blue-600 mb-2">
-                Google Prompting Essentials
-              </h3>
-              <p class="text-sm text-center">
-                Fundamentals of effective AI prompting techniques.
-              </p>
-            </div>
-            <!-- Back Side -->
-            <div class="flip-card-face flip-card-back flex flex-col items-center justify-center p-6">
-              <h4 class="text-2xl font-montserrat mb-2">Skills Acquired</h4>
-              <ul class="list-disc text-left pl-5 text-sm">
-                <li>Effective prompting techniques</li>
-                <li>AI model input optimization</li>
-                <li>Best practices in prompt engineering</li>
-              </ul>
-              <a
-                href="https://example.com/google-cert-verification"
-                target="_blank"
-                class="mt-4 inline-block bg-white text-blue-600 font-bold py-1 px-3 rounded hover:bg-gray-100 transition"
-                rel="noopener noreferrer"
-              >
-                Verify
-              </a>
+  </nav>
+  
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="header-title" data-aos="fade-up">Professional Certifications</h1>
+        <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
+          A collection of industry-recognized credentials showcasing expertise in AI, machine learning, and data science
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certifications Section -->
+  <section class="cert-section">
+    <div class="container">
+      <div class="cert-container">
+        <div class="row g-4">
+          <!-- Google Certification -->
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="cert-card">
+              <div class="cert-header">
+                <i class="fab fa-google cert-icon"></i>
+              </div>
+              <div class="cert-body">
+                <h3 class="cert-title">Google Prompting Essentials</h3>
+                <p class="cert-issuer">Google</p>
+                <p class="cert-date">Issued Feb 2025</p>
+                <p class="cert-description">
+                  Advanced expertise in AI prompt engineering and design optimization for large language models.
+                  <br>
+                  Credential ID: 46U2Y6M0IDZT
+                </p>
+                <a href="https://www.coursera.org/account/accomplishments/records/46U2Y6M0IDZT" 
+                   target="_blank" 
+                   class="cert-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  View Credential
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Certification Card: Microsoft Office Specialist -->
-        <div class="flip-card bg-gray-50 shadow-lg rounded-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
-          <div class="flip-card-inner">
-            <!-- Front Side -->
-            <div class="flip-card-face flip-card-front flex flex-col items-center justify-center p-6">
-              <img
-                src="assets/images/mos.png"
-                alt="Microsoft Office Specialist Logo"
-                class="w-24 mb-4"
-              />
-              <h3 class="text-2xl font-montserrat text-blue-600 mb-2">
-                Microsoft Office Specialist
-              </h3>
-              <p class="text-sm text-center">
-                Expertise in Microsoft Office suite.
-              </p>
-            </div>
-            <!-- Back Side -->
-            <div class="flip-card-face flip-card-back flex flex-col items-center justify-center p-6">
-              <h4 class="text-2xl font-montserrat mb-2">Skills Acquired</h4>
-              <ul class="list-disc text-left pl-5 text-sm">
-                <li>Advanced document management</li>
-                <li>Spreadsheet analysis &amp; visualization</li>
-                <li>Presentation design</li>
-              </ul>
-              <a
-                href="https://example.com/mos-verification"
-                target="_blank"
-                class="mt-4 inline-block bg-white text-blue-600 font-bold py-1 px-3 rounded hover:bg-gray-100 transition"
-                rel="noopener noreferrer"
-              >
-                Verify
-              </a>
+          
+          <!-- DBT Certification -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="cert-card">
+              <div class="cert-header">
+                <i class="fas fa-database cert-icon"></i>
+              </div>
+              <div class="cert-body">
+                <h3 class="cert-title">DBT Fundamentals</h3>
+                <p class="cert-issuer">dbt Labs</p>
+                <p class="cert-date">Issued Jun 2024 · Expires Jun 2026</p>
+                <p class="cert-description">
+                  Expert-level certification in data transformation and modeling using DBT methodologies.
+                </p>
+                <a href="https://scq.io/9fj11cA" 
+                   target="_blank" 
+                   class="cert-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  View Credential
+                </a>
+              </div>
             </div>
           </div>
+          
+          <!-- Microsoft Certification -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="cert-card">
+              <div class="cert-header">
+                <i class="fab fa-microsoft cert-icon"></i>
+              </div>
+              <div class="cert-body">
+                <h3 class="cert-title">Microsoft Office Specialist</h3>
+                <p class="cert-issuer">Microsoft</p>
+                <p class="cert-date">Issued Jun 2017</p>
+                <p class="cert-description">
+                  Professional certification demonstrating advanced proficiency in Microsoft Office suite applications.
+                </p>
+                <a href="https://www.icloud.com/iclouddrive/0cagjQPaNcrjWgIxMwN07o6xw#Microsoft_office_specialist" 
+                   target="_blank" 
+                   class="cert-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  View Credential
+                </a>
+              </div>
+            </div>
+          </div>
+        </div><!-- /row -->
+      </div><!-- /cert-container -->
+    </div>
+  </section>
+  
+  <!-- Achievement Section -->
+  <section class="achievement-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="achievement-item">
+            <div class="achievement-number">3+</div>
+            <div class="achievement-label">Professional Certifications</div>
+          </div>
         </div>
-
-        <!-- Certification Card: DBT Fundamentals -->
-        <div class="flip-card bg-gray-50 shadow-lg rounded-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
-          <div class="flip-card-inner">
-            <!-- Front Side -->
-            <div class="flip-card-face flip-card-front flex flex-col items-center justify-center p-6">
-              <img
-                src="assets/images/dbt-fundamentals.png"
-                alt="DBT Fundamentals Logo"
-                class="w-24 mb-4"
-              />
-              <h3 class="text-2xl font-montserrat text-blue-600 mb-2">
-                DBT Fundamentals
-              </h3>
-              <p class="text-sm text-center">
-                Mastery in data transformation and analytics.
-              </p>
-            </div>
-            <!-- Back Side -->
-            <div class="flip-card-face flip-card-back flex flex-col items-center justify-center p-6">
-              <h4 class="text-2xl font-montserrat mb-2">Skills Acquired</h4>
-              <ul class="list-disc text-left pl-5 text-sm">
-                <li>Data transformation with dbt</li>
-                <li>SQL proficiency</li>
-                <li>Analytics workflow optimization</li>
-              </ul>
-              <a
-                href="https://example.com/dbt-verification"
-                target="_blank"
-                class="mt-4 inline-block bg-white text-blue-600 font-bold py-1 px-3 rounded hover:bg-gray-100 transition"
-                rel="noopener noreferrer"
-              >
-                Verify
-              </a>
-            </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="achievement-item">
+            <div class="achievement-number">2+</div>
+            <div class="achievement-label">Years of Experience</div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="achievement-item">
+            <div class="achievement-number">10+</div>
+            <div class="achievement-label">Projects Completed</div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-blue-700 text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
-      <div class="mt-4 flex justify-center space-x-4">
-        <a
-          href="https://github.com/MohitBhimrajka"
-          target="_blank"
-          class="hover:text-blue-300"
-          rel="noopener noreferrer"
-        >
-          GitHub
+    </div>
+  </section>
+  
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mb-2">© 2025 Mohit Bhimrajka. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
         </a>
-        <a
-          href="https://linkedin.com/in/mohit-bhimrajka"
-          target="_blank"
-          class="hover:text-blue-300"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
+        <a href="https://github.com/MohitBhimrajka" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:mohitbhimrajka5@gmail.com" aria-label="Email Contact">
+          <i class="fas fa-envelope"></i>
         </a>
       </div>
     </div>
   </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- SCRIPTS -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    defer
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-    defer
-  ></script>
-  <script
-    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-    defer
-  ></script>
-  <script src="assets/js/main.js" defer></script>
+  <!-- AOS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
