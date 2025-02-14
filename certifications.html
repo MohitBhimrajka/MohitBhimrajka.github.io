@@ -23,12 +23,11 @@
   
   <!-- Custom CSS -->
   <style>
-    /* Root color overrides to match your blue theme */
     :root {
       --primary-color: #2563eb;   /* Base Blue */
       --primary-dark: #1E3A8A;    /* Darker Blue */
-      --text-dark: #333333;       /* Standard dark text */
-      --text-light: #666666;      /* Slightly lighter text */
+      --text-dark: #333333;       
+      --text-light: #666666;      
     }
 
     body {
@@ -47,7 +46,7 @@
     }
     .navbar.scrolled {
       padding: 0.5rem 0;
-      background: rgba(37, 99, 235, 0.98) !important; /* Slightly transparent blue */
+      background: rgba(37, 99, 235, 0.98) !important;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -74,7 +73,7 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' ...%3E");
     }
     .header-content {
       position: relative;
@@ -252,8 +251,6 @@
       color: var(--primary-dark);
       transform: translateY(-2px);
     }
-
-    /* [Optional] A mild fade-up override if you want something simpler */
   </style>
 </head>
 
@@ -279,11 +276,13 @@
           <li class="nav-item">
             <a class="nav-link active" href="certifications.html">Certifications</a>
           </li>
-          <!-- Here: linking "Projects" to your GitHub or to projects.html -->
           <li class="nav-item">
             <a class="nav-link" href="projects.html">
               <i class="fab fa-github me-1"></i>Projects
             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">Achievements</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -322,8 +321,7 @@
                 <p class="cert-date">Issued Feb 2025</p>
                 <p class="cert-description">
                   Advanced expertise in AI prompt engineering and design optimization for large language models.
-                  <br>
-                  Credential ID: 46U2Y6M0IDZT
+                  <br>Credential ID: 46U2Y6M0IDZT
                 </p>
                 <a href="https://www.coursera.org/account/accomplishments/records/46U2Y6M0IDZT" 
                    target="_blank" 
@@ -369,7 +367,7 @@
                 <p class="cert-issuer">Microsoft</p>
                 <p class="cert-date">Issued Jun 2017</p>
                 <p class="cert-description">
-                  Professional certification demonstrating advanced proficiency in Microsoft Office suite applications.
+                  Advanced proficiency in Microsoft Office suite (Word, Excel, PowerPoint) for professional environments.
                 </p>
                 <a href="https://www.icloud.com/iclouddrive/0cagjQPaNcrjWgIxMwN07o6xw#Microsoft_office_specialist" 
                    target="_blank" 
@@ -381,7 +379,7 @@
             </div>
           </div>
         </div><!-- /row -->
-      </div><!-- /cert-container -->
+      </div>
     </div>
   </section>
   
@@ -439,7 +437,6 @@
 
   <!-- AOS Library -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  
   <script>
     // Initialize AOS
     AOS.init({
@@ -459,7 +456,7 @@
       }
     });
 
-    // Back to Top Button
+    // Back to Top
     const backToTop = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {

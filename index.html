@@ -1,333 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required Meta Tags -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO / Social Meta -->
-  <title>Mohit Bhimrajka Portfolio</title>
-  <meta
-    name="description"
-    content="Personal portfolio of Mohit Bhimrajka, an AI-focused technology student and emerging leader. Explore projects, resume, certifications, and contact information."
-  />
-  <meta name="keywords" content="Mohit, Bhimrajka, AI, Machine Learning, Leadership, Projects, Portfolio, Resume" />
-  <meta property="og:title" content="Mohit Bhimrajka Portfolio" />
-  <meta
-    property="og:description"
-    content="Personal portfolio showcasing AI projects, leadership experience, and certifications."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://your-github-pages-url" />
-  <meta property="og:image" content="assets/images/hero-bg.jpg" />
-  <link rel="canonical" href="https://your-github-pages-url/index.html" />
-
-  <!-- Tailwind CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-
-  <!-- AOS (Animate On Scroll) -->
-  <link
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    rel="stylesheet"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Mohit Bhimrajka - AI/ML Engineer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Welcome to the personal portfolio of Mohit Bhimrajka, an AI/ML Engineer and tech enthusiast.">
+  <meta name="keywords" content="Home, AI Engineer, ML Engineer, Mohit Bhimrajka">
+  
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Bootswatch Materia Theme (Bootstrap) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/materia/bootstrap.min.css">
 
-  <!-- Custom Styles -->
-  <link
-    rel="stylesheet"
-    href="assets/css/style.css"
-  />
-
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  
+  <!-- Custom CSS -->
   <style>
-    /* Hero gradient: from navyish (#1E40AF) to lighter blue (#3B82F6) */
-    .hero-bg {
-      background: linear-gradient(
-        135deg,
-        rgba(30, 64, 175, 0.8),
-        rgba(59, 130, 246, 0.8)
-      ),
-      url('assets/images/hero-bg.jpg') center / cover no-repeat;
+    :root {
+      --primary-color: #2563eb;   /* Base Blue */
+      --primary-dark: #1E3A8A;    /* Darker Blue */
+      --text-dark: #333333;
+      --text-light: #666666;
     }
-    .hero-overlay {
-      /* We still have an overlay, but the gradient is mostly handled above */
-      background-color: rgba(0, 0, 0, 0.4);
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
-    /* Make sure the buttons and text are well contrasted */
-    .btn-primary {
-      background-color: #2563eb; /* Blue-600 from Tailwind */
-      color: #ffffff;
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      background: var(--primary-color) !important;
     }
-    .btn-primary:hover {
-      background-color: #1e3a8a; /* Darker blue hover */
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: rgba(37, 99, 235, 0.98) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .btn-outline {
-      background-color: transparent;
-      border: 2px solid #ffffff;
-      color: #ffffff;
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      color: #ffffff !important;
+      transition: all 0.3s ease;
     }
-    .btn-outline:hover {
-      background-color: #ffffff;
-      color: #2563eb;
+    .nav-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* Header Section */
+    .header-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 8rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' ...%3E");
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .header-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .header-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Main Features or CTA Section (optional) */
+    .features-section {
+      padding: 4rem 0;
+      margin-top: -4rem;
+    }
+    .features-container {
+      background: white;
+      border-radius: 2rem;
+      padding: 3rem;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+    }
+    .feature-box {
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      padding: 2rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      border-color: var(--primary-color);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .feature-text {
+      color: var(--text-light);
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    #back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      color: var(--primary-dark);
+      transform: translateY(-2px);
     }
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
-  <!-- HEADER / NAVIGATION -->
-  <header id="navbar" class="bg-white shadow sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Logo / Brand Name -->
-      <a
-        href="index.html"
-        class="text-2xl font-montserrat text-blue-600"
-        aria-label="Go to Home"
-      >
-        Mohit Bhimrajka
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
       </a>
-
-      <!-- Desktop Menu -->
-      <nav aria-label="Primary" class="hidden md:flex space-x-6">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="resume.html" class="hover:text-blue-600">Resume</a>
-        <a href="certifications.html" class="hover:text-blue-600">Certifications</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
-
-      <!-- Mobile Nav Toggle -->
-      <button
-        id="menu-toggle"
-        class="md:hidden cursor-pointer"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <svg
-          class="w-8 h-8 text-blue-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 8h16M4 16h16"
-          />
-        </svg>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <nav
-      id="mobile-menu"
-      class="hidden md:hidden bg-white"
-      aria-label="Mobile Primary Navigation"
-    >
-      <ul class="flex flex-col space-y-2 p-4">
-        <li><a href="#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
-        <li><a href="resume.html" class="hover:text-blue-600">Resume</a></li>
-        <li><a href="certifications.html" class="hover:text-blue-600">Certifications</a></li>
-        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION (Gradient + Image) -->
-  <section
-    class="hero-bg hero-height relative flex items-center justify-center py-24"
-    role="img"
-    aria-label="Hero background showcasing AI innovation theme"
-  >
-    <!-- Additional dark overlay for contrast -->
-    <div class="absolute inset-0 hero-overlay"></div>
-
-    <!-- Hero Content -->
-    <div
-      class="relative text-center text-white px-4 py-8 flex flex-col items-center"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      <h1 class="text-4xl md:text-6xl font-montserrat mb-4">
-        Bridging AI Innovation &amp; Exceptional Leadership
-      </h1>
-      <p class="text-lg md:text-2xl mb-8 max-w-3xl">
-        Transforming ideas into impact with cutting-edge AI solutions and
-        dynamic leadership.
-      </p>
-
-      <!-- Action Buttons -->
-      <div class="flex flex-col md:flex-row justify-center gap-4">
-        <a
-          href="resume.html"
-          class="btn-primary font-bold py-3 px-6 rounded transition duration-300 shadow-lg"
-        >
-          View Resume
-        </a>
-        <a
-          href="#about"
-          class="btn-outline font-bold py-3 px-6 rounded transition duration-300 shadow-lg"
-        >
-          Learn More
-        </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Home active -->
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="certifications.html">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">
+              <i class="fab fa-github me-1"></i>Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-
-      <!-- Quote -->
-      <blockquote
-        class="mt-8 italic text-lg max-w-2xl"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        "Innovation thrives where vision meets relentless pursuit of excellence."
-      </blockquote>
+    </div>
+  </nav>
+  
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="header-title" data-aos="fade-up">
+          Bridging AI Innovation &amp; Exceptional Leadership
+        </h1>
+        <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Welcome to my personal portfolio! Explore my journey in artificial intelligence, machine learning, and dynamic leadership.
+        </p>
+      </div>
     </div>
   </section>
-
-  <!-- MAIN CONTENT -->
-  <main class="container mx-auto px-6 py-12 bg-white">
-    <!-- ABOUT SECTION -->
-    <section id="about" class="mb-20" data-aos="fade-up">
-      <h2 class="text-3xl font-montserrat text-blue-600 mb-4">About Me</h2>
-      <p class="text-lg leading-relaxed max-w-3xl">
-        I'm <strong>Mohit Bhimrajka</strong>, a passionate AI-focused technology
-        student and an emerging leader with a flair for innovation. I combine
-        deep technical expertise with strategic vision to create solutions that
-        push boundaries and drive impactful results. Whether I'm building
-        sophisticated machine learning models or orchestrating large-scale
-        initiatives, my ultimate goal is to set new benchmarks of excellence.
-      </p>
-    </section>
-
-    <!-- TEASER PROJECTS SECTION -->
-    <section id="teaser-projects" class="mb-20" data-aos="fade-up">
-      <h2 class="text-3xl font-montserrat text-blue-600 mb-4">Featured Projects</h2>
-      <p class="text-lg mb-8 max-w-3xl">
-        Explore a glimpse of my projects—each a testament to my technical
-        prowess and leadership capabilities. Click below to discover more on the
-        Projects page.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Project Card 1 -->
-        <div
-          class="relative group bg-gray-50 shadow-lg rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-2xl"
-          data-aos="fade-up"
-        >
-          <img
-            src="assets/images/project-recommendation.jpg"
-            alt="Preview of the Recommendation Engine Project"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-2xl font-montserrat text-blue-600 mb-2">
-              Recommendation Engine
-            </h3>
-            <p class="mb-4">
-              Leveraging Python and ML for personalized recommendations that
-              drive engagement.
-            </p>
-            <a
-              href="projects.html#recommendation-engine"
-              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Learn More
-            </a>
+  
+  <!-- Features / CTA Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-container">
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="feature-box">
+              <i class="fas fa-robot feature-icon"></i>
+              <h3 class="feature-title">AI Projects</h3>
+              <p class="feature-text">
+                Delve into my portfolio of cutting-edge machine learning and AI projects pushing the boundaries of technology.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div
-          class="relative group bg-gray-50 shadow-lg rounded-lg overflow-hidden transform transition hover:-translate-y-2 hover:shadow-2xl"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <img
-            src="assets/images/project-counseling.jpg"
-            alt="Preview of the College Counseling App"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-2xl font-montserrat text-blue-600 mb-2">
-              College Counseling App
-            </h3>
-            <p class="mb-4">
-              Streamlining internship applications using advanced language
-              models and intuitive design.
-            </p>
-            <a
-              href="projects.html#college-counseling-app"
-              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Learn More
-            </a>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-box">
+              <i class="fas fa-chalkboard-teacher feature-icon"></i>
+              <h3 class="feature-title">Leadership</h3>
+              <p class="feature-text">
+                Discover how I spearhead large-scale initiatives, mentor teams, and drive impactful innovations.
+              </p>
+            </div>
           </div>
-        </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-box">
+              <i class="fas fa-certificate feature-icon"></i>
+              <h3 class="feature-title">Certifications</h3>
+              <p class="feature-text">
+                Explore a collection of industry-recognized credentials that validate my expertise in AI, data science, and beyond.
+              </p>
+            </div>
+          </div>
+        </div><!-- /row -->
       </div>
-    </section>
-
-    <!-- CALL-TO-ACTION FOR RESUME -->
-    <section id="cta-resume" class="mb-20" data-aos="fade-up">
-      <div class="bg-blue-600 text-white rounded-lg p-8 text-center">
-        <h2 class="text-3xl font-montserrat mb-4">Discover My Full Resume</h2>
-        <p class="text-lg mb-6 max-w-2xl mx-auto">
-          Delve into my academic achievements, professional experiences, and
-          certifications in detail.
-        </p>
-        <a
-          href="resume.html"
-          class="bg-white text-blue-600 font-bold py-3 px-6 rounded transition duration-300 hover:bg-gray-100 shadow-lg"
-        >
-          View Resume
+    </div>
+  </section>
+  
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mb-2">© 2025 Mohit Bhimrajka. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
         </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-blue-700 text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
-      <div class="mt-4 flex justify-center space-x-4">
-        <a
-          href="https://github.com/MohitBhimrajka"
-          target="_blank"
-          class="hover:text-blue-300"
-          rel="noopener noreferrer"
-        >
-          GitHub
+        <a href="https://github.com/MohitBhimrajka" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
         </a>
-        <a
-          href="https://linkedin.com/in/mohit-bhimrajka"
-          target="_blank"
-          class="hover:text-blue-300"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
+        <a href="mailto:mohitbhimrajka5@gmail.com" aria-label="Email Contact">
+          <i class="fas fa-envelope"></i>
         </a>
       </div>
     </div>
   </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- SCRIPTS: GSAP, AOS, and Inlined Script for Sticky Nav & Mobile Toggle -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    defer
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-    defer
-  ></script>
-  <script
-    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-    defer
-  ></script>
-  <script src="assets/js/main.js" defer></script>
+  <!-- AOS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>

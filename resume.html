@@ -1,315 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required Meta Tags -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Mohit Bhimrajka - AI/ML Engineer</title>
 
-  <!-- SEO / Social Meta -->
-  <title>Resume | Mohit Bhimrajka Portfolio</title>
-  <meta
-    name="description"
-    content="Access Mohit Bhimrajka’s comprehensive resume, featuring academic achievements, professional experiences, and certifications."
-  />
-  <meta
-    name="keywords"
-    content="Resume, Mohit, Bhimrajka, AI, ML, Data Science, Projects, Education, Experience"
-  />
-  <meta property="og:title" content="Resume | Mohit Bhimrajka" />
-  <meta
-    property="og:description"
-    content="Discover Mohit's professional journey, including his academic background, career experience, and key projects."
-  />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:url"
-    content="https://your-github-pages-url/resume.html"
-  />
-  <meta property="og:image" content="assets/images/hero-bg.jpg" />
-  <link
-    rel="canonical"
-    href="https://your-github-pages-url/resume.html"
-  />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore the professional resume of Mohit Bhimrajka - AI/ML Engineer and technology enthusiast.">
+  <meta name="keywords" content="Resume, AI Engineer, ML Engineer, Mohit Bhimrajka">
 
-  <!-- Tailwind CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-  <!-- AOS (Animate On Scroll) -->
-  <link
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    rel="stylesheet"
-  />
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Custom Styles -->
-  <link
-    rel="stylesheet"
-    href="assets/css/style.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Bootswatch Materia Theme (Bootstrap) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/materia/bootstrap.min.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Custom CSS -->
   <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-dark: #1E3A8A;
+      --text-dark: #333333;
+      --text-light: #666666;
+    }
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f9fafb;
-      color: #333333;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
-    h1, h2, h3, .font-montserrat {
-      font-family: 'Montserrat', sans-serif;
+    .navbar {
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      background: var(--primary-color) !important;
     }
-    #navbar {
-      transition: padding 0.3s ease-in-out;
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: rgba(37, 99, 235, 0.98) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .resume-viewer iframe {
-      width: 100%;
-      height: 85vh; 
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      color: #ffffff !important;
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* Header Section */
+    .header-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 8rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' ...%3E");
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .header-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .header-subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Main Resume Section */
+    .resume-section {
+      padding: 5rem 0;
+      margin-top: -4rem;
+    }
+    .resume-container {
+      background: white;
+      border-radius: 2rem;
+      padding: 3rem;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+    }
+    .resume-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .resume-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* Download and Print Buttons */
+    .resume-buttons {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .resume-buttons a,
+    .resume-buttons button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+    }
+    .btn-download {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
       border: none;
     }
-    @media (max-width: 768px) {
-      .resume-viewer iframe {
-        height: 70vh;
-      }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      color: white;
     }
-    .tab-btn.active {
-      background-color: #2563eb;
-      color: #ffffff;
+    .btn-print {
+      background: white;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    .btn-print:hover {
+      transform: translateY(-2px);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    #back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      color: var(--primary-dark);
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
-  <!-- HEADER / NAVIGATION -->
-  <header id="navbar" class="bg-white shadow sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Logo / Brand -->
-      <a
-        href="index.html"
-        class="text-2xl font-montserrat text-blue-600"
-        aria-label="Go to Home"
-      >
-        Mohit Bhimrajka
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
       </a>
-
-      <!-- Desktop Menu -->
-      <nav aria-label="Primary" class="hidden md:flex space-x-6">
-        <a href="index.html#about" class="hover:text-blue-600">About</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="resume.html" class="text-blue-600 font-bold">Resume</a>
-        <a href="certifications.html" class="hover:text-blue-600">Certifications</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
-
-      <!-- Mobile Nav Toggle -->
-      <button
-        id="menu-toggle"
-        class="md:hidden cursor-pointer"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <svg
-          class="w-8 h-8 text-blue-600"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 8h16M4 16h16"
-          />
-        </svg>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <nav
-      id="mobile-menu"
-      class="hidden md:hidden bg-white"
-      aria-label="Mobile Primary Navigation"
-    >
-      <ul class="flex flex-col space-y-2 p-4">
-        <li><a href="index.html#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
-        <li><a href="resume.html" class="text-blue-600 font-bold">Resume</a></li>
-        <li><a href="certifications.html" class="hover:text-blue-600">Certifications</a></li>
-        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- RESUME SECTION -->
-  <section class="container mx-auto px-6 py-12 bg-white" data-aos="fade-up">
-    <h1 class="text-4xl font-montserrat text-blue-600 mb-6 text-center">
-      Resume
-    </h1>
-    <p class="text-center text-lg mb-8 max-w-2xl mx-auto">
-      View my detailed professional journey. Choose between an embedded PDF or
-      an interactive summary.
-    </p>
-
-    <!-- TAB BUTTONS -->
-    <div class="flex justify-center space-x-4 mb-8">
-      <button
-        id="tab-pdf"
-        class="tab-btn bg-blue-600 text-white font-bold py-2 px-4 rounded active"
-      >
-        PDF View
-      </button>
-      <button
-        id="tab-summary"
-        class="tab-btn bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded"
-      >
-        Interactive Summary
-      </button>
-    </div>
-
-    <!-- TAB CONTENT -->
-    <!-- PDF VIEW -->
-    <div id="pdf-view" class="tab-content">
-      <div class="resume-viewer" data-aos="zoom-in">
-        <iframe
-          src="assets/pdf/MohitBhimrajka_Resume.pdf"
-          title="Mohit Bhimrajka Resume"
-        ></iframe>
-      </div>
-    </div>
-
-    <!-- SUMMARY VIEW -->
-    <div id="summary-view" class="tab-content hidden" data-aos="fade-up">
-      <div class="bg-gray-50 shadow-lg rounded-lg p-8 max-w-3xl mx-auto">
-        <!-- Professional Summary -->
-        <h2 class="text-2xl font-montserrat text-blue-600 mb-4">
-          Professional Summary
-        </h2>
-        <p class="mb-4">
-          AI-focused technology student and emerging leader with a strong
-          foundation in AI/ML, Data Science, and Big Data analytics. Developed a
-          top-3 ranked recommendation engine and reduced
-          ideation-to-production time by 20% during a GenAI internship at
-          Siemens.
-        </p>
-
-        <!-- Education -->
-        <h3 class="text-xl font-montserrat text-blue-600 mb-2">
-          Education
-        </h3>
-        <p class="mb-4">
-          Bachelor of Technology in Computer Science (AI &amp; ML) from
-          <strong>ATLAS SkillTech University</strong> with a CGPA of 9.03/10.00.
-        </p>
-
-        <!-- Professional Experience -->
-        <h3 class="text-xl font-montserrat text-blue-600 mb-2">
-          Professional Experience
-        </h3>
-        <ul class="list-disc pl-5 mb-4">
-          <li>
-            <strong>GenAI Intern, Siemens AG:</strong> Developed an AI-driven
-            assistant and integrated LLaMA 3.1 to reduce production time.
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Adjust active link for Resume -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li>
-            <strong>Data Science Intern, University of Technology Sydney:</strong>
-            Enhanced COVID-19 simulation tools and UI/UX design.
+          <li class="nav-item">
+            <a class="nav-link active" href="resume.html">Resume</a>
           </li>
-        </ul>
-
-        <!-- Key Projects -->
-        <h3 class="text-xl font-montserrat text-blue-600 mb-2">
-          Key Projects
-        </h3>
-        <ul class="list-disc pl-5">
-          <li>Recommendation Engine (Ongoing)</li>
-          <li>College Counseling App</li>
-          <li>Interactive CNN Demo</li>
-          <li>Housing Price Prediction</li>
+          <li class="nav-item">
+            <a class="nav-link" href="certifications.html">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">
+              <i class="fab fa-github me-1"></i>Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
+  </nav>
 
-    <!-- DOWNLOAD & PRINT OPTIONS -->
-    <div
-      class="mt-8 flex flex-col sm:flex-row justify-center gap-4"
-      data-aos="fade-up"
-      data-aos-delay="200"
-    >
-      <a
-        href="assets/pdf/MohitBhimrajka_Resume.pdf"
-        download
-        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded transition duration-300 text-center"
-      >
-        Download Resume
-      </a>
-      <button
-        onclick="window.print()"
-        class="bg-transparent border border-blue-600 hover:bg-blue-600 hover:text-white text-blue-600 font-bold py-3 px-8 rounded transition duration-300 text-center"
-      >
-        Print Resume
-      </button>
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="header-title" data-aos="fade-up">My Resume</h1>
+        <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
+          A comprehensive overview of my academic achievements, professional experiences, and skill sets.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-blue-700 text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-      <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
-      <div class="mt-4 flex justify-center space-x-4">
-        <a
-          href="https://github.com/MohitBhimrajka"
-          target="_blank"
-          class="hover:text-blue-300"
-          rel="noopener noreferrer"
-        >
-          GitHub
+  <!-- Resume Section -->
+  <section class="resume-section">
+    <div class="container">
+      <div class="resume-container" data-aos="fade-up">
+        <div class="resume-header">
+          <h2 class="resume-title">Professional Summary</h2>
+          <p class="text-muted">
+            AI-focused technology student and emerging leader with a strong foundation in AI/ML, Data Science, and Big Data analytics.
+            Developed a top-3 ranked recommendation engine and reduced ideation-to-production time by 20% during a GenAI internship at Siemens.
+          </p>
+        </div>
+
+        <hr>
+
+        <!-- Education -->
+        <div class="mt-4">
+          <h3 class="text-primary mb-2">Education</h3>
+          <p><strong>B.Tech in Computer Science (AI &amp; ML)</strong> - ATLAS SkillTech University (CGPA: 9.03/10.00)</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="mt-4">
+          <h3 class="text-primary mb-2">Professional Experience</h3>
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <strong>GenAI Intern</strong>, Siemens AG (Jun 2024 - Dec 2024)<br>
+              Developed an AI-driven assistant integrating LLaMA 3.1, reducing production time by 20%.
+            </li>
+            <li>
+              <strong>Data Science Intern</strong>, University of Technology Sydney (Jan 2024 - May 2024)<br>
+              Enhanced COVID-19 simulation tools and UI/UX design for improved usability.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="mt-4">
+          <h3 class="text-primary mb-2">Key Projects</h3>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check-circle text-success me-2"></i>Recommendation Engine (Ongoing)</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i>College Counseling App</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i>Interactive CNN Demo</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i>Housing Price Prediction</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <!-- Buttons: Download & Print -->
+        <div class="resume-buttons">
+          <a href="assets/pdf/MohitBhimrajka_Resume.pdf" download class="btn-download">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
+          <button class="btn-print" onclick="window.print()">
+            <i class="fas fa-print"></i> Print Resume
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mb-2">© 2025 Mohit Bhimrajka. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
         </a>
-        <a
-          href="https://linkedin.com/in/mohit-bhimrajka"
-          target="_blank"
-          class="hover:text-blue-300"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
+        <a href="https://github.com/MohitBhimrajka" target="_blank" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:mohitbhimrajka5@gmail.com" aria-label="Email Contact">
+          <i class="fas fa-envelope"></i>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- GSAP, AOS, and Custom Scripts -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    defer
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-    defer
-  ></script>
-  <script
-    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-    defer
-  ></script>
-  <script src="assets/js/main.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Tab functionality for PDF/summary
-      const tabPDF = document.getElementById('tab-pdf');
-      const tabSummary = document.getElementById('tab-summary');
-      const pdfView = document.getElementById('pdf-view');
-      const summaryView = document.getElementById('summary-view');
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-      tabPDF.addEventListener('click', () => {
-        tabPDF.classList.add('active');
-        tabSummary.classList.remove('active');
-        pdfView.classList.remove('hidden');
-        summaryView.classList.add('hidden');
-      });
-      tabSummary.addEventListener('click', () => {
-        tabSummary.classList.add('active');
-        tabPDF.classList.remove('active');
-        pdfView.classList.add('hidden');
-        summaryView.classList.remove('hidden');
+  <!-- AOS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Back to Top
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
     });
   </script>
