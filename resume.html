@@ -24,11 +24,12 @@
   <!-- Custom CSS -->
   <style>
     :root {
-      --primary-color: #2563eb;
-      --primary-dark: #1E3A8A;
-      --text-dark: #333333;
-      --text-light: #666666;
-      --bg-light: #f8fafc;
+      --primary-color: #1a365d;
+      --primary-dark: #0f172a;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-start: #2563eb;
+      --gradient-end: #1E3A8A;
       --section-bg: #ffffff;
     }
 
@@ -52,7 +53,7 @@
       background: white;
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
       display: flex;
       gap: 1rem;
       justify-content: center;
@@ -62,26 +63,69 @@
     .action-btn {
       display: inline-flex;
       align-items: center;
+      gap: 0.75rem;
       padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      font-weight: 500;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
       text-decoration: none;
+      min-width: 250px;
+      justify-content: center;
     }
 
     .action-btn.primary {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white !important;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
     }
 
     .action-btn.secondary {
-      background: var(--bg-light);
+      background: #f1f5f9;
       color: var(--text-dark) !important;
+      border: 2px solid var(--primary-color);
     }
 
     .action-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Resume Toggle */
+    .resume-toggle {
+      display: none;
+    }
+
+    .resume-toggle:checked ~ .resume-content {
+      display: block;
+    }
+
+    .resume-toggle:checked ~ .pdf-container {
+      display: none;
+    }
+
+    .resume-toggle:not(:checked) ~ .resume-content {
+      display: none;
+    }
+
+    .resume-toggle:not(:checked) ~ .pdf-container {
+      display: block;
+    }
+
+    .toggle-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      background: #f1f5f9;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-label:hover {
+      background: #e2e8f0;
     }
 
     /* PDF Viewer */
@@ -170,8 +214,9 @@
       max-width: 700px;
       margin: 0 auto;
     }
-/* Resume Content */
-.resume-section {
+
+    /* Resume Content */
+    .resume-section {
       padding: 5rem 0;
       margin-top: -4rem;
     }
@@ -509,8 +554,9 @@
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-/* Awards Section */
-.awards-grid {
+
+    /* Awards Section */
+    .awards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
@@ -829,14 +875,19 @@
     <div class="container">
       <div class="action-buttons" data-aos="fade-up">
         <a href="assets/pdf/Mohit_Bhimrajka_Resume.pdf" download="Mohit_Bhimrajka_Resume.pdf" class="action-btn primary" id="downloadBtn">
-          <i class="fas fa-download me-2"></i>Download Resume (PDF)
+          <i class="fas fa-download"></i>
+          Download Resume (PDF)
         </a>
-        <a href="assets/pdf/Mohit_Bhimrajka_Resume.pdf" target="_blank" class="action-btn secondary" id="viewPdfBtn">
-          <i class="fas fa-eye me-2"></i>View PDF Version
-        </a>
+        <label for="viewToggle" class="action-btn secondary">
+          <i class="fas fa-eye"></i>
+          View Resume Online
+        </label>
       </div>
     </div>
   </section>
+
+  <!-- Resume View Toggle -->
+  <input type="checkbox" id="viewToggle" class="resume-toggle">
 
   <!-- PDF Viewer Container -->
   <div class="container">
@@ -845,261 +896,266 @@
     </div>
   </div>
 
-  <!-- Resume Section -->
-  <section class="resume-section">
-    <div class="container">
-      <div class="resume-container" data-aos="fade-up">
-        <!-- Resume Header -->
-        <div class="resume-header">
-          <h1>Mohit Bhimrajka</h1>
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>+91 90043 82252</span>
+  <!-- Resume Content -->
+  <div class="resume-content">
+    <!-- Resume Section -->
+    <section class="resume-section">
+      <div class="container">
+        <div class="resume-container" data-aos="fade-up">
+          <!-- Resume Header -->
+          <div class="resume-header">
+            <h1>Mohit Bhimrajka</h1>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+91 90043 82252</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>mohitbhimrajka5@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Mumbai, Maharashtra</span>
+              </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>mohitbhimrajka5@gmail.com</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Mumbai, Maharashtra</span>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <a href="https://MohitBhimrajka.github.io/" target="_blank">Portfolio</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/MohitBhimrajka" target="_blank">GitHub</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank">LinkedIn</a>
+              </div>
             </div>
           </div>
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-globe"></i>
-              <a href="https://MohitBhimrajka.github.io/" target="_blank">Portfolio</a>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/MohitBhimrajka" target="_blank">GitHub</a>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank">LinkedIn</a>
+
+          <!-- Professional Summary -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-user-tie"></i>
+              Professional Summary
+            </h2>
+            <p>
+              AI-focused technology student and emerging leader with a strong foundation in AI/ML, Data Science, and Big Data analytics. 
+              Currently developing a recommendation engine that ranked in the top 3 among my batch, showcasing innovation and technical excellence. 
+              Demonstrated ability to drive efficiency—reducing ideation-to-production time by 20% during my GenAI internship at Siemens—while 
+              bridging technical insights with strategic business needs.
+            </p>
+          </div>
+
+          <!-- Core Competencies & Skills -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-laptop-code"></i>
+              Core Competencies & Skills
+            </h2>
+            <div class="skills-grid">
+              <div class="skill-category" data-aos="fade-up">
+                <h4><i class="fas fa-code"></i>Programming & Data Analysis</h4>
+                <ul class="skill-list">
+                  <li>Python (Pandas, NumPy, SciPy, scikit-learn)</li>
+                  <li>Jupyter Notebook</li>
+                  <li>Matplotlib, Seaborn</li>
+                </ul>
+              </div>
+              <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h4><i class="fas fa-brain"></i>Machine Learning & AI</h4>
+                <ul class="skill-list">
+                  <li>TensorFlow, PyTorch</li>
+                  <li>LLM integration (Llama, OpenAI, Deepseek)</li>
+                  <li>Generative AI & Prompt Design</li>
+                </ul>
+              </div>
+              <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h4><i class="fas fa-database"></i>Big Data & Databases</h4>
+                <ul class="skill-list">
+                  <li>Apache Spark, Hadoop</li>
+                  <li>SQL, NoSQL (MongoDB, Redis)</li>
+                  <li>Data Engineering</li>
+                </ul>
+              </div>
+              <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h4><i class="fas fa-tools"></i>Tools & Platforms</h4>
+                <ul class="skill-list">
+                  <li>Docker, JIRA</li>
+                  <li>Google Cloud</li>
+                  <li>Snowflake</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Professional Summary -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-user-tie"></i>
-            Professional Summary
-          </h2>
-          <p>
-            AI-focused technology student and emerging leader with a strong foundation in AI/ML, Data Science, and Big Data analytics. 
-            Currently developing a recommendation engine that ranked in the top 3 among my batch, showcasing innovation and technical excellence. 
-            Demonstrated ability to drive efficiency—reducing ideation-to-production time by 20% during my GenAI internship at Siemens—while 
-            bridging technical insights with strategic business needs.
-          </p>
-        </div>
+          <!-- Education -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-graduation-cap"></i>
+              Education
+            </h2>
+            <div class="education-item">
+              <h3 class="university-name">ATLAS SkillTech University</h3>
+              <div class="degree-info">
+                <strong>Bachelor of Technology in Computer Science, AI & ML</strong>
+                <span class="education-date">Jul 2023 – Jun 2027</span>
+              </div>
+              <p><strong>CGPA:</strong> 9.03/10.00</p>
+              <p><strong>Relevant Coursework:</strong> Machine Learning, Data Engineering & Large-Scale Storage, 
+                Data Structures & Algorithms, DevOps & MLOps</p>
+            </div>
+          </div>
 
-        <!-- Core Competencies & Skills -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-laptop-code"></i>
-            Core Competencies & Skills
-          </h2>
-          <div class="skills-grid">
-            <div class="skill-category" data-aos="fade-up">
-              <h4><i class="fas fa-code"></i>Programming & Data Analysis</h4>
-              <ul class="skill-list">
-                <li>Python (Pandas, NumPy, SciPy, scikit-learn)</li>
-                <li>Jupyter Notebook</li>
-                <li>Matplotlib, Seaborn</li>
+          <!-- Professional Experience -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-briefcase"></i>
+              Professional Experience
+            </h2>
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <h3 class="company-name">Siemens AG</h3>
+                  <h4 class="experience-title">GenAI Intern</h4>
+                </div>
+                <span class="experience-date">May 2024 – Jul 2024</span>
+              </div>
+              <ul>
+                <li>Developed an AI-driven assistant using Python and NLP tools, particularly FAISS embeddings for enhanced search capabilities</li>
+                <li>Integrated LLaMA 3.1 to reduce ideation-to-production cycle by 20%</li>
+                <li>Implemented advanced prompt engineering techniques to improve response accuracy by 35%</li>
               </ul>
             </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-              <h4><i class="fas fa-brain"></i>Machine Learning & AI</h4>
-              <ul class="skill-list">
-                <li>TensorFlow, PyTorch</li>
-                <li>LLM integration (Llama, OpenAI, Deepseek)</li>
-                <li>Generative AI & Prompt Design</li>
-              </ul>
-            </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-              <h4><i class="fas fa-database"></i>Big Data & Databases</h4>
-              <ul class="skill-list">
-                <li>Apache Spark, Hadoop</li>
-                <li>SQL, NoSQL (MongoDB, Redis)</li>
-                <li>Data Engineering</li>
-              </ul>
-            </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-              <h4><i class="fas fa-tools"></i>Tools & Platforms</h4>
-              <ul class="skill-list">
-                <li>Docker, JIRA</li>
-                <li>Google Cloud</li>
-                <li>Snowflake</li>
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <h3 class="company-name">University of Technology Sydney</h3>
+                  <h4 class="experience-title">Data Science Intern</h4>
+                </div>
+                <span class="experience-date">May 2024 – Jul 2024</span>
+              </div>
+              <ul>
+                <li>Developed custom PDF generation functionality for a COVID-19 simulation tool</li>
+                <li>Streamlined pandemic data dissemination and designed a user-centric UI/UX for SEIRDS model</li>
+                <li>Optimized data processing workflows reducing report generation time by 40%</li>
               </ul>
             </div>
           </div>
-        </div><!-- Education -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-graduation-cap"></i>
-            Education
-          </h2>
-          <div class="education-item">
-            <h3 class="university-name">ATLAS SkillTech University</h3>
-            <div class="degree-info">
-              <strong>Bachelor of Technology in Computer Science, AI & ML</strong>
-              <span class="education-date">Jul 2023 – Jun 2027</span>
-            </div>
-            <p><strong>CGPA:</strong> 9.03/10.00</p>
-            <p><strong>Relevant Coursework:</strong> Machine Learning, Data Engineering & Large-Scale Storage, 
-              Data Structures & Algorithms, DevOps & MLOps</p>
-          </div>
-        </div>
 
-        <!-- Professional Experience -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-briefcase"></i>
-            Professional Experience
-          </h2>
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <h3 class="company-name">Siemens AG</h3>
-                <h4 class="experience-title">GenAI Intern</h4>
+          <!-- Projects -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-project-diagram"></i>
+              Key Projects
+            </h2>
+            <div class="project-grid">
+              <div class="project-card">
+                <h3 class="project-title">
+                  <i class="fas fa-star"></i>
+                  Recommendation Engine
+                </h3>
+                <p class="project-text">Building a sophisticated recommendation system using collaborative filtering and deep learning techniques, achieving 92% accuracy in user preference predictions.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">ML</span>
+                  <span class="project-tag">PostgreSQL</span>
+                </div>
               </div>
-              <span class="experience-date">May 2024 – Jul 2024</span>
-            </div>
-            <ul>
-              <li>Developed an AI-driven assistant using Python and NLP tools, particularly FAISS embeddings for enhanced search capabilities</li>
-              <li>Integrated LLaMA 3.1 to reduce ideation-to-production cycle by 20%</li>
-              <li>Implemented advanced prompt engineering techniques to improve response accuracy by 35%</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <h3 class="company-name">University of Technology Sydney</h3>
-                <h4 class="experience-title">Data Science Intern</h4>
+              <div class="project-card">
+                <h3 class="project-title">
+                  <i class="fas fa-graduation-cap"></i>
+                  College Counseling App
+                </h3>
+                <p class="project-text">Developed an AI-powered counseling system integrating LLMs to provide personalized academic and career guidance to students.</p>
+                <div class="project-tags">
+                  <span class="project-tag">LLM</span>
+                  <span class="project-tag">AI</span>
+                  <span class="project-tag">Python</span>
+                </div>
               </div>
-              <span class="experience-date">May 2024 – Jul 2024</span>
-            </div>
-            <ul>
-              <li>Developed custom PDF generation functionality for a COVID-19 simulation tool</li>
-              <li>Streamlined pandemic data dissemination and designed a user-centric UI/UX for SEIRDS model</li>
-              <li>Optimized data processing workflows reducing report generation time by 40%</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Projects -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-project-diagram"></i>
-            Key Projects
-          </h2>
-          <div class="project-grid">
-            <div class="project-card">
-              <h3 class="project-title">
-                <i class="fas fa-star"></i>
-                Recommendation Engine
-              </h3>
-              <p class="project-text">Building a sophisticated recommendation system using collaborative filtering and deep learning techniques, achieving 92% accuracy in user preference predictions.</p>
-              <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">ML</span>
-                <span class="project-tag">PostgreSQL</span>
-              </div>
-            </div>
-            <div class="project-card">
-              <h3 class="project-title">
-                <i class="fas fa-graduation-cap"></i>
-                College Counseling App
-              </h3>
-              <p class="project-text">Developed an AI-powered counseling system integrating LLMs to provide personalized academic and career guidance to students.</p>
-              <div class="project-tags">
-                <span class="project-tag">LLM</span>
-                <span class="project-tag">AI</span>
-                <span class="project-tag">Python</span>
-              </div>
-            </div>
-            <div class="project-card">
-              <h3 class="project-title">
-                <i class="fas fa-brain"></i>
-                Interactive CNN Demo
-              </h3>
-              <p class="project-text">Created an interactive demonstration of convolutional neural networks using Keras and the MNIST dataset for real-time visualization.</p>
-              <div class="project-tags">
-                <span class="project-tag">Deep Learning</span>
-                <span class="project-tag">Keras</span>
-                <span class="project-tag">CNN</span>
+              <div class="project-card">
+                <h3 class="project-title">
+                  <i class="fas fa-brain"></i>
+                  Interactive CNN Demo
+                </h3>
+                <p class="project-text">Created an interactive demonstration of convolutional neural networks using Keras and the MNIST dataset for real-time visualization.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Deep Learning</span>
+                  <span class="project-tag">Keras</span>
+                  <span class="project-tag">CNN</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Leadership -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-users"></i>
-            Leadership & Activities
-          </h2>
-          <div class="leadership-item">
-            <h3 class="role-title">Vice President, STAGE (Cultural Club)</h3>
-            <p class="experience-date">Aug 2024 – Present</p>
-            <p>Lead cultural initiatives and coordinate multidisciplinary teams to execute high-impact events at the university. Managed a team of 50+ members and organized events with 1000+ participants.</p>
-          </div>
-          <div class="leadership-item">
-            <h3 class="role-title">Community Lead, Code Vipassana</h3>
-            <p class="experience-date">Mar 2024 – Present</p>
-            <p>Organize technical workshops and community events, fostering collaboration and knowledge exchange among peers. Led 15+ workshops on AI/ML topics.</p>
-          </div>
-          <div class="leadership-item">
-            <h3 class="role-title">Contingent Leader, College Funbaazi 3.0</h3>
-            <p class="experience-date">Oct 2024 – Nov 2024</p>
-            <p>Directed a team of over 230 participants in a competitive event, achieving top placement and bolstering college representation.</p>
-          </div>
-          <div class="leadership-item">
-            <h3 class="role-title">President, Technical Student Council</h3>
-            <p class="experience-date">Jun 2023 – Feb 2025</p>
-            <p>Managed the college's largest tech hackathon in partnership with MumbaiTech & GDG MAD, earning a Guinness World Record for participation.</p>
-          </div>
-        </div>
-
-        <!-- Awards -->
-        <div class="section">
-          <h2 class="section-title">
-            <i class="fas fa-trophy"></i>
-            Awards & Achievements
-          </h2>
-          <div class="awards-grid">
-            <div class="award-card">
-              <h3 class="award-title">SAT Math Excellence</h3>
-              <p>Scored 740/800, demonstrating outstanding quantitative aptitude and analytical skills. Ranked in the 95th percentile globally.</p>
+          <!-- Leadership -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-users"></i>
+              Leadership & Activities
+            </h2>
+            <div class="leadership-item">
+              <h3 class="role-title">Vice President, STAGE (Cultural Club)</h3>
+              <p class="experience-date">Aug 2024 – Present</p>
+              <p>Lead cultural initiatives and coordinate multidisciplinary teams to execute high-impact events at the university. Managed a team of 50+ members and organized events with 1000+ participants.</p>
             </div>
-            <div class="award-card">
-              <h3 class="award-title">ATLAS Achievers Award</h3>
-              <p>Recognized for exceptional leadership and technical contributions to the university community. Selected among 500+ students.</p>
+            <div class="leadership-item">
+              <h3 class="role-title">Community Lead, Code Vipassana</h3>
+              <p class="experience-date">Mar 2024 – Present</p>
+              <p>Organize technical workshops and community events, fostering collaboration and knowledge exchange among peers. Led 15+ workshops on AI/ML topics.</p>
             </div>
-            <div class="award-card">
-              <h3 class="award-title">Hackathon Champion</h3>
-              <p>Led team to victory in university-wide AI hackathon, developing an innovative solution for healthcare diagnostics.</p>
+            <div class="leadership-item">
+              <h3 class="role-title">Contingent Leader, College Funbaazi 3.0</h3>
+              <p class="experience-date">Oct 2024 – Nov 2024</p>
+              <p>Directed a team of over 230 participants in a competitive event, achieving top placement and bolstering college representation.</p>
+            </div>
+            <div class="leadership-item">
+              <h3 class="role-title">President, Technical Student Council</h3>
+              <p class="experience-date">Jun 2023 – Feb 2025</p>
+              <p>Managed the college's largest tech hackathon in partnership with MumbaiTech & GDG MAD, earning a Guinness World Record for participation.</p>
             </div>
           </div>
-        </div>
 
-        <!-- Resume Actions -->
-        <div class="resume-actions">
-          <a href="assets/pdf/Mohit_Bhimrajka_Resume.pdf" download="Mohit_Bhimrajka_Resume.pdf" class="resume-btn primary" id="downloadBtnBottom">
-            <i class="fas fa-download"></i>
-            Download PDF
-          </a>
-          <button onclick="window.print()" class="resume-btn secondary">
-            <i class="fas fa-print"></i>
-            Print Resume
-          </button>
+          <!-- Awards -->
+          <div class="section">
+            <h2 class="section-title">
+              <i class="fas fa-trophy"></i>
+              Awards & Achievements
+            </h2>
+            <div class="awards-grid">
+              <div class="award-card">
+                <h3 class="award-title">SAT Math Excellence</h3>
+                <p>Scored 740/800, demonstrating outstanding quantitative aptitude and analytical skills. Ranked in the 95th percentile globally.</p>
+              </div>
+              <div class="award-card">
+                <h3 class="award-title">ATLAS Achievers Award</h3>
+                <p>Recognized for exceptional leadership and technical contributions to the university community. Selected among 500+ students.</p>
+              </div>
+              <div class="award-card">
+                <h3 class="award-title">Hackathon Champion</h3>
+                <p>Led team to victory in university-wide AI hackathon, developing an innovative solution for healthcare diagnostics.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resume Actions -->
+          <div class="resume-actions">
+            <a href="assets/pdf/Mohit_Bhimrajka_Resume.pdf" download="Mohit_Bhimrajka_Resume.pdf" class="resume-btn primary" id="downloadBtnBottom">
+              <i class="fas fa-download"></i>
+              Download PDF
+            </a>
+            <button onclick="window.print()" class="resume-btn secondary">
+              <i class="fas fa-print"></i>
+              Print Resume
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Back to Top Button -->
   <button id="back-to-top" aria-label="Back to Top">
@@ -1178,6 +1234,16 @@
       });
     });
 
+    // Resume View Toggle Handler
+    const viewToggle = document.getElementById('viewToggle');
+    viewToggle.addEventListener('change', () => {
+      if (viewToggle.checked) {
+        document.querySelector('.resume-content').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        document.querySelector('.pdf-container').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -1202,29 +1268,6 @@
         top: 0,
         behavior: 'smooth'
       });
-    });
-
-    // Smooth Scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Print Handler
-    window.addEventListener('beforeprint', () => {
-      document.body.classList.add('printing');
-    });
-
-    window.addEventListener('afterprint', () => {
-      document.body.classList.remove('printing');
     });
   </script>
 </body>

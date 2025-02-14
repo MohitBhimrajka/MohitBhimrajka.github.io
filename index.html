@@ -24,10 +24,10 @@
   <!-- Custom CSS -->
   <style>
     :root {
-      --primary-color: #2563eb;
-      --primary-dark: #1E3A8A;
-      --text-dark: #333333;
-      --text-light: #666666;
+      --primary-color: #1a365d;
+      --primary-dark: #0f172a;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
     }
 
     body {
@@ -46,7 +46,7 @@
     }
     .navbar.scrolled {
       padding: 0.5rem 0;
-      background: rgba(37, 99, 235, 0.98) !important;
+      background: rgba(26, 54, 93, 0.98) !important;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -65,113 +65,112 @@
     .header-section {
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
       color: white;
-      padding: 8rem 0 6rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       position: relative;
       overflow: hidden;
+      padding: 0;
     }
     .header-content {
       position: relative;
       z-index: 1;
       text-align: center;
+      padding: 4rem 0;
     }
     .header-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .header-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto 2rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
     }
 
-    /* Resume Button */
-    .resume-btn {
-      background: white;
-      color: var(--primary-color);
-      padding: 1rem 2.5rem;
+    /* Buttons */
+    .hero-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .resume-btn, .about-btn {
+      padding: 1.2rem 3rem;
       border-radius: 50px;
       font-weight: 600;
       font-size: 1.1rem;
       transition: all 0.3s ease;
       text-decoration: none;
       display: inline-block;
-      margin-top: 1rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .resume-btn:hover {
+    .resume-btn {
+      background: white;
+      color: var(--primary-color);
+    }
+    .about-btn {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    .resume-btn:hover, .about-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .resume-btn:hover {
       color: var(--primary-dark);
+    }
+    .about-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
     }
 
     /* Features Section */
     .features-section {
-      padding: 4rem 0;
-      margin-top: -4rem;
+      padding: 8rem 0;
     }
     .features-container {
       background: white;
       border-radius: 2rem;
-      padding: 3rem;
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      padding: 4rem;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
     .feature-box {
       text-align: center;
       border: 1px solid #e2e8f0;
-      padding: 2rem;
+      padding: 3rem 2rem;
       border-radius: 1rem;
       transition: all 0.3s ease;
       cursor: pointer;
       text-decoration: none;
       color: inherit;
       display: block;
+      height: 100%;
     }
     .feature-box:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
       border-color: var(--primary-color);
     }
     .feature-icon {
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: var(--primary-color);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .feature-title {
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
     .feature-text {
       color: var(--text-light);
-    }
-
-    /* Stats Section */
-    .stats-section {
-      padding: 4rem 0;
-    }
-    .stat-card {
-      background: white;
-      border-radius: 1rem;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.05);
-      transition: all 0.3s ease;
-    }
-    .stat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1);
-    }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-    .stat-label {
-      color: var(--text-light);
-      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     /* Back to Top Button */
@@ -200,25 +199,25 @@
     }
     #back-to-top:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
     }
 
     /* Footer */
     .footer {
       background: white;
-      padding: 2rem 0;
+      padding: 3rem 0;
       text-align: center;
       margin-top: 4rem;
     }
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
     .social-links a {
       color: var(--primary-color);
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       transition: all 0.3s ease;
     }
     .social-links a:hover {
@@ -275,9 +274,14 @@
         <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
           Welcome to my personal portfolio! Explore my journey in artificial intelligence, machine learning, and dynamic leadership.
         </p>
-        <a href="resume.html" class="resume-btn" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-file-alt me-2"></i>View My Resume
-        </a>
+        <div class="hero-buttons">
+          <a href="#about" class="about-btn" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-user me-2"></i>About Me
+          </a>
+          <a href="resume.html" class="resume-btn" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-file-alt me-2"></i>View My Resume
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -286,7 +290,7 @@
   <section class="features-section">
     <div class="container">
       <div class="features-container">
-        <div class="row g-4">
+        <div class="row g-5">
           <div class="col-lg-4" data-aos="fade-up">
             <a href="projects.html" class="feature-box">
               <i class="fas fa-robot feature-icon"></i>
@@ -313,38 +317,6 @@
                 Explore a collection of industry-recognized credentials that validate my expertise in AI, data science, and beyond.
               </p>
             </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-3" data-aos="fade-up">
-          <div class="stat-card">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-card">
-            <div class="stat-number">20+</div>
-            <div class="stat-label">AI Projects</div>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-card">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Certifications</div>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="stat-card">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Awards</div>
           </div>
         </div>
       </div>
@@ -423,40 +395,6 @@
         behavior: 'smooth'
       });
     });
-  });
-
-  // Add animation to stats numbers
-  const stats = document.querySelectorAll('.stat-number');
-  const animateStats = () => {
-    stats.forEach(stat => {
-      const value = parseFloat(stat.innerText);
-      let current = 0;
-      const increment = value / 30;
-      const updateCounter = () => {
-        if (current < value) {
-          current += increment;
-          stat.innerText = Math.ceil(current) + '+';
-          setTimeout(updateCounter, 50);
-        } else {
-          stat.innerText = value + '+';
-        }
-      };
-      updateCounter();
-    });
-  };
-
-  // Trigger stats animation when in viewport
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateStats();
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  document.querySelector('.stats-section').querySelectorAll('.stat-card').forEach((stat) => {
-    observer.observe(stat);
   });
 </script>
 </body>

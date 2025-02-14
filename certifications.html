@@ -24,11 +24,12 @@
   <!-- Custom CSS -->
   <style>
     :root {
-      --primary-color: #2563eb;
-      --primary-dark: #1E3A8A;
-      --text-dark: #333333;
-      --text-light: #666666;
-      --bg-light: #f8fafc;
+      --primary-color: #1a365d;
+      --primary-dark: #0f172a;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-start: #2563eb;
+      --gradient-end: #1E3A8A;
     }
 
     body {
@@ -48,7 +49,7 @@
 
     .navbar.scrolled {
       padding: 0.5rem 0;
-      background: rgba(37, 99, 235, 0.98) !important;
+      background: rgba(26, 54, 93, 0.98) !important;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -67,7 +68,7 @@
 
     /* Header Section */
     .header-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
       padding: 8rem 0 6rem;
       position: relative;
@@ -81,7 +82,7 @@
       width: 100%;
       height: 100%;
       opacity: 0.05;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff'/%3E%3C/svg%3E");
     }
 
     .header-content {
@@ -105,43 +106,7 @@
       margin: 0 auto;
     }
 
-    /* Certificate Categories */
-    .category-tabs {
-      margin-top: -2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .filter-container {
-      background: white;
-      border-radius: 50px;
-      padding: 1rem;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
-      display: inline-flex;
-      gap: 0.5rem;
-    }
-
-    .filter-btn {
-      padding: 0.5rem 1.5rem;
-      border: none;
-      background: none;
-      color: var(--text-light);
-      border-radius: 25px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .filter-btn:hover {
-      color: var(--primary-color);
-    }
-
-    .filter-btn.active {
-      background: var(--primary-color);
-      color: white;
-    }
-
-    /* Certifications Section */
+    /* Certificate Cards */
     .cert-section {
       padding: 5rem 0;
       margin-top: -2rem;
@@ -151,12 +116,12 @@
       background: white;
       border-radius: 2rem;
       padding: 3rem;
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
 
     .cert-card {
       background: white;
-      border: 1px solid #e5e7eb;
+      border: 1px solid #e2e8f0;
       border-radius: 1.5rem;
       overflow: hidden;
       transition: all 0.3s ease;
@@ -166,33 +131,37 @@
 
     .cert-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
       border-color: var(--primary-color);
     }
 
     .cert-header {
-      padding: 2rem;
+      padding: 2.5rem;
       text-align: center;
-      background: var(--bg-light);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       position: relative;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .cert-banner {
       position: absolute;
       top: 1rem;
       right: 1rem;
-      background: var(--primary-color);
-      color: white;
-      padding: 0.25rem 0.75rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
       border-radius: 25px;
       font-size: 0.8rem;
-      font-weight: 500;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
     }
 
     .cert-icon {
-      font-size: 3rem;
-      color: var(--primary-color);
-      margin-bottom: 1.5rem;
+      height: 80px;
+      filter: brightness(0) invert(1);
       transition: all 0.3s ease;
     }
 
@@ -205,17 +174,17 @@
     }
 
     .cert-title {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       color: var(--text-dark);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       font-weight: 600;
     }
 
     .cert-issuer {
       color: var(--primary-color);
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 500;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -225,16 +194,17 @@
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      padding: 0.25rem 0.5rem;
+      padding: 0.35rem 0.75rem;
       background: #ecfdf5;
       color: #059669;
       border-radius: 25px;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 500;
     }
 
     .cert-date {
       color: var(--text-light);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
@@ -243,8 +213,9 @@
 
     .cert-description {
       color: var(--text-light);
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 1.5rem;
+      line-height: 1.8;
     }
 
     .cert-skills {
@@ -252,7 +223,7 @@
     }
 
     .skills-title {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       margin-bottom: 1rem;
       color: var(--text-dark);
@@ -261,47 +232,50 @@
     .skills-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
 
     .skill-tag {
-      background: var(--bg-light);
+      background: #f1f5f9;
       color: var(--primary-color);
-      padding: 0.25rem 0.75rem;
+      padding: 0.5rem 1rem;
       border-radius: 25px;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
     }
 
     .cert-actions {
-      display: flex;
-      gap: 1rem;
+      margin-top: 2rem;
     }
 
     .cert-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 25px;
-      font-weight: 500;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
       text-decoration: none;
-    }
-
-    .cert-link.primary {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
-    }
-
-    .cert-link.secondary {
-      background: var(--bg-light);
-      color: var(--text-dark);
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
     }
 
     .cert-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
+      color: white;
     }
 
     /* Stats Section */
@@ -310,7 +284,7 @@
       background: white;
       margin-top: 4rem;
       border-radius: 2rem;
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
 
     .stat-card {
@@ -341,115 +315,6 @@
       font-weight: 500;
     }
 
-    /* Skills Progress Section */
-    .skills-section {
-      padding: 4rem 0;
-      margin-top: 4rem;
-    }
-
-    .skills-container {
-      background: white;
-      border-radius: 2rem;
-      padding: 3rem;
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
-    }
-
-    .skill-progress {
-      margin-bottom: 2rem;
-    }
-
-    .skill-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-name {
-      font-weight: 500;
-      color: var(--text-dark);
-    }
-
-    .skill-percentage {
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    .progress {
-      height: 0.5rem;
-      background: var(--bg-light);
-      border-radius: 1rem;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-      transition: width 1.5s ease-in-out;
-    }
-
-    /* Certifications Timeline */
-    .timeline-section {
-      padding: 4rem 0;
-    }
-
-    .timeline {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: var(--primary-color);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -1px;
-    }
-
-    .timeline-item {
-      padding: 10px 40px;
-      position: relative;
-      width: 50%;
-      background: transparent;
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: white;
-      border: 4px solid var(--primary-color);
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .timeline-item.left {
-      left: 0;
-    }
-
-    .timeline-item.right {
-      left: 50%;
-    }
-
-    .timeline-item.left::after {
-      right: -10px;
-    }
-
-    .timeline-item.right::after {
-      left: -10px;
-    }
-
-    .timeline-content {
-      padding: 20px;
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
-    }
-
     /* Back to Top Button */
     #back-to-top {
       position: fixed;
@@ -469,6 +334,7 @@
       opacity: 0;
       visibility: hidden;
       z-index: 1000;
+      border: none;
     }
 
     #back-to-top.visible {
@@ -478,7 +344,7 @@
 
     #back-to-top:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
     }
 
     /* Footer */
@@ -517,23 +383,12 @@
         padding: 0.5rem;
       }
 
-      .timeline::after {
-        left: 31px;
+      .cert-header {
+        height: 150px;
       }
 
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-
-      .timeline-item.right {
-        left: 0;
-      }
-
-      .timeline-item.left::after,
-      .timeline-item.right::after {
-        left: 21px;
+      .cert-icon {
+        height: 60px;
       }
     }
   </style>
@@ -589,29 +444,19 @@
     </div>
   </section>
 
-  <!-- Category Filters -->
-  <section class="category-tabs text-center">
-    <div class="container">
-      <div class="filter-container" data-aos="fade-up">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
-        <button class="filter-btn" data-filter="data">Data Science</button>
-        <button class="filter-btn" data-filter="tools">Tools & Platforms</button>
-      </div>
-    </div>
-  </section>
-
   <!-- Certifications Section -->
   <section class="cert-section">
     <div class="container">
       <div class="cert-container">
         <div class="row g-4">
           <!-- Google Prompting Essentials -->
-          <div class="col-lg-4" data-aos="fade-up" data-category="ai-ml">
+          <div class="col-lg-4" data-aos="fade-up">
             <div class="cert-card">
               <div class="cert-header">
                 <span class="cert-banner">Featured</span>
-                <i class="fab fa-google cert-icon"></i>
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_white_background_color_120x44dp.svg" 
+                     alt="Google" 
+                     class="cert-icon">
               </div>
               <div class="cert-body">
                 <h3 class="cert-title">Google Prompting Essentials</h3>
@@ -641,24 +486,22 @@
                 <div class="cert-actions">
                   <a href="https://www.coursera.org/account/accomplishments/records/46U2Y6M0IDZT" 
                      target="_blank" 
-                     class="cert-link primary">
+                     class="cert-link">
                     <i class="fas fa-external-link-alt"></i>
-                    Verify Certificate
+                    View Certificate
                   </a>
-                  <button class="cert-link secondary" onclick="showDetails('google-cert')">
-                    <i class="fas fa-info-circle"></i>
-                    Learn More
-                  </button>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- DBT Fundamentals -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" data-category="data">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="cert-card">
               <div class="cert-header">
-                <i class="fas fa-database cert-icon"></i>
+                <img src="https://www.getdbt.com/ui/img/logos/dbt-logo-full-white.svg" 
+                     alt="dbt" 
+                     class="cert-icon">
               </div>
               <div class="cert-body">
                 <h3 class="cert-title">DBT Fundamentals</h3>
@@ -688,24 +531,22 @@
                 <div class="cert-actions">
                   <a href="https://scq.io/9fj11cA" 
                      target="_blank" 
-                     class="cert-link primary">
+                     class="cert-link">
                     <i class="fas fa-external-link-alt"></i>
-                    Verify Certificate
+                    Verify Credential
                   </a>
-                  <button class="cert-link secondary" onclick="showDetails('dbt-cert')">
-                    <i class="fas fa-info-circle"></i>
-                    Learn More
-                  </button>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Microsoft Office Specialist -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200" data-category="tools">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="cert-card">
               <div class="cert-header">
-                <i class="fab fa-microsoft cert-icon"></i>
+                <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" 
+                     alt="Microsoft" 
+                     class="cert-icon">
               </div>
               <div class="cert-body">
                 <h3 class="cert-title">Microsoft Office Specialist</h3>
@@ -735,52 +576,14 @@
                 <div class="cert-actions">
                   <a href="https://www.icloud.com/iclouddrive/0cagjQPaNcrjWgIxMwN07o6xw#Microsoft_office_specialist" 
                      target="_blank" 
-                     class="cert-link primary">
+                     class="cert-link">
                     <i class="fas fa-external-link-alt"></i>
-                    Verify Certificate
+                    View Certificate
                   </a>
-                  <button class="cert-link secondary" onclick="showDetails('microsoft-cert')">
-                    <i class="fas fa-info-circle"></i>
-                    Learn More
-                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Progress Section -->
-  <section class="skills-section">
-    <div class="container">
-      <div class="skills-container">
-        <h2 class="text-center mb-5">Skills Mastery from Certifications</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="skill-progress">
-              <div class="skill-header">
-                <span class="skill-name">AI/ML & Prompt Engineering</span>
-                <span class="skill-percentage">95%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 0%" data-target="95"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="skill-progress">
-              <div class="skill-header">
-                <span class="skill-name">Data Transformation & Modeling</span>
-                <span class="skill-percentage">90%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 0%" data-target="90"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Add more skill progress bars -->
         </div>
       </div>
     </div>
@@ -886,30 +689,6 @@
       });
     });
 
-    // Certificate Filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const certCards = document.querySelectorAll('[data-category]');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-
-        const filter = button.getAttribute('data-filter');
-        
-        certCards.forEach(card => {
-          const category = card.getAttribute('data-category');
-          if (filter === 'all' || filter === category) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
     // Animate Stats Numbers
     const animateStats = () => {
       const stats = document.querySelectorAll('.stat-number');
@@ -932,22 +711,6 @@
       });
     };
 
-    // Animate Skill Progress Bars
-    const animateSkills = () => {
-      const progressBars = document.querySelectorAll('.progress-bar');
-      progressBars.forEach(bar => {
-        const target = parseInt(bar.getAttribute('data-target'));
-        bar.style.width = target + '%';
-      });
-    };
-
-    // Certificate Details Modal
-    const showDetails = (certId) => {
-      // Implementation for showing detailed certificate information
-      console.log(`Showing details for ${certId}`);
-      // You could implement a modal or expand the card here
-    };
-
     // Intersection Observer for Stats Animation
     const statsSection = document.querySelector('.stats-section');
     const statsObserver = new IntersectionObserver((entries) => {
@@ -961,30 +724,6 @@
     if (statsSection) {
       statsObserver.observe(statsSection);
     }
-
-    // Intersection Observer for Skills Animation
-    const skillsSection = document.querySelector('.skills-section');
-    const skillsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateSkills();
-          skillsObserver.unobserve(entry.target);
-        }
-      });
-    });
-    if (skillsSection) {
-      skillsObserver.observe(skillsSection);
-    }
-
-    // Optional: Add hover effect to certification cards
-    document.querySelectorAll('.cert-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-      });
-    });
   </script>
 </body>
 </html>
