@@ -1,20 +1,29 @@
-/* Base Reset & Global Fonts */
+/* -------------------------------------------------------------------
+  Base & Global Styles
+------------------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
 }
+
 h1, h2, h3, .font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Container */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Container is generally handled by Tailwind, but here's a fallback: */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,23 +34,8 @@ h1, h2, h3, .font-montserrat {
 #navbar {
   transition: padding 0.3s ease-in-out;
 }
-.navbar a {
-  text-decoration: none;
-  transition: color 0.3s;
-}
 
-/* Hero Section */
-.hero-bg {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.hero-overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0,0,0,0.8));
-}
-
-/* Floating Labels for Forms */
+/* Form floating labels */
 .form-group {
   position: relative;
   margin-bottom: 1.5rem;
@@ -54,21 +48,21 @@ h1, h2, h3, .font-montserrat {
   border-radius: 0.375rem;
   transition: border-color 0.3s;
 }
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
 .form-label {
   position: absolute;
   top: 50%;
   left: 0.75rem;
   transform: translateY(-50%);
-  background: #fff;
+  background-color: #fff;
   padding: 0 0.25rem;
   color: #999;
   pointer-events: none;
   transition: top 0.3s, font-size 0.3s, color 0.3s;
-}
-.form-input:focus,
-.form-textarea:focus {
-  border-color: #008080;
-  outline: none;
 }
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label,
@@ -76,7 +70,7 @@ h1, h2, h3, .font-montserrat {
 .form-textarea:not(:placeholder-shown) + .form-label {
   top: -0.6rem;
   font-size: 0.75rem;
-  color: #008080;
+  color: #2563eb;
 }
 
 /* Error Messages */
@@ -86,14 +80,14 @@ h1, h2, h3, .font-montserrat {
   margin-top: 0.25rem;
 }
 
-/* Flip Card Styles (Certifications) */
+/* Flip Cards */
 .flip-card {
   perspective: 1000px;
 }
 .flip-card-inner {
-  transition: transform 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  transition: transform 0.6s ease;
 }
 .flip-card-face {
   position: absolute;
@@ -101,14 +95,22 @@ h1, h2, h3, .font-montserrat {
   height: 100%;
   backface-visibility: hidden;
 }
+.flip-card-front {
+  background-color: #ffffff;
+}
 .flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
 /* Project Card Overlay */
 .project-card-overlay {
   background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  color: #ffffff;
   position: absolute;
   inset: 0;
   display: flex;
@@ -119,9 +121,9 @@ h1, h2, h3, .font-montserrat {
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
-  padding: 1rem;
   text-align: center;
   border-radius: 0.5rem;
+  padding: 1rem;
 }
 .project-card:hover .project-card-overlay {
   opacity: 1;
@@ -129,7 +131,7 @@ h1, h2, h3, .font-montserrat {
   transform: translateY(0);
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
   position: fixed;
   inset: 0;
@@ -147,7 +149,7 @@ h1, h2, h3, .font-montserrat {
   visibility: visible;
 }
 .modal-content {
-  background: #fff;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 0.5rem;
   max-width: 600px;
@@ -163,16 +165,11 @@ h1, h2, h3, .font-montserrat {
   color: #555;
 }
 
-/* Tab Button Styles (Resume Page) */
+/* Tabs (Resume page) */
 .tab-btn {
   transition: background 0.3s, color 0.3s;
 }
 .tab-btn.active {
-  background-color: #008080;
-  color: #fff;
-}
-
-/* Section Scroll Margin */
-section {
-  scroll-margin-top: 80px;
+  background-color: #2563eb;
+  color: #ffffff;
 }

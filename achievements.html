@@ -1,76 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Achievements - Mohit Bhimrajka Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO / Social Meta -->
+  <title>Achievements | Mohit Bhimrajka Portfolio</title>
+  <meta
+    name="description"
+    content="Explore the leadership milestones and accolades of Mohit Bhimrajka, an AI-focused technology student and emerging leader."
+  />
+  <meta name="keywords" content="Mohit, Bhimrajka, Achievements, Leadership, AI, Projects, Portfolio" />
+  <meta property="og:title" content="Achievements | Mohit Bhimrajka" />
+  <meta
+    property="og:description"
+    content="A showcase of leadership milestones and accolades throughout Mohit's journey in AI, tech, and community leadership."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-github-pages-url/achievements.html" />
+  <meta property="og:image" content="assets/images/hero-bg.jpg" />
+  <link rel="canonical" href="https://your-github-pages-url/achievements.html" />
+
+  <!-- Tailwind CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <!-- AOS (Animate On Scroll) -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom Styles -->
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9fafb; /* Slightly off-white background */
+      color: #333333;
+    }
+    h1, h2, h3, .font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+    #navbar {
+      transition: padding 0.3s ease-in-out;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html">Mohit Bhimrajka</a>
+  <!-- HEADER / NAVIGATION -->
+  <header id="navbar" class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo / Brand -->
+      <a
+        href="index.html"
+        class="text-2xl font-montserrat text-blue-600"
+        aria-label="Go to Home"
+      >
+        Mohit Bhimrajka
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav aria-label="Primary" class="hidden md:flex space-x-6">
+        <a href="index.html#about" class="hover:text-blue-600">About</a>
+        <a href="projects.html" class="hover:text-blue-600">Projects</a>
+        <a href="resume.html" class="hover:text-blue-600">Resume</a>
+        <a href="certifications.html" class="hover:text-blue-600">Certifications</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        <a href="achievements.html" class="text-blue-600 font-bold">Achievements</a>
+      </nav>
+
+      <!-- Mobile Nav Toggle -->
+      <button
+        id="menu-toggle"
+        class="md:hidden cursor-pointer"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <svg
+          class="w-8 h-8 text-blue-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 8h16M4 16h16"
+          />
+        </svg>
+      </button>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#leadership">Leadership</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="achievements.html" class="active">Achievements</a></li>
-    </ul>
+
+    <!-- Mobile Navigation -->
+    <nav
+      id="mobile-menu"
+      class="hidden md:hidden bg-white"
+      aria-label="Mobile Primary Navigation"
+    >
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="index.html#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-blue-600">Resume</a></li>
+        <li><a href="certifications.html" class="hover:text-blue-600">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        <li><a href="achievements.html" class="text-blue-600 font-bold">Achievements</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="achievements-section">
-      <div class="container">
-        <h1>Achievements</h1>
-        <p>A showcase of my leadership milestones and accolades throughout my journey.</p>
-        <div class="achievement-cards">
-          <article class="achievement-card">
-            <h2>Guinness World Record Hackathon</h2>
-            <p>Organized the college’s largest tech hackathon in partnership with MumbaiTech & GDG MAD, setting a Guinness World Record.</p>
-            <span class="achievement-date">Jun 2023 – Feb 2025</span>
-          </article>
-          <article class="achievement-card">
-            <h2>Vice President, STAGE</h2>
-            <p>Led cultural initiatives and coordinated multidisciplinary teams to execute high-impact events.</p>
-            <span class="achievement-date">Aug 2024 – Present</span>
-          </article>
-          <article class="achievement-card">
-            <h2>Community Lead, Code Vipassana</h2>
-            <p>Organized technical workshops and community events, fostering collaboration and knowledge exchange.</p>
-            <span class="achievement-date">Mar 2024 – Present</span>
-          </article>
-          <article class="achievement-card">
-            <h2>Contingent Leader, College Funbaazi 3.0</h2>
-            <p>Directed a team of over 230 participants in a competitive event, achieving top placement and enhancing college representation.</p>
-            <span class="achievement-date">Oct 2024 – Nov 2024</span>
-          </article>
-          <article class="achievement-card">
-            <h2>President, Technical Student Council</h2>
-            <p>Managed the college’s largest tech hackathon, driving technical innovation and community engagement.</p>
-            <span class="achievement-date">Jun 2023 – Feb 2025</span>
-          </article>
-        </div>
+  <!-- MAIN CONTENT -->
+  <main class="container mx-auto px-6 py-12 bg-white">
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="mb-12" data-aos="fade-up">
+      <h1 class="text-4xl font-montserrat text-blue-600 mb-4">Achievements</h1>
+      <p class="text-lg max-w-2xl mb-8">
+        A showcase of my leadership milestones and accolades throughout my journey.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <article class="bg-gray-50 shadow-lg rounded-lg p-6" data-aos="zoom-in">
+          <h2 class="text-xl font-montserrat text-blue-600 mb-2">
+            Guinness World Record Hackathon
+          </h2>
+          <p class="mb-2">
+            Organized the college’s largest tech hackathon in partnership with
+            MumbaiTech &amp; GDG MAD, setting a Guinness World Record.
+          </p>
+          <span class="block text-sm text-gray-500">Jun 2023 – Feb 2025</span>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="bg-gray-50 shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-delay="100">
+          <h2 class="text-xl font-montserrat text-blue-600 mb-2">Vice President, STAGE</h2>
+          <p class="mb-2">
+            Led cultural initiatives and coordinated multidisciplinary teams to
+            execute high-impact events.
+          </p>
+          <span class="block text-sm text-gray-500">Aug 2024 – Present</span>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-gray-50 shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-delay="200">
+          <h2 class="text-xl font-montserrat text-blue-600 mb-2">
+            Community Lead, Code Vipassana
+          </h2>
+          <p class="mb-2">
+            Organized technical workshops and community events, fostering
+            collaboration and knowledge exchange.
+          </p>
+          <span class="block text-sm text-gray-500">Mar 2024 – Present</span>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="bg-gray-50 shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-delay="300">
+          <h2 class="text-xl font-montserrat text-blue-600 mb-2">
+            Contingent Leader, College Funbaazi 3.0
+          </h2>
+          <p class="mb-2">
+            Directed a team of over 230 participants in a competitive event,
+            achieving top placement and enhancing college representation.
+          </p>
+          <span class="block text-sm text-gray-500">Oct 2024 – Nov 2024</span>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="bg-gray-50 shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-delay="400">
+          <h2 class="text-xl font-montserrat text-blue-600 mb-2">
+            President, Technical Student Council
+          </h2>
+          <p class="mb-2">
+            Managed the college’s largest tech hackathon, driving technical
+            innovation and community engagement.
+          </p>
+          <span class="block text-sm text-gray-500">Jun 2023 – Feb 2025</span>
+        </article>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
+  <!-- FOOTER -->
+  <footer class="bg-blue-700 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
       <p>&copy; 2025 Mohit Bhimrajka. All rights reserved.</p>
-      <ul class="social-links">
-        <li><a href="https://github.com/MohitBhimrajka" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/mohit-bhimrajka" target="_blank">LinkedIn</a></li>
-      </ul>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a
+          href="https://github.com/MohitBhimrajka"
+          target="_blank"
+          class="hover:text-blue-300"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/mohit-bhimrajka"
+          target="_blank"
+          class="hover:text-blue-300"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- SCRIPTS: GSAP, AOS, and Mobile Toggle -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    defer
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    defer
+  ></script>
+  <script
+    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+    defer
+  ></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
