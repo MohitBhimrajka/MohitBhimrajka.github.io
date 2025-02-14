@@ -21,14 +21,407 @@
   
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    :root {
+      --primary-color: #1a365d;
+      --primary-dark: #0f172a;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-start: #2563eb;
+      --gradient-end: #1E3A8A;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      padding: 1.5rem 0;
+      transition: all 0.3s ease;
+      background: transparent !important;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar.scrolled {
+      padding: 1rem 0;
+      background: rgba(26, 54, 93, 0.98) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: white !important;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: white !important;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 60vh;
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 6rem;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff'/%3E%3C/svg%3E");
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      margin-top: -4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+    }
+
+    .stat-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .stat-label {
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    /* Certifications Section */
+    .cert-section {
+      padding: 8rem 0 4rem;
+      background: #f8fafc;
+    }
+
+    .cert-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      height: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+    }
+
+    .cert-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    }
+
+    .cert-header {
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      padding: 2rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+    }
+
+    .cert-banner {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      color: white;
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .cert-icon {
+      width: auto;
+      height: 60px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .cert-body {
+      padding: 2rem;
+    }
+
+    .cert-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .cert-issuer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+
+    .verified-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #10b981;
+      font-size: 0.9rem;
+    }
+
+    .cert-date {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cert-description {
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .skills-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .skill-tag {
+      background: #f1f5f9;
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .cert-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+      color: white;
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      border: none;
+    }
+
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: white;
+      padding: 3rem 0;
+      text-align: center;
+      box-shadow: 0 -10px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 991px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .cert-header {
+        height: 100px;
+      }
+
+      .cert-icon {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .cert-section {
+        padding: 6rem 0 3rem;
+      }
+
+      .cert-card {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <div class="brand-logo">
@@ -76,30 +469,35 @@
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <section class="header-section">
-    <div class="header-pattern"></div>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-pattern"></div>
     <div class="container">
-      <div class="header-content">
-        <h1 class="header-title" data-aos="fade-up">Professional Credentials</h1>
-        <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
+      <div class="hero-content">
+        <h1 class="hero-title" data-aos="fade-up">Professional Credentials</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
           Industry-recognized certifications and specialized training in AI, machine learning, and data science
         </p>
-        <!-- Stats Section -->
-        <div class="row mt-5 g-4 justify-content-center">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-card">
-              <i class="fas fa-certificate stat-icon"></i>
-              <div class="stat-number" data-target="3">0</div>
-              <div class="stat-label">Professional Certifications</div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="stat-card">
+            <i class="fas fa-certificate stat-icon"></i>
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Professional Certifications</div>
           </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-card">
-              <i class="fas fa-code-branch stat-icon"></i>
-              <div class="stat-number" data-target="15">0</div>
-              <div class="stat-label">Skills Mastered</div>
-            </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card">
+            <i class="fas fa-code-branch stat-icon"></i>
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Skills Mastered</div>
           </div>
         </div>
       </div>
@@ -116,10 +514,7 @@
             <div class="cert-card">
               <div class="cert-header">
                 <span class="cert-banner">Featured</span>
-                <img src="assets/images/logos/google-logo.png" 
-                     alt="Google" 
-                     class="cert-icon"
-                     onerror="this.src='https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg'">
+                <img src="assets/images/logos/google-logo.png" alt="Google" class="cert-icon" onerror="this.src='https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg'">
               </div>
               <div class="cert-body">
                 <h3 class="cert-title">Google Prompting Essentials</h3>
@@ -137,23 +532,16 @@
                 <p class="cert-description">
                   Advanced certification in AI prompt engineering, covering LLM interaction, context optimization, and response generation.
                 </p>
-                <div class="cert-skills">
-                  <h4 class="skills-title">Skills Acquired</h4>
-                  <div class="skills-list">
-                    <span class="skill-tag">Prompt Engineering</span>
-                    <span class="skill-tag">LLM Integration</span>
-                    <span class="skill-tag">Context Design</span>
-                    <span class="skill-tag">Response Optimization</span>
-                  </div>
+                <div class="skills-list">
+                  <span class="skill-tag">Prompt Engineering</span>
+                  <span class="skill-tag">LLM Integration</span>
+                  <span class="skill-tag">Context Design</span>
+                  <span class="skill-tag">Response Optimization</span>
                 </div>
-                <div class="cert-actions">
-                  <a href="https://www.coursera.org/account/accomplishments/records/46U2Y6M0IDZT" 
-                     target="_blank" 
-                     class="cert-link">
-                    <i class="fas fa-external-link-alt"></i>
-                    View Certificate
-                  </a>
-                </div>
+                <a href="https://www.coursera.org/account/accomplishments/records/46U2Y6M0IDZT" target="_blank" class="cert-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  View Certificate
+                </a>
               </div>
             </div>
           </div>
@@ -162,10 +550,7 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="cert-card">
               <div class="cert-header">
-                <img src="assets/images/logos/dbt-logo.png" 
-                     alt="dbt" 
-                     class="cert-icon"
-                     onerror="this.src='https://www.getdbt.com/ui/img/logos/dbt-logo.svg'">
+                <img src="assets/images/logos/dbt-logo.png" alt="dbt" class="cert-icon" onerror="this.src='https://www.getdbt.com/ui/img/logos/dbt-logo.svg'">
               </div>
               <div class="cert-body">
                 <h3 class="cert-title">DBT Fundamentals</h3>
@@ -183,23 +568,16 @@
                 <p class="cert-description">
                   Comprehensive training in data transformation, modeling, and analytics engineering using dbt methodologies.
                 </p>
-                <div class="cert-skills">
-                  <h4 class="skills-title">Skills Acquired</h4>
-                  <div class="skills-list">
-                    <span class="skill-tag">Data Modeling</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Analytics Engineering</span>
-                    <span class="skill-tag">Version Control</span>
-                  </div>
+                <div class="skills-list">
+                  <span class="skill-tag">Data Modeling</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">Analytics Engineering</span>
+                  <span class="skill-tag">Version Control</span>
                 </div>
-                <div class="cert-actions">
-                  <a href="https://scq.io/9fj11cA" 
-                     target="_blank" 
-                     class="cert-link">
-                    <i class="fas fa-external-link-alt"></i>
-                    Verify Credential
-                  </a>
-                </div>
+                <a href="https://scq.io/9fj11cA" target="_blank" class="cert-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  Verify Credential
+                </a>
               </div>
             </div>
           </div>
@@ -208,10 +586,7 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="cert-card">
               <div class="cert-header">
-                <img src="assets/images/logos/microsoft-logo.png" 
-                     alt="Microsoft" 
-                     class="cert-icon"
-                     onerror="this.src='https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31'">
+                <img src="assets/images/logos/microsoft-logo.png" alt="Microsoft" class="cert-icon" onerror="this.src='https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31'">
               </div>
               <div class="cert-body">
                 <h3 class="cert-title">Microsoft Office Specialist</h3>
@@ -229,23 +604,16 @@
                 <p class="cert-description">
                   Expert-level certification in Microsoft Office Suite, covering advanced features and business applications.
                 </p>
-                <div class="cert-skills">
-                  <h4 class="skills-title">Skills Acquired</h4>
-                  <div class="skills-list">
-                    <span class="skill-tag">Excel Advanced</span>
-                    <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">Visualization</span>
-                    <span class="skill-tag">Business Tools</span>
-                  </div>
+                <div class="skills-list">
+                  <span class="skill-tag">Excel Advanced</span>
+                  <span class="skill-tag">Data Analysis</span>
+                  <span class="skill-tag">Visualization</span>
+                  <span class="skill-tag">Business Tools</span>
                 </div>
-                <div class="cert-actions">
-                  <a href="https://www.icloud.com/iclouddrive/0cagjQPaNcrjWgIxMwN07o6xw#Microsoft_office_specialist" 
-                     target="_blank" 
-                     class="cert-link">
-                    <i class="fas fa-external-link-alt"></i>
-                    View Certificate
-                  </a>
-                </div>
+                <a href="https://www.icloud.com/iclouddrive/0cagjQPaNcrjWgIxMwN07o6xw#Microsoft_office_specialist" target="_blank" class="cert-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  View Certificate
+                </a>
               </div>
             </div>
           </div>
@@ -340,19 +708,19 @@
       });
     };
 
-    // Intersection Observer for Stats Animation
-    const statsSection = document.querySelector('.stats-section');
-    const statsObserver = new IntersectionObserver((entries) => {
+    // Trigger stats animation when section is in view
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           animateStats();
-          statsObserver.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
     });
-    if (statsSection) {
-      statsObserver.observe(statsSection);
-    }
+
+    document.querySelectorAll('.stat-card').forEach((stat) => {
+      observer.observe(stat);
+    });
   </script>
 </body>
 </html>

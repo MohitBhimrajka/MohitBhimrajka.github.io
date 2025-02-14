@@ -22,12 +22,6 @@
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Custom Navbar CSS -->
-  <link rel="stylesheet" href="assets/css/navbar.css">
-
   <style>
     :root {
       --primary-color: #1a365d;
@@ -74,7 +68,7 @@
 
     /* Header Section */
     .header-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
       padding: 8rem 0 6rem;
       position: relative;
@@ -88,7 +82,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+      opacity: 0.1;
     }
 
     .header-content {
@@ -99,14 +94,14 @@
 
     .header-title {
       font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .header-subtitle {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       opacity: 0.9;
       max-width: 700px;
       margin: 0 auto;
@@ -123,6 +118,7 @@
       border: none;
       justify-content: center;
       gap: 1rem;
+      padding: 0 1rem;
     }
 
     .nav-tabs .nav-link {
@@ -133,11 +129,24 @@
       padding: 0.75rem 1.5rem;
       font-weight: 500;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-tabs .nav-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
     }
 
     .nav-tabs .nav-link.active {
-      background: var(--primary-color);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white !important;
+    }
+
+    .nav-tabs .nav-link i {
+      font-size: 1.1rem;
     }
 
     /* Achievements Section */
@@ -155,7 +164,7 @@
 
     .achievement-card {
       background: white;
-      border: 1px solid #e2e8f0;
+      border: none;
       border-radius: 1.5rem;
       padding: 2.5rem;
       transition: all 0.3s ease;
@@ -163,23 +172,41 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+      overflow: hidden;
+    }
+
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      transition: all 0.3s ease;
     }
 
     .achievement-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-      border-color: var(--primary-color);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    }
+
+    .achievement-card:hover::before {
+      height: 6px;
     }
 
     .achievement-icon {
       font-size: 2.5rem;
-      color: var(--primary-color);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 1.5rem;
       transition: all 0.3s ease;
     }
 
     .achievement-card:hover .achievement-icon {
-      transform: scale(1.1);
+      transform: scale(1.1) rotate(5deg);
     }
 
     .achievement-title {
@@ -229,12 +256,14 @@
       font-size: 0.85rem;
       font-weight: 500;
       transition: all 0.3s ease;
+      border: 1px solid rgba(37, 99, 235, 0.1);
     }
 
     .skill-tag:hover {
-      background: var(--primary-color);
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       color: white;
       transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
     }
 
     .know-more-btn {
@@ -257,18 +286,22 @@
     /* Stats Section */
     .stats-section {
       padding: 4rem 0;
-      background: white;
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
       margin-top: 4rem;
+      position: relative;
+      overflow: hidden;
     }
 
     .stat-card {
       text-align: center;
-      padding: 1.5rem;
-      border-radius: 1rem;
+      padding: 2rem;
+      border-radius: 1.5rem;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
     }
 
     .stat-card:hover {
@@ -352,7 +385,25 @@
       transform: translateY(-2px);
     }
 
+    /* Responsive Design */
     @media (max-width: 768px) {
+      .header-title {
+        font-size: 2.5rem;
+      }
+
+      .header-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .nav-tabs {
+        gap: 0.5rem;
+      }
+
+      .nav-tabs .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
       .achievement-card {
         padding: 2rem;
       }
@@ -432,21 +483,21 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="stat-card">
               <i class="fas fa-users stat-icon"></i>
-              <div class="stat-number" data-target="1000">0</div>
-              <div class="stat-label">Community Impact</div>
+              <div class="stat-number" data-target="300">0</div>
+              <div class="stat-label">Students Impacted</div>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="stat-card">
               <i class="fas fa-calendar-check stat-icon"></i>
-              <div class="stat-number" data-target="25">0</div>
+              <div class="stat-number" data-target="15">0</div>
               <div class="stat-label">Events Organized</div>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="stat-card">
               <i class="fas fa-user-tie stat-icon"></i>
-              <div class="stat-number" data-target="10">0</div>
+              <div class="stat-number" data-target="6">0</div>
               <div class="stat-label">Leadership Roles</div>
             </div>
           </div>
