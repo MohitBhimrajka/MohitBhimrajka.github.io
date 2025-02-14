@@ -6,8 +6,9 @@
   <title>Home | Mohit Bhimrajka - AI/ML Engineer</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Welcome to the personal portfolio of Mohit Bhimrajka, an AI/ML Engineer and tech enthusiast.">
-  <meta name="keywords" content="Home, AI Engineer, ML Engineer, Mohit Bhimrajka">
+  <meta name="description" content="Welcome to the personal portfolio of Mohit Bhimrajka, an AI/ML Engineer and tech enthusiast. Explore projects, skills, and professional experience.">
+  <meta name="keywords" content="AI Engineer, ML Engineer, Data Science, Mohit Bhimrajka, Portfolio">
+  <meta name="author" content="Mohit Bhimrajka">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,209 +23,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   
   <!-- Custom CSS -->
-  <style>
-    :root {
-      --primary-color: #1a365d;
-      --primary-dark: #0f172a;
-      --text-dark: #1e293b;
-      --text-light: #64748b;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text-dark);
-      overflow-x: hidden;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    }
-
-    /* Navbar Styles */
-    .navbar {
-      padding: 1rem 0;
-      transition: all 0.3s ease;
-      background: var(--primary-color) !important;
-    }
-    .navbar.scrolled {
-      padding: 0.5rem 0;
-      background: rgba(26, 54, 93, 0.98) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      color: #ffffff !important;
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    /* Header Section */
-    .header-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-    }
-    .header-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 4rem 0;
-    }
-    .header-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    .header-subtitle {
-      font-size: 1.25rem;
-      opacity: 0.9;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      line-height: 1.8;
-    }
-
-    /* Buttons */
-    .hero-buttons {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .resume-btn, .about-btn {
-      padding: 1.2rem 3rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .resume-btn {
-      background: white;
-      color: var(--primary-color);
-    }
-    .about-btn {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-    .resume-btn:hover, .about-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-    .resume-btn:hover {
-      color: var(--primary-dark);
-    }
-    .about-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-    }
-
-    /* Features Section */
-    .features-section {
-      padding: 8rem 0;
-    }
-    .features-container {
-      background: white;
-      border-radius: 2rem;
-      padding: 4rem;
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-    }
-    .feature-box {
-      text-align: center;
-      border: 1px solid #e2e8f0;
-      padding: 3rem 2rem;
-      border-radius: 1rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      height: 100%;
-    }
-    .feature-box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-      border-color: var(--primary-color);
-    }
-    .feature-icon {
-      font-size: 3.5rem;
-      color: var(--primary-color);
-      margin-bottom: 1.5rem;
-    }
-    .feature-title {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    .feature-text {
-      color: var(--text-light);
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    /* Back to Top Button */
-    #back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--primary-color);
-      color: white;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-    }
-    #back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-    #back-to-top:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
-    }
-
-    /* Footer */
-    .footer {
-      background: white;
-      padding: 3rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .social-links a {
-      color: var(--primary-color);
-      font-size: 1.4rem;
-      transition: all 0.3s ease;
-    }
-    .social-links a:hover {
-      color: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -232,32 +31,45 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
+        <div class="brand-logo">
+          <i class="fas fa-code"></i>
+        </div>
+        <span>Mohit Bhimrajka</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="certifications.html">Certifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html">
-              <i class="fab fa-github me-1"></i>Projects
+            <a class="nav-link active" href="index.html">
+              <i class="fas fa-home me-2"></i>Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="achievements.html">Achievements</a>
+            <a class="nav-link" href="resume.html">
+              <i class="fas fa-file-alt me-2"></i>Resume
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="certifications.html">
+              <i class="fas fa-certificate me-2"></i>Certifications
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">
+              <i class="fas fa-code-branch me-2"></i>Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">
+              <i class="fas fa-trophy me-2"></i>Achievements
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              <i class="fas fa-envelope me-2"></i>Contact
+            </a>
           </li>
         </ul>
       </div>
@@ -281,6 +93,123 @@
           <a href="resume.html" class="resume-btn" data-aos="fade-up" data-aos-delay="200">
             <i class="fas fa-file-alt me-2"></i>View My Resume
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="assets/images/Mohit_image.png" alt="Mohit Bhimrajka" class="profile-image">
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="about-content">
+              <h2>Hello, I'm Mohit</h2>
+              <p>
+                I'm an AI/ML Engineer and technology enthusiast with a passion for pushing the boundaries of artificial intelligence and machine learning. Currently pursuing my Bachelor's in Computer Science with a focus on AI & ML at ATLAS SkillTech University, I blend technical expertise with leadership skills to drive innovation.
+              </p>
+              <p>
+                My journey spans from developing sophisticated recommendation engines to creating AI-powered educational tools. I'm particularly interested in the intersection of AI with real-world applications, focusing on making technology more accessible and impactful.
+              </p>
+              <div class="skills-section">
+                <h3 class="skills-heading">Technical Expertise</h3>
+                
+                <!-- Programming & Data Analysis -->
+                <div class="skill-category">
+                  <h4 class="category-title">
+                    <i class="fas fa-code"></i>
+                    Programming & Data Analysis
+                  </h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">SciPy</span>
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                  </div>
+                </div>
+
+                <!-- Machine Learning & AI -->
+                <div class="skill-category">
+                  <h4 class="category-title">
+                    <i class="fas fa-brain"></i>
+                    Machine Learning & AI
+                  </h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">LLM Integration</span>
+                    <span class="skill-tag">Langchain</span>
+                    <span class="skill-tag">Ollama</span>
+                    <span class="skill-tag">OpenAI</span>
+                    <span class="skill-tag">Deepseek</span>
+                    <span class="skill-tag">Generative AI</span>
+                    <span class="skill-tag">Prompt Design</span>
+                    <span class="skill-tag">Multimodal Prompting</span>
+                  </div>
+                </div>
+
+                <!-- Big Data & Databases -->
+                <div class="skill-category">
+                  <h4 class="category-title">
+                    <i class="fas fa-database"></i>
+                    Big Data & Databases
+                  </h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Apache Spark</span>
+                    <span class="skill-tag">Hadoop</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                  </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                  <h4 class="category-title">
+                    <i class="fas fa-tools"></i>
+                    Tools & Platforms
+                  </h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">Google Cloud</span>
+                    <span class="skill-tag">Snowflake</span>
+                  </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                  <h4 class="category-title">
+                    <i class="fas fa-user-tie"></i>
+                    Professional Skills
+                  </h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Strategic Planning</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Critical Thinking</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-tags mt-4">
+                <span class="skill-tag">AI/ML Development</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Data Science</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Innovation</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -387,13 +316,19 @@
     });
   });
 
-  // Add smooth scrolling to all links
+  // Smooth Scrolling for all links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const navHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
     });
   });
 </script>

@@ -6,8 +6,9 @@
   <title>Contact | Mohit Bhimrajka - AI/ML Engineer</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Get in touch with Mohit Bhimrajka for collaborations, inquiries, or opportunities in AI and ML.">
-  <meta name="keywords" content="Contact, AI Engineer, ML Engineer, Mohit Bhimrajka">
+  <meta name="description" content="Get in touch with Mohit Bhimrajka for collaborations, inquiries, or opportunities in AI and ML. Connect for professional discussions and partnerships.">
+  <meta name="keywords" content="Contact, AI Engineer, ML Engineer, Mohit Bhimrajka, Professional Network">
+  <meta name="author" content="Mohit Bhimrajka">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,15 +23,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Custom Navbar CSS -->
+  <link rel="stylesheet" href="assets/css/navbar.css">
+
   <style>
     :root {
-      --primary-color: #0f172a;
-      --primary-dark: #1e293b;
-      --text-dark: #e2e8f0;
-      --text-light: #94a3b8;
-      --bg-dark: #0f172a;
-      --bg-darker: #020617;
-      --accent-color: #3b82f6;
+      --primary-color: #1a365d;
+      --primary-dark: #0f172a;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-start: #2563eb;
+      --gradient-end: #1E3A8A;
+      --section-bg: #ffffff;
     }
 
     body {
@@ -38,39 +44,39 @@
       line-height: 1.6;
       color: var(--text-dark);
       overflow-x: hidden;
-      background: var(--bg-dark);
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
 
     /* Navbar Styles */
     .navbar {
       padding: 1rem 0;
       transition: all 0.3s ease;
-      background: var(--bg-darker) !important;
+      background: var(--primary-color) !important;
     }
 
     .navbar.scrolled {
       padding: 0.5rem 0;
-      background: rgba(2, 6, 23, 0.98) !important;
+      background: rgba(26, 54, 93, 0.98) !important;
       backdrop-filter: blur(10px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 6px rgba(15, 23, 42, 0.1);
     }
 
     .nav-link {
       font-weight: 500;
       padding: 0.5rem 1rem !important;
-      color: var(--text-dark) !important;
+      color: #ffffff !important;
       transition: all 0.3s ease;
     }
 
     .nav-link:hover {
       transform: translateY(-2px);
-      color: var(--accent-color) !important;
+      opacity: 0.9;
     }
 
     /* Header Section */
     .header-section {
-      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-dark) 100%);
-      color: var(--text-dark);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
       padding: 8rem 0 6rem;
       position: relative;
       overflow: hidden;
@@ -87,12 +93,12 @@
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      color: var(--text-dark);
+      color: white;
     }
 
     .header-subtitle {
       font-size: 1.2rem;
-      color: var(--text-light);
+      color: rgba(255, 255, 255, 0.9);
       max-width: 700px;
       margin: 0 auto;
     }
@@ -104,31 +110,31 @@
     }
 
     .contact-container {
-      background: var(--primary-dark);
+      background: white;
       border-radius: 2rem;
       padding: 4rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
 
     .contact-card {
-      background: var(--bg-dark);
+      background: white;
       border-radius: 1.5rem;
       padding: 2.5rem;
       text-align: center;
       transition: all 0.3s ease;
       height: 100%;
-      border: 1px solid var(--primary-dark);
+      border: 1px solid #e2e8f0;
     }
 
     .contact-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      border-color: var(--accent-color);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      border-color: var(--primary-color);
     }
 
     .contact-icon {
       font-size: 2.5rem;
-      color: var(--accent-color);
+      color: var(--primary-color);
       margin-bottom: 1.5rem;
       transition: all 0.3s ease;
     }
@@ -155,8 +161,8 @@
       align-items: center;
       justify-content: center;
       padding: 0.75rem 1.5rem;
-      background: var(--accent-color);
-      color: var(--text-dark);
+      background: var(--primary-color);
+      color: white;
       text-decoration: none;
       border-radius: 50px;
       font-weight: 500;
@@ -165,8 +171,8 @@
 
     .contact-link:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-      color: var(--text-dark);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+      color: white;
     }
 
     .contact-link i {
@@ -177,15 +183,15 @@
     .availability-section {
       padding: 4rem 0;
       text-align: center;
-      background: var(--bg-dark);
+      background: white;
     }
 
     .availability-badge {
       display: inline-flex;
       align-items: center;
       padding: 0.75rem 1.5rem;
-      background: rgba(59, 130, 246, 0.2);
-      color: var(--accent-color);
+      background: rgba(26, 54, 93, 0.1);
+      color: var(--primary-color);
       border-radius: 50px;
       font-weight: 500;
       margin-bottom: 1rem;
@@ -206,8 +212,8 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: var(--accent-color);
-      color: var(--text-dark);
+      background: var(--primary-color);
+      color: white;
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -229,12 +235,12 @@
 
     #back-to-top:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
     }
 
     /* Footer */
     .footer {
-      background: var(--bg-darker);
+      background: white;
       padding: 2rem 0;
       text-align: center;
       margin-top: 4rem;
@@ -248,13 +254,13 @@
     }
 
     .social-links a {
-      color: var(--accent-color);
+      color: var(--primary-color);
       font-size: 1.2rem;
       transition: all 0.3s ease;
     }
 
     .social-links a:hover {
-      color: var(--text-dark);
+      color: var(--primary-dark);
       transform: translateY(-2px);
     }
   </style>
@@ -265,32 +271,45 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
+        <div class="brand-logo">
+          <i class="fas fa-code"></i>
+        </div>
+        <span>Mohit Bhimrajka</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="certifications.html">Certifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html">
-              <i class="fab fa-github me-1"></i>Projects
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home me-2"></i>Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="achievements.html">Achievements</a>
+            <a class="nav-link" href="resume.html">
+              <i class="fas fa-file-alt me-2"></i>Resume
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="contact.html">Contact</a>
+            <a class="nav-link" href="certifications.html">
+              <i class="fas fa-certificate me-2"></i>Certifications
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">
+              <i class="fas fa-code-branch me-2"></i>Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">
+              <i class="fas fa-trophy me-2"></i>Achievements
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">
+              <i class="fas fa-envelope me-2"></i>Contact
+            </a>
           </li>
         </ul>
       </div>

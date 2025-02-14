@@ -1,30 +1,34 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website showcasing my professional journey, skills, and achievements in AI/ML engineering.
+A modern, responsive portfolio website showcasing my professional journey, skills, and achievements in AI/ML engineering. Features standardized components and optimized performance across all pages.
 
 ## 🌐 Live Demo
 Visit the live website: [MohitBhimrajka.github.io](https://MohitBhimrajka.github.io)
 
 ## ✨ Features
 
-- Responsive design that works on all devices
+- Fully responsive design optimized for all devices
+- Standardized components across all pages (navbar, header, footer)
 - Modern UI with smooth animations and transitions
 - Interactive project showcase with filtering capabilities
 - Detailed certifications display with skills breakdown
-- Achievement timeline with visual elements
-- Contact section with direct communication channels
-- Printable and downloadable resume
+- Achievement timeline with visual elements and statistics
+- Enhanced contact section with social media integration
+- Improved SEO with optimized meta tags
+- Consistent styling and branding throughout
+- Accessibility improvements with ARIA labels
+- Performance optimized animations and transitions
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3 (with custom variables and animations)
+- HTML5 with semantic markup
+- CSS3 (with custom properties and modern animations)
 - JavaScript (ES6+)
-- Bootstrap 5.3
-- Font Awesome Icons
-- Google Fonts
-- AOS (Animate On Scroll) Library
-- Bootswatch Materia Theme
+- Bootstrap 5.3 with Bootswatch Materia Theme
+- Font Awesome 6.4.0 for icons
+- Google Fonts (Poppins & Inter)
+- AOS (Animate On Scroll) Library 2.3.4
+- Custom CSS variables for consistent theming
 
 ## 📁 Project Structure
 
@@ -38,13 +42,64 @@ portfolio/
 ├── contact.html           # Contact information
 ├── assets/
 │   ├── css/
-│   │   └── style.css      # Global styles
+│   │   ├── style.css      # Global styles
+│   │   └── navbar.css     # Navbar specific styles
+│   │   └── footer.css     # Footer specific styles
 │   ├── js/
 │   │   └── main.js        # Global JavaScript
 │   ├── images/            # Image assets
 │   └── pdf/               # PDF documents
 └── README.md
 ```
+
+## 🎨 Standardized Components
+
+### Navbar
+- Consistent across all pages
+- Responsive toggle button
+- Icon integration with labels
+- Active state indicators
+- Smooth scroll effect
+
+### Header
+- Standardized structure
+- Consistent padding and spacing
+- Unified subtitle max-width (700px)
+- Gradient background with pattern overlay
+- AOS animations integration
+
+### Footer
+- Unified social media links
+- Consistent padding (2rem 0)
+- Standard copyright text
+- Hover effects on social icons
+- Accessibility improvements
+
+## 🎯 Recent Improvements
+
+1. **Component Standardization**
+   - Removed redundant navbar.css references
+   - Unified styling patterns
+   - Consistent spacing and padding
+   - Standardized animation effects
+
+2. **SEO Optimization**
+   - Enhanced meta descriptions
+   - Improved keyword targeting
+   - Added author meta tags
+   - Optimized page titles
+
+3. **Accessibility**
+   - Added ARIA labels
+   - Improved navigation structure
+   - Enhanced keyboard navigation
+   - Better screen reader support
+
+4. **Performance**
+   - Optimized CSS variables
+   - Improved animation performance
+   - Better resource loading
+   - Reduced redundant code
 
 ## 🚀 Setup and Deployment
 
@@ -108,29 +163,26 @@ portfolio/
 - Social media links
 - Direct communication channels
 
-## 🔧 Customization
+## 🎨 Theme Customization
 
-1. **Colors**: Modify color variables in `assets/css/style.css`:
-   ```css
-   :root {
-     --primary-color: #2563eb;
-     --primary-dark: #1E3A8A;
-     /* ... other variables */
-   }
-   ```
-
-2. **Content**: Update personal information in respective HTML files
-
-3. **Images**: Replace images in `assets/images/` with your own
-
-4. **Resume**: Update `assets/pdf/Mohit_Bhimrajka_Resume.pdf` with your latest resume
+The website uses a consistent color scheme defined by CSS variables:
+```css
+:root {
+  --primary-color: #1a365d;
+  --primary-dark: #0f172a;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --gradient-start: #2563eb;
+  --gradient-end: #1E3A8A;
+}
+```
 
 ## 📱 Responsive Design
 
-The website is fully responsive with breakpoints at:
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
+The website is fully responsive with carefully crafted breakpoints:
+- Mobile: < 768px (optimized navigation)
+- Tablet: 768px - 1024px (fluid layouts)
+- Desktop: > 1024px (enhanced interactions)
 
 ## 🤝 Contributing
 

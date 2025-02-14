@@ -4,434 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Mohit Bhimrajka - AI/ML Engineer</title>
-
+  
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Showcase of AI, ML, and data science projects by Mohit Bhimrajka">
-  <meta name="keywords" content="Projects, AI Engineer, ML Engineer, Mohit Bhimrajka">
-
+  <meta name="description" content="Explore innovative AI/ML projects and technical solutions developed by Mohit Bhimrajka. From machine learning models to data science applications.">
+  <meta name="keywords" content="AI Projects, ML Projects, Data Science, Mohit Bhimrajka, Portfolio Projects">
+  <meta name="author" content="Mohit Bhimrajka">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
+  
   <!-- Bootswatch Materia Theme (Bootstrap) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/materia/bootstrap.min.css">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-
+  
   <!-- Custom CSS -->
-  <style>
-    :root {
-      --primary-color: #1a365d;
-      --primary-dark: #0f172a;
-      --text-dark: #1e293b;
-      --text-light: #64748b;
-      --gradient-start: #2563eb;
-      --gradient-end: #1E3A8A;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text-dark);
-      overflow-x: hidden;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    }
-
-    /* Navbar Styles */
-    .navbar {
-      padding: 1rem 0;
-      transition: all 0.3s ease;
-      background: var(--primary-color) !important;
-    }
-
-    .navbar.scrolled {
-      padding: 0.5rem 0;
-      background: rgba(26, 54, 93, 0.98) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      color: #ffffff !important;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    /* Header Section */
-    .header-section {
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-      color: white;
-      padding: 8rem 0 6rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .header-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-
-    .header-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    /* Project Filters */
-    .project-filters {
-      margin-top: -2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .filter-container {
-      background: white;
-      border-radius: 50px;
-      padding: 1rem;
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
-      display: inline-flex;
-      gap: 0.5rem;
-    }
-
-    .filter-btn {
-      padding: 0.5rem 1.5rem;
-      border: none;
-      background: none;
-      color: var(--text-light);
-      border-radius: 25px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .filter-btn:hover {
-      color: var(--primary-color);
-    }
-
-    .filter-btn.active {
-      background: var(--primary-color);
-      color: white;
-    }
-
-    /* Projects Section */
-    .projects-section {
-      padding: 5rem 0;
-      margin-top: -2rem;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      position: relative;
-      border: 1px solid #e2e8f0;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-      border-color: var(--primary-color);
-    }
-
-    .project-img-container {
-      position: relative;
-      overflow: hidden;
-      height: 250px;
-    }
-
-    .project-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
-
-    .project-card:hover .project-img {
-      transform: scale(1.1);
-    }
-
-    .project-category {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .project-body {
-      padding: 2rem;
-    }
-
-    .project-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 1rem;
-    }
-
-    .project-text {
-      color: var(--text-light);
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    .project-stack {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-
-    .stack-tag {
-      background: #f1f5f9;
-      color: var(--primary-color);
-      padding: 0.25rem 0.75rem;
-      border-radius: 25px;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .project-link.primary {
-      background: var(--primary-color);
-      color: white;
-    }
-
-    .project-link.secondary {
-      background: #f1f5f9;
-      color: var(--text-dark);
-    }
-
-    .project-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Project Stats */
-    .project-stats {
-      padding: 4rem 0;
-      background: white;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .stat-icon {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      color: var(--text-light);
-      font-weight: 500;
-    }
-
-    /* Github Activity */
-    .github-activity {
-      padding: 4rem 0;
-    }
-
-    .activity-container {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
-    }
-
-    .contribution-graph {
-      width: 100%;
-      height: 200px;
-      background: #f1f5f9;
-      border-radius: 1rem;
-      margin-top: 1rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contribution-bar {
-      position: absolute;
-      bottom: 0;
-      width: 8px;
-      margin: 0 3px;
-      background: var(--primary-color);
-      opacity: 0.2;
-      transition: all 0.3s ease;
-    }
-
-    .contribution-bar:hover {
-      opacity: 1;
-    }
-
-    /* Back to Top Button */
-    #back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--primary-color);
-      color: white;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-    }
-
-    #back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    #back-to-top:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-    }
-
-    /* Footer */
-    .footer {
-      background: white;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      color: var(--primary-color);
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-      .header-title {
-        font-size: 2.5rem;
-      }
-
-.filter-container {
-  overflow-x: auto;
-  padding: 0.5rem;
-}
-
-.project-img-container {
-  height: 200px;
-}
-}
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<!-- Navbar -->
+<!-- Updated Navbar Structure -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-<div class="container">
-<a class="navbar-brand" href="index.html">
-  <i class="fas fa-code me-2"></i>Mohit Bhimrajka
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-  <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="resume.html">Resume</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="certifications.html">Certifications</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" href="projects.html">
-        <i class="fab fa-github me-1"></i>Projects
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="achievements.html">Achievements</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="contact.html">Contact</a>
-    </li>
-  </ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <div class="brand-logo">
+        <i class="fas fa-code"></i>
+      </div>
+      <span>Mohit Bhimrajka</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home me-2"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.html">
+            <i class="fas fa-file-alt me-2"></i>Resume
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="certifications.html">
+            <i class="fas fa-certificate me-2"></i>Certifications
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="projects.html">
+            <i class="fas fa-code-branch me-2"></i>Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="achievements.html">
+            <i class="fas fa-trophy me-2"></i>Achievements
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="fas fa-envelope me-2"></i>Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- Header Section -->
@@ -461,154 +103,99 @@
 
 <!-- Projects Section -->
 <section class="projects-section">
-<div class="container">
-<div class="row g-4">
-  <!-- Project 1: Recommendation Engine -->
-  <div class="col-md-6 col-lg-4" data-category="ai-ml">
-    <div class="project-card" data-aos="fade-up">
-      <div class="project-img-container">
-        <img src="/api/placeholder/400/300" alt="Recommendation Engine" class="project-img">
-        <span class="project-category">AI/ML</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">Recommendation Engine (Ongoing)</h3>
-        <p class="project-text">
-          Building a sophisticated recommendation system using Python and PostgreSQL for personalized content delivery and user experience enhancement.
-        </p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">Pandas</span>
-          <span class="stack-tag">PostgreSQL</span>
-          <span class="stack-tag">scikit-learn</span>
+  <div class="container">
+    <div class="projects-container">
+      <div class="projects-grid">
+        <!-- Project 1: Recommendation Engine -->
+        <div class="project-card" data-aos="fade-up">
+          <span class="project-category">AI/ML</span>
+          <div class="project-body">
+            <h3 class="project-title">Recommendation Engine</h3>
+            <p class="project-text">
+              Building a sophisticated recommendation system using Python and PostgreSQL for personalized content delivery and user experience enhancement.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Pandas</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">scikit-learn</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MohitBhimrajka/Projects/tree/main/College-Counseling-App" target="_blank" class="project-link primary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/MohitBhimrajka/Projects/tree/main/College-Counseling-App" target="_blank" class="project-link primary">
-            <i class="fab fa-github"></i> View Code
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Project 2: College Counseling App -->
-  <div class="col-md-6 col-lg-4" data-category="ai-ml">
-    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-      <div class="project-img-container">
-        <img src="/api/placeholder/400/300" alt="College Counseling App" class="project-img">
-        <span class="project-category">AI/ML</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">College Counseling App</h3>
-        <p class="project-text">
-          Developed an AI-powered counseling system integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications and provide personalized guidance.
-        </p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">Gemma2</span>
-          <span class="stack-tag">LLaMA 3.2</span>
-          <span class="stack-tag">FastAPI</span>
+        <!-- Project 2: College Counseling App -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="project-category">AI/ML</span>
+          <div class="project-body">
+            <h3 class="project-title">College Counseling App</h3>
+            <p class="project-text">
+              Developed an AI-powered counseling system integrating LLMs (Gemma2 & LLaMA 3.2) to streamline internship applications and provide personalized guidance.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Gemma2</span>
+              <span class="stack-tag">LLaMA 3.2</span>
+              <span class="stack-tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MohitBhimrajka/Projects/tree/main/College-Counseling-App" target="_blank" class="project-link primary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/MohitBhimrajka/Projects/tree/main/College-Counseling-App" target="_blank" class="project-link primary">
-            <i class="fab fa-github"></i> View Code
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Project 3: Interactive CNN Demo -->
-  <div class="col-md-6 col-lg-4" data-category="ai-ml">
-    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-      <div class="project-img-container">
-        <img src="/api/placeholder/400/300" alt="Interactive CNN Demo" class="project-img">
-        <span class="project-category">AI/ML</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">Interactive CNN Demo</h3>
-        <p class="project-text">
-          Created an interactive Convolutional Neural Network demonstration using Keras and the MNIST dataset, enabling real-time visualization of deep learning concepts.
-        </p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">Keras</span>
-          <span class="stack-tag">TensorFlow</span>
-          <span class="stack-tag">MNIST</span>
+        <!-- Project 3: Interactive CNN Demo -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="project-category">AI/ML</span>
+          <div class="project-body">
+            <h3 class="project-title">Interactive CNN Demo</h3>
+            <p class="project-text">
+              Created an interactive Convolutional Neural Network demonstration using Keras and the MNIST dataset, enabling real-time visualization of deep learning concepts.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Keras</span>
+              <span class="stack-tag">TensorFlow</span>
+              <span class="stack-tag">MNIST</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Interactive-CNN-Demo" target="_blank" class="project-link primary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Interactive-CNN-Demo" target="_blank" class="project-link primary">
-            <i class="fab fa-github"></i> View Code
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Project 4: Housing Price Prediction -->
-  <div class="col-md-6 col-lg-4" data-category="data-science">
-    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-      <div class="project-img-container">
-        <img src="/api/placeholder/400/300" alt="Housing Price Prediction" class="project-img">
-        <span class="project-category">Data Science</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">Housing Price Prediction</h3>
-        <p class="project-text">
-          Engineered a robust housing price prediction model with advanced preprocessing, PCA & outlier handling techniques, achieving an impressive RMSE of 0.106.
-        </p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">scikit-learn</span>
-          <span class="stack-tag">PCA</span>
-          <span class="stack-tag">Pandas</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Housing-Price-Prediction" target="_blank" class="project-link primary">
-            <i class="fab fa-github"></i> View Code
-          </a>
+        <!-- Project 4: Housing Price Prediction -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="project-category">Data Science</span>
+          <div class="project-body">
+            <h3 class="project-title">Housing Price Prediction</h3>
+            <p class="project-text">
+              Engineered a robust housing price prediction model with advanced preprocessing, PCA & outlier handling techniques, achieving an impressive RMSE of 0.106.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">scikit-learn</span>
+              <span class="stack-tag">PCA</span>
+              <span class="stack-tag">Pandas</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MohitBhimrajka/Projects/tree/main/Housing-Price-Prediction" target="_blank" class="project-link primary">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-</div>
-</div>
-</section>
-
-<!-- Project Stats -->
-<section class="project-stats">
-<div class="container">
-<div class="row g-4">
-  <div class="col-md-3" data-aos="fade-up">
-    <div class="stat-card">
-      <i class="fas fa-code-branch stat-icon"></i>
-      <div class="stat-number" data-target="50">0</div>
-      <div class="stat-label">Projects Completed</div>
-    </div>
-  </div>
-  <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-    <div class="stat-card">
-      <i class="fas fa-star stat-icon"></i>
-      <div class="stat-number" data-target="120">0</div>
-      <div class="stat-label">GitHub Stars</div>
-    </div>
-  </div>
-  <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-    <div class="stat-card">
-      <i class="fas fa-code stat-icon"></i>
-      <div class="stat-number" data-target="15000">0</div>
-      <div class="stat-label">Lines of Code</div>
-    </div>
-  </div>
-  <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-    <div class="stat-card">
-      <i class="fas fa-users stat-icon"></i>
-      <div class="stat-number" data-target="25">0</div>
-      <div class="stat-label">Contributors</div>
-    </div>
-  </div>
-</div>
-</div>
 </section>
 
 <!-- GitHub Activity -->

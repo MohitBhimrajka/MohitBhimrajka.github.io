@@ -6,8 +6,9 @@
   <title>Achievements | Mohit Bhimrajka - AI/ML Engineer</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Leadership milestones and accolades of Mohit Bhimrajka - AI/ML Engineer">
-  <meta name="keywords" content="Achievements, AI Engineer, ML Engineer, Mohit Bhimrajka">
+  <meta name="description" content="Leadership milestones and accolades of Mohit Bhimrajka - AI/ML Engineer. Explore achievements in AI, ML, and technology leadership.">
+  <meta name="keywords" content="Achievements, AI Engineer, ML Engineer, Leadership, Mohit Bhimrajka">
+  <meta name="author" content="Mohit Bhimrajka">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,12 +23,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Custom Navbar CSS -->
+  <link rel="stylesheet" href="assets/css/navbar.css">
+
   <style>
     :root {
       --primary-color: #1a365d;
       --primary-dark: #0f172a;
       --text-dark: #1e293b;
       --text-light: #64748b;
+      --gradient-start: #2563eb;
+      --gradient-end: #1E3A8A;
     }
 
     body {
@@ -142,59 +150,48 @@
       background: white;
       border-radius: 2rem;
       padding: 3rem;
-      box-shadow: 0 20px 40px rgba(26, 54, 93, 0.1);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
 
     .achievement-card {
       background: white;
       border: 1px solid #e2e8f0;
-      border-radius: 1rem;
-      padding: 2rem;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
       transition: all 0.3s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
       position: relative;
-      overflow: hidden;
-    }
-
-    .achievement-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--primary-color);
-      opacity: 0;
-      transition: all 0.3s ease;
     }
 
     .achievement-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(26, 54, 93, 0.1);
-    }
-
-    .achievement-card:hover::before {
-      opacity: 1;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      border-color: var(--primary-color);
     }
 
     .achievement-icon {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: var(--primary-color);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .achievement-card:hover .achievement-icon {
+      transform: scale(1.1);
     }
 
     .achievement-title {
-      font-weight: 600;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
       font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
     }
 
     .achievement-date {
       color: var(--text-light);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -204,6 +201,7 @@
     .achievement-text {
       color: var(--text-light);
       font-size: 0.95rem;
+      margin-bottom: 1.5rem;
       flex-grow: 1;
     }
 
@@ -218,17 +216,25 @@
 
     .achievement-skills {
       display: flex;
-      gap: 0.5rem;
       flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: auto;
     }
 
     .skill-tag {
       background: #f1f5f9;
       color: var(--primary-color);
-      padding: 0.25rem 0.75rem;
-      border-radius: 50px;
-      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
       font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
     }
 
     .know-more-btn {
@@ -257,26 +263,34 @@
 
     .stat-card {
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
     }
 
+    .stat-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
     .stat-icon {
-      font-size: 2.5rem;
-      color: var(--primary-color);
+      font-size: 2rem;
+      color: white;
       margin-bottom: 1rem;
     }
 
     .stat-number {
       font-size: 2.5rem;
       font-weight: 700;
-      color: var(--primary-color);
+      color: white;
       margin-bottom: 0.5rem;
     }
 
     .stat-label {
-      color: var(--text-light);
+      color: rgba(255, 255, 255, 0.9);
       font-weight: 500;
     }
 
@@ -337,6 +351,21 @@
       color: var(--primary-dark);
       transform: translateY(-2px);
     }
+
+    @media (max-width: 768px) {
+      .achievement-card {
+        padding: 2rem;
+      }
+
+      .achievement-title {
+        font-size: 1.1rem;
+      }
+
+      .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
   </style>
 </head>
 
@@ -345,32 +374,45 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <i class="fas fa-code me-2"></i>Mohit Bhimrajka
+        <div class="brand-logo">
+          <i class="fas fa-code"></i>
+        </div>
+        <span>Mohit Bhimrajka</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="certifications.html">Certifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html">
-              <i class="fab fa-github me-1"></i>Projects
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home me-2"></i>Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="achievements.html">Achievements</a>
+            <a class="nav-link" href="resume.html">
+              <i class="fas fa-file-alt me-2"></i>Resume
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="certifications.html">
+              <i class="fas fa-certificate me-2"></i>Certifications
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">
+              <i class="fas fa-code-branch me-2"></i>Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="achievements.html">
+              <i class="fas fa-trophy me-2"></i>Achievements
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              <i class="fas fa-envelope me-2"></i>Contact
+            </a>
           </li>
         </ul>
       </div>
@@ -385,6 +427,30 @@
         <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
           Showcasing leadership achievements, community impact, and technical excellence throughout my journey.
         </p>
+        <!-- Stats Section -->
+        <div class="row mt-5 g-4 justify-content-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-card">
+              <i class="fas fa-users stat-icon"></i>
+              <div class="stat-number" data-target="1000">0</div>
+              <div class="stat-label">Community Impact</div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card">
+              <i class="fas fa-calendar-check stat-icon"></i>
+              <div class="stat-number" data-target="25">0</div>
+              <div class="stat-label">Events Organized</div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-card">
+              <i class="fas fa-user-tie stat-icon"></i>
+              <div class="stat-number" data-target="10">0</div>
+              <div class="stat-label">Leadership Roles</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -420,71 +486,122 @@
         <div class="tab-pane fade show active" id="leadership">
           <div class="achievements-container">
             <div class="row g-4">
-              <!-- Guinness Record Card -->
+              <!-- Vice President STAGE Card -->
               <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="achievement-card">
-                  <i class="fas fa-trophy achievement-icon"></i>
-                  <h3 class="achievement-title">Guinness World Record Hackathon</h3>
-                  <div class="achievement-date">
-                    <i class="far fa-calendar-alt"></i>
-                    Jun 2023 – Feb 2025
-                  </div>
-                  <p class="achievement-text">
-                    Organized and led the college's largest tech hackathon in partnership with MumbaiTech & GDG MAD, successfully setting a Guinness World Record for participation and innovation.
-                  </p>
-                  <div class="achievement-footer">
-                    <div class="achievement-skills">
-                      <span class="skill-tag">Event Management</span>
-                      <span class="skill-tag">Leadership</span>
-                      <span class="skill-tag">Tech</span>
-                    </div>
-                    <a href="achievements/guinness-record.html" class="know-more-btn">Know More</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Vice President Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="achievement-card">
-                  <i class="fas fa-user-tie achievement-icon"></i>
+                  <i class="fas fa-theater-masks achievement-icon"></i>
                   <h3 class="achievement-title">Vice President, STAGE</h3>
                   <div class="achievement-date">
                     <i class="far fa-calendar-alt"></i>
                     Aug 2024 – Present
                   </div>
                   <p class="achievement-text">
-                    Spearheaded cultural initiatives and coordinated multidisciplinary teams to execute high-impact events, fostering student engagement and community building.
+                    Leading the cultural club and organizing major events, fostering artistic expression and cultural diversity within the college community.
                   </p>
-                  <div class="achievement-footer">
-                    <div class="achievement-skills">
-                      <span class="skill-tag">Leadership</span>
-                      <span class="skill-tag">Management</span>
-                      <span class="skill-tag">Culture</span>
-                    </div>
-                    <a href="achievements/vice-president.html" class="know-more-btn">Know More</a>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Event Management</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Cultural Affairs</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Community Lead Card -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <!-- Community Lead Code Vipassana Card -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="achievement-card">
-                  <i class="fas fa-users achievement-icon"></i>
+                  <i class="fas fa-cloud achievement-icon"></i>
                   <h3 class="achievement-title">Community Lead, Code Vipassana</h3>
                   <div class="achievement-date">
                     <i class="far fa-calendar-alt"></i>
                     Mar 2024 – Present
                   </div>
                   <p class="achievement-text">
-                    Led technical workshops and community events, fostering collaboration and knowledge exchange among tech enthusiasts and developers.
+                    Leading a Google Cloud-empowered community, organizing workshops, and fostering technical learning among students.
                   </p>
-                  <div class="achievement-footer">
-                    <div class="achievement-skills">
-                      <span class="skill-tag">Community</span>
-                      <span class="skill-tag">Technical</span>
-                      <span class="skill-tag">Education</span>
-                    </div>
-                    <a href="achievements/community-lead.html" class="know-more-btn">Know More</a>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Community Building</span>
+                    <span class="skill-tag">Google Cloud</span>
+                    <span class="skill-tag">Technical Leadership</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contingent Leader Card -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="achievement-card">
+                  <i class="fas fa-flag achievement-icon"></i>
+                  <h3 class="achievement-title">Contingent Leader, College Funbaazi 3.0</h3>
+                  <div class="achievement-date">
+                    <i class="far fa-calendar-alt"></i>
+                    Oct 2024 – Nov 2024
+                  </div>
+                  <p class="achievement-text">
+                    Led a team of 230+ students to victory, competing against 1,500+ participants and securing multiple accolades for the college.
+                  </p>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Competition</span>
+                    <span class="skill-tag">Strategy</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- UGDX Student Council Card -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="achievement-card">
+                  <i class="fas fa-users-cog achievement-icon"></i>
+                  <h3 class="achievement-title">President, UGDX Student Council</h3>
+                  <div class="achievement-date">
+                    <i class="far fa-calendar-alt"></i>
+                    Aug 2023 – May 2024
+                  </div>
+                  <p class="achievement-text">
+                    Led student initiatives, organized technical events, and fostered collaboration between different departments.
+                  </p>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Student Leadership</span>
+                    <span class="skill-tag">Event Planning</span>
+                    <span class="skill-tag">Administration</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ILLENIUM Outreach Card -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="achievement-card">
+                  <i class="fas fa-bullhorn achievement-icon"></i>
+                  <h3 class="achievement-title">Head of Outreach & PR, ILLENIUM</h3>
+                  <div class="achievement-date">
+                    <i class="far fa-calendar-alt"></i>
+                    Oct 2023 – Mar 2024
+                  </div>
+                  <p class="achievement-text">
+                    Managed public relations and outreach initiatives, expanding the organization's reach and impact.
+                  </p>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Public Relations</span>
+                    <span class="skill-tag">Marketing</span>
+                    <span class="skill-tag">Communication</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Parijat Industries Card -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="achievement-card">
+                  <i class="fas fa-hands-helping achievement-icon"></i>
+                  <h3 class="achievement-title">Director of Volunteers, Parijat Industries</h3>
+                  <div class="achievement-date">
+                    <i class="far fa-calendar-alt"></i>
+                    Aug 2019 – Jul 2022
+                  </div>
+                  <p class="achievement-text">
+                    Spearheaded the "Back to School Initiative," supporting 300+ students and managing volunteer programs.
+                  </p>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Volunteer Management</span>
+                    <span class="skill-tag">Social Impact</span>
+                    <span class="skill-tag">Project Management</span>
                   </div>
                 </div>
               </div>
@@ -496,29 +613,25 @@
         <div class="tab-pane fade" id="technical">
           <div class="achievements-container">
             <div class="row g-4">
-              <!-- Add Technical Achievement Cards -->
+              <!-- SAT Math Excellence Card -->
               <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="achievement-card">
-                  <i class="fas fa-robot achievement-icon"></i>
-                  <h3 class="achievement-title">AI Innovation Award</h3>
+                  <i class="fas fa-calculator achievement-icon"></i>
+                  <h3 class="achievement-title">SAT Math Excellence</h3>
                   <div class="achievement-date">
                     <i class="far fa-calendar-alt"></i>
-                    Dec 2024
+                    2023
                   </div>
                   <p class="achievement-text">
-                    Received recognition for developing innovative AI solutions that address real-world challenges in healthcare and education sectors.
+                    Achieved an exceptional score of 740/800 in SAT Mathematics, demonstrating strong quantitative and analytical skills.
                   </p>
-                  <div class="achievement-footer">
-                    <div class="achievement-skills">
-                      <span class="skill-tag">AI</span>
-                      <span class="skill-tag">ML</span>
-                      <span class="skill-tag">Innovation</span>
-                    </div>
-                    <a href="achievements/ai-innovation.html" class="know-more-btn">Know More</a>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Mathematics</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Analytics</span>
                   </div>
                 </div>
               </div>
-              <!-- Add more technical achievements as needed -->
             </div>
           </div>
         </div>
@@ -527,66 +640,26 @@
         <div class="tab-pane fade" id="community">
           <div class="achievements-container">
             <div class="row g-4">
-              <!-- Add Community Achievement Cards -->
+              <!-- ATLAS Achievers Award Card -->
               <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="achievement-card">
-                  <i class="fas fa-hand-holding-heart achievement-icon"></i>
-                  <h3 class="achievement-title">Tech for Good Initiative</h3>
+                  <i class="fas fa-award achievement-icon"></i>
+                  <h3 class="achievement-title">ATLAS Achievers Award</h3>
                   <div class="achievement-date">
                     <i class="far fa-calendar-alt"></i>
-                    Jan 2025
+                    2024
                   </div>
                   <p class="achievement-text">
-                    Led a community initiative to teach coding skills to underprivileged students, impacting over 100 young learners.
+                    Recognized for exceptional leadership and significant contributions to the college community through various initiatives.
                   </p>
-                  <div class="achievement-footer">
-                    <div class="achievement-skills">
-                      <span class="skill-tag">Social Impact</span>
-                      <span class="skill-tag">Education</span>
-                      <span class="skill-tag">Mentorship</span>
-                    </div>
-                    <a href="achievements/tech-for-good.html" class="know-more-btn">Know More</a>
+                  <div class="achievement-skills">
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Community Service</span>
+                    <span class="skill-tag">Excellence</span>
                   </div>
                 </div>
               </div>
-              <!-- Add more community achievements as needed -->
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-3" data-aos="fade-up">
-          <div class="stat-card">
-            <i class="fas fa-award stat-icon"></i>
-            <div class="stat-number" data-target="15">0</div>
-            <div class="stat-label">Awards Won</div>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-card">
-            <i class="fas fa-users stat-icon"></i>
-            <div class="stat-number" data-target="1000">0</div>
-            <div class="stat-label">Community Impact</div>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-card">
-            <i class="fas fa-calendar-check stat-icon"></i>
-            <div class="stat-number" data-target="25">0</div>
-            <div class="stat-label">Events Organized</div>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="stat-card">
-            <i class="fas fa-certificate stat-icon"></i>
-            <div class="stat-number" data-target="10">0</div>
-            <div class="stat-label">Leadership Roles</div>
           </div>
         </div>
       </div>
